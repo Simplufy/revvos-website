@@ -1,0 +1,3 @@
+# RevvOS — staging on pages.dev. Remove noindex + this block at launch on the real domain.
+User-agent: *
+Disallow: /

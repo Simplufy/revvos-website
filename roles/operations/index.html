@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Automotive Operations Visibility | RevvOS</title>
+  <meta name="description" content="Give operations leaders one clear view of stale estimates, aging repairs, overdue parts, callbacks, and pickup work across every shop.">
+  <meta name="robots" content="noindex">
+  <meta property="og:title" content="Automotive Operations Visibility | RevvOS">
+  <meta property="og:description" content="See the jobs, estimates, parts, callbacks, and handoffs that need attention across every shop.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#05060f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080a14'/%3E%3Cpath d='M9 22V10h6.2a3.9 3.9 0 0 1 1.5 7.5L20 22h-3.3l-2.9-4.2H12V22H9Zm3-6.7h2.9a1.6 1.6 0 0 0 0-3.2H12v3.2Z' fill='%23eaf1ff'/%3E%3Ccircle cx='23' cy='11' r='2.4' fill='%232fe08e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/marketing.css?v=6">
+  <link rel="stylesheet" href="/assets/pages-teams.css">
+  <link rel="stylesheet" href="/assets/brand-alignment.css">
+  <link rel="stylesheet" href="/assets/os-story.css?v=9">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does this replace the shop system?","acceptedAnswer":{"@type":"Answer","text":"No. The Job Board works alongside Tekmetric, CCC ONE, Urable, or the booking system you already use."}},{"@type":"Question","name":"What appears in Needs You Now?","acceptedAnswer":{"@type":"Answer","text":"Items such as stale estimates, aging repair orders, overdue parts, callbacks owed, and pickup-ready vehicles."}},{"@type":"Question","name":"Does the preview update a repair order?","acceptedAnswer":{"@type":"Answer","text":"No. It demonstrates a possible board state without changing the original record."}}]}</script>
+</head>
+<body class="page-teams page-operations">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="/platform">Platform</a>
+      <details class="nav-group">
+        <summary>Solutions</summary>
+        <div class="nav-menu"><a href="/solutions/multi-location">Multi-location operations</a><a href="/solutions/daily-operations">Daily operations</a><a href="/solutions/executive-visibility">Executive visibility</a></div>
+      </details>
+      <details class="nav-group">
+        <summary>Roles</summary>
+        <div class="nav-menu"><a href="/roles/owner">Owners</a><a href="/roles/operations">Operations leaders</a><a href="/roles/marketing">Marketing leaders</a></div>
+      </details>
+      <details class="nav-group">
+        <summary>Use cases</summary>
+        <div class="nav-menu"><a href="/use-cases/reputation">Reputation</a><a href="/use-cases/local-seo">Local SEO</a><a href="/use-cases/social-media">Social media</a><a href="/use-cases/customer-engagement">Customer engagement</a><a href="/use-cases/operational-visibility">Operational visibility</a><a href="/use-cases/compliance">Compliance</a></div>
+      </details>
+      <a href="/resources">Resources</a>
+      <a href="/support/">Support</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-secondary" href="/contact">Contact</a>
+      <a class="btn btn-primary" href="/demo">Get an assessment</a>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="teams-hero">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>Roles</span><span>/</span><span aria-current="page">Operations</span></nav>
+      <div class="teams-intro">
+        <div class="teams-copy reveal">
+          <p class="teams-kicker">For operations leaders</p>
+          <h1>See what is slowing every shop down.</h1>
+          <p class="lede">RevvOS gives operations leaders one clear view of stale estimates, aging repairs, overdue parts, promised callbacks, and vehicles waiting for pickup.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="/demo">Book a demo <span class="arrow">-&gt;</span></a><a class="btn btn-secondary" href="#exception-tray">See the priority tray</a></div>
+        </div>
+
+        <div class="scene-shell dispatch-shell reveal" role="group" data-dispatch-wall aria-label="Interactive Job Board preview showing automotive operating exceptions across all shops">
+          <div class="scene-toolbar dispatch-toolbar"><span>Job Board / All Shops / Needs You Now</span><span class="dispatch-clock">Latest update</span></div>
+          <div class="dispatch-board">
+            <section class="dispatch-lane">
+              <h2>Estimate risk <span class="lane-count">0</span></h2>
+              <div class="lane-drop" data-lane="ready">
+                <article class="dispatch-ticket" data-moving-ticket>
+                  <div class="ticket-top"><span>Summit Repair</span><span>Tekmetric</span></div>
+                  <h3>Estimate awaiting response</h3>
+                  <p class="ticket-owner">Stale estimate: service advisor follow-up due</p>
+                  <div class="ticket-foot"><span>Last activity 2 days ago</span><span class="ticket-proof">Read only</span></div>
+                </article>
+                <article class="dispatch-ticket">
+                  <div class="ticket-top"><span>Ridge Auto</span><span>Tekmetric</span></div>
+                  <h3>Vehicle ready for pickup</h3>
+                  <p class="ticket-owner">Customer handoff still outstanding</p>
+                  <div class="ticket-foot"><span>Ready status on repair order</span><span class="ticket-proof">Read only</span></div>
+                </article>
+              </div>
+            </section>
+            <section class="dispatch-lane">
+              <h2>Customer follow-up <span class="lane-count">0</span></h2>
+              <div class="lane-drop" data-lane="waiting">
+                <article class="dispatch-ticket">
+                  <div class="ticket-top"><span>Clearview Glass</span><span>Urable</span></div>
+                  <h3>Callback owed</h3>
+                  <p class="ticket-owner">Customer requested an installation update</p>
+                  <div class="ticket-foot"><span>Callback window passed</span><span class="ticket-proof">Read only</span></div>
+                </article>
+              </div>
+            </section>
+            <section class="dispatch-lane">
+              <h2>Stage aging <span class="lane-count">0</span></h2>
+              <div class="lane-drop" data-lane="location">
+                <article class="dispatch-ticket">
+                  <div class="ticket-top"><span>Northline Collision</span><span>CCC ONE</span></div>
+                  <h3>Repair order aging in body stage</h3>
+                  <p class="ticket-owner">Cycle-time threshold needs review</p>
+                  <div class="ticket-foot"><span>Stage unchanged</span><span class="ticket-proof">Read only</span></div>
+                </article>
+              </div>
+            </section>
+            <section class="dispatch-lane">
+              <h2>Parts risk <span class="lane-count">0</span></h2>
+              <div class="lane-drop" data-lane="help">
+                <article class="dispatch-ticket is-blocked" data-blocked-ticket>
+                  <div class="ticket-top"><span>Summit Repair</span><span class="ticket-alert">Overdue</span></div>
+                  <h3>Brake caliper delivery overdue</h3>
+                  <p class="ticket-owner">Repair order waiting on promised part</p>
+                  <div class="ticket-foot"><span>Supplier date passed</span><span class="ticket-alert">Needs attention</span></div>
+                </article>
+              </div>
+            </section>
+            <section class="dispatch-lane">
+              <h2>Pickup queue <span class="lane-count">0</span></h2>
+              <div class="lane-drop" data-lane="check">
+                <article class="dispatch-ticket">
+                  <div class="ticket-top"><span>Lake Street Auto</span><span>Booking system</span></div>
+                  <h3>Pickup appointment not confirmed</h3>
+                  <p class="ticket-owner">Vehicle marked ready; booking still open</p>
+                  <div class="ticket-foot"><span>Customer confirmation needed</span><span class="ticket-proof">Read only</span></div>
+                </article>
+              </div>
+            </section>
+          </div>
+          <div class="dispatch-controls">
+            <p>Preview only. Source changes still happen in Tekmetric, CCC ONE, Urable, or the applicable booking system.</p>
+            <button class="scene-button" type="button" data-advance-ticket>Preview next state</button>
+            <button class="scene-button help-action" type="button" data-divert-ticket>Preview in exception tray</button>
+          </div>
+        </div>
+      </div>
+      <p class="sr-status" aria-live="polite" data-dispatch-status></p>
+    </div>
+  </section>
+
+  <section class="answer-band" aria-labelledby="wall-answers-title">
+    <div class="wrap answer-row">
+      <header class="answer-intro">
+        <p class="micro-label">At a glance</p>
+        <h2 id="wall-answers-title">The Job Board shows managers where to start.</h2>
+      </header>
+      <div class="answer-item"><strong>Which shop needs attention?</strong><p>All Shops shows where the issue started.</p></div>
+      <div class="answer-item"><strong>Why is it here?</strong><p>The status and age show why it needs attention.</p></div>
+      <div class="answer-item"><strong>Where is it updated?</strong><p>Staff still update the original shop system.</p></div>
+    </div>
+  </section>
+
+  <section class="teams-section" id="exception-tray" aria-labelledby="exception-title">
+    <div class="wrap exception-layout">
+      <header class="exception-copy reveal">
+        <p class="teams-kicker">Focus on what is unusual</p>
+        <h2 id="exception-title">Bring delayed parts and overloaded days into view.</h2>
+        <p class="teams-section-copy">The priority tray gives operators one place to review a late part or an overbooked day. The original repair order, part record, and schedule stay in their existing systems.</p>
+      </header>
+      <div class="exception-tray reveal" role="group" aria-label="Exception tray">
+        <div class="tray-head"><span>Exception tray</span><span>All Shops review</span></div>
+        <div class="tray-drop" data-exception-drop>
+          <article class="dispatch-ticket is-blocked">
+            <div class="ticket-top"><span>Northline Collision</span><span class="ticket-alert">Delayed part</span></div>
+            <h3>Quarter panel ETA moved</h3>
+            <p class="ticket-owner">Production manager review needed</p>
+            <div class="ticket-foot"><span>Promised date at risk</span><span class="ticket-alert">Source: CCC ONE</span></div>
+          </article>
+          <div class="tray-placeholder" aria-hidden="true">Blocked work lands here<br>with its context</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="teams-section" aria-labelledby="ops-questions-title">
+    <div class="wrap ops-close">
+      <div class="reveal">
+        <p class="teams-kicker">Straight answers</p>
+        <h2 id="ops-questions-title">Straight answers for operations leaders.</h2>
+        <dl class="ops-faq">
+          <div><dt>Does this replace the shop system?</dt><dd>No. The Job Board works alongside Tekmetric, CCC ONE, Urable, or the booking system you already use.</dd></div>
+          <div><dt>What appears in Needs You Now?</dt><dd>Exceptions such as stale estimates, aging repair orders, overdue parts, callbacks owed, and pickup-ready vehicles.</dd></div>
+          <div><dt>Does the preview update a repair order?</dt><dd>No. It demonstrates a possible board state without changing the source record.</dd></div>
+        </dl>
+      </div>
+      <aside class="ops-cta reveal" aria-label="Book a RevvOS demo">
+        <p class="micro-label">Bring one busy shop day</p>
+        <h2>Find where important work gets lost.</h2>
+        <p>Show us where estimates, repair stages, parts, callbacks, or pickup handoffs become hard to see across locations.</p>
+        <a class="btn btn-primary" href="/demo">Book a demo <span class="arrow">-&gt;</span></a>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
+        <p>RevvOS gives multi-location automotive businesses a clearer view of operating gaps across their shops.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column"><h3>Platform</h3><a href="/platform">Overview</a><a href="/agents">Agents</a><a href="/integrations">Integrations</a><a href="/security">Security</a></div>
+        <div class="footer-column"><h3>Solutions</h3><a href="/solutions/multi-location">Multi-location</a><a href="/solutions/daily-operations">Daily operations</a><a href="/solutions/executive-visibility">Executive visibility</a></div>
+        <div class="footer-column"><h3>Roles</h3><a href="/roles/owner">Owners</a><a href="/roles/operations">Operations leaders</a><a href="/roles/marketing">Marketing leaders</a><a href="/resources">Resources</a></div>
+        <div class="footer-column"><h3>Company</h3><a href="/demo">Get an assessment</a><a href="/contact">Contact</a><a href="/support/">Support</a><a href="/legal/privacy">Privacy</a><a href="/legal/terms">Terms</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 RevvOS. All rights reserved.</span><span class="footer-bottom-links"><a href="/legal/security">Legal security</a><a href="mailto:team@simplufy.com">team@simplufy.com</a></span></div>
+  </div>
+</footer>
+<script src="/assets/marketing.js?v=8" defer></script>
+<script src="/assets/plain-pages.js?v=9" defer></script>
+<script src="/assets/pages-teams.js" defer></script>
+</body>
+</html>

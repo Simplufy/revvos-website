@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Security — RevvOS</title>
+<meta name="description" content="Review the security principles, data practices, and operational safeguards described for RevvOS services and governed workflows.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080a14'/%3E%3Cpath d='M9 22V10h6.2a3.9 3.9 0 0 1 1.5 7.5L20 22h-3.3l-2.9-4.2H12V22H9Zm3-6.7h2.9a1.6 1.6 0 0 0 0-3.2H12v3.2Z' fill='%23eaf1ff'/%3E%3Ccircle cx='23' cy='11' r='2.4' fill='%232fe08e'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/base.css">
+</head>
+<body>
+<div class="grid-bg" aria-hidden="true"></div><div class="halo" aria-hidden="true"></div>
+<header class="nav" id="nav"><div class="wrap bar"><a class="brand" href="/"><img class="brandlogo" src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a><a class="backlink" href="/"><span class="bk">→</span> Back to overview</a></div></header>
+
+<section class="phead"><div class="wrap">
+  <span class="eye">Legal</span>
+  <h1>Security</h1>
+  <p>How we protect your shop's data, and the principles we build by.</p>
+  <div class="updated">Last updated: 14 July 2026</div>
+</div></section>
+
+<div class="wrap"><div class="prose">
+  <p class="note">This page is a plain-language template provided for review. Confirm each statement against your final infrastructure and have it reviewed by your own counsel before you rely on it publicly.</p>
+
+  <h2>Our principles</h2>
+  <ul>
+    <li><strong>Read-only by default.</strong> On your systems of record, RevvOS reads and reports; it only writes or sends where you explicitly enable it.</li>
+    <li><strong>Human approval first.</strong> Customer-facing messages and financial actions start as drafts you approve, until a task earns more autonomy on your terms.</li>
+    <li><strong>Your data is yours.</strong> We never sell it, and we never share it for others' marketing.</li>
+  </ul>
+
+  <h2>Encryption</h2>
+  <p>Data is encrypted in transit using modern TLS and encrypted at rest. API keys and credentials are stored encrypted and are never exposed in the interface.</p>
+
+  <h2>Data location</h2>
+  <p>Platform data is stored in the United States.</p>
+
+  <h2>Runs on a machine in your shop</h2>
+  <p>The AI models run locally on a dedicated machine that lives in your shop, not in a third-party cloud. Sensitive processing, such as transcribing your phone calls, happens on that machine and never leaves the building. Call audio is not resold, shared, or used to train outside models, and is handled with least-privilege access.</p>
+
+  <h2>Access controls</h2>
+  <ul>
+    <li>Staff logins are individual, and access to customer data is limited to what is needed to operate the service.</li>
+    <li>Integration permissions are scoped to the minimum required, and you can revoke any connection at any time.</li>
+  </ul>
+
+  <h2>Subprocessors</h2>
+  <p>We use a small set of reputable infrastructure providers to run the platform, under confidentiality obligations. A current list is available on request.</p>
+
+  <h2>Reliability</h2>
+  <p>We monitor uptime and system health continuously so issues are caught early. If the network is unavailable, the platform is designed to degrade gracefully rather than stop your shop.</p>
+
+  <h2>Responsible disclosure</h2>
+  <p>If you believe you have found a security issue, please email <a href="mailto:team@simplufy.com">team@simplufy.com</a> with the details. We appreciate reports made in good faith and will work with you to resolve them.</p>
+
+  <h2>Contact</h2>
+  <p>Security questions? Email <a href="mailto:team@simplufy.com">team@simplufy.com</a>.</p>
+
+  <div class="toc"><a href="/legal/privacy/">Privacy Policy</a><a href="/legal/terms/">Terms of Service</a><a href="/contact/">Contact</a></div>
+</div></div>
+
+<footer><div class="wrap"><div class="fbot"><span>© 2026 RevvOS. All rights reserved.</span><span class="fl"><a href="/legal/privacy/">Privacy</a><a href="/legal/terms/">Terms</a><a href="/legal/security/">Security</a><a href="/contact/">Contact</a></span></div></div></footer>
+<script>const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>8),{passive:true});</script>
+</body>
+</html>

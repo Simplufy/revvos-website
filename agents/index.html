@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The RevvOS fleet, 40+ AI agents for auto shops</title>
+<meta name="description" content="Every RevvOS agent, in detail: what it does, how it makes your team's day easier, and how it grows your shop. Front desk, growth, money, shop floor, reputation, insurance, intelligence and people.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080a14'/%3E%3Cpath d='M9 22V10h6.2a3.9 3.9 0 0 1 1.5 7.5L20 22h-3.3l-2.9-4.2H12V22H9Zm3-6.7h2.9a1.6 1.6 0 0 0 0-3.2H12v3.2Z' fill='%23eaf1ff'/%3E%3Ccircle cx='23' cy='11' r='2.4' fill='%232fe08e'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --canvas:#05060f;--frost:rgba(186,214,247,.03);--frost2:rgba(186,214,247,.06);--frost3:rgba(199,211,234,.09);
+    --ice:#d8ecf8;--frostglow:#d1e4fa;--moon:#c7d3ea;--fog:#9da7ba;--fog2:#6b7688;
+    --hair:rgba(186,215,247,.12);--hair2:rgba(186,215,247,.2);
+    --acc:#2fe08e;--acc-b:#6bffb6;--acc-d:#12b06a;--acc-ink:#57ea9f;--acc-soft:rgba(47,224,142,.12);
+    --shadow-card:inset 0 1px 1px rgba(199,211,234,.12),inset 0 24px 48px rgba(199,211,234,.045),0 24px 40px rgba(4,5,12,.6);
+    --shadow-float:inset 0 1px 1px rgba(216,236,248,.2),inset 0 24px 48px rgba(47,224,142,.05),0 26px 60px rgba(0,0,0,.5);
+    --glow:0 0 0 1px rgba(47,224,142,.3),0 0 44px rgba(47,224,142,.3);
+    --disp:'Space Grotesk',system-ui,sans-serif;--sans:'Inter',system-ui,-apple-system,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+    --maxw:1160px;--ease:cubic-bezier(.16,1,.3,1);
+  }
+  @media(max-width:1080px){:root{--maxw:960px}}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:88px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{font-family:var(--sans);background:var(--canvas);color:var(--frostglow);line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+  ::selection{background:rgba(47,224,142,.26);color:#fff}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px;position:relative;z-index:2}
+  @media(max-width:560px){.wrap{padding:0 18px}}
+  h1,h2,h3,h4{font-family:var(--disp);font-weight:500;letter-spacing:-.02em;line-height:1.08}
+  .skywash{background:linear-gradient(180deg,var(--ice),#8fe9bf);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .eye{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-ink);font-weight:400}
+
+  .grid-bg{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(186,215,247,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(186,215,247,.05) 1px,transparent 1px);background-size:88px 88px;mask-image:radial-gradient(130% 90% at 50% 0,#000 34%,transparent 74%)}
+  .halo{position:fixed;top:-42vh;left:50%;transform:translateX(-50%);width:130vw;height:90vh;z-index:0;pointer-events:none;background:radial-gradient(45% 55% at 50% 40%,rgba(47,224,142,.15),transparent 70%);filter:blur(30px)}
+  body::after{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+  .btn{display:inline-flex;align-items:center;gap:8px;font:500 14px var(--sans);padding:11px 20px;border-radius:999px;cursor:pointer;border:1px solid transparent;transition:transform .25s var(--ease),box-shadow .3s var(--ease),background .2s}
+  .btn-primary{background:linear-gradient(180deg,#eafff5,#bff8dd);color:#04351f;box-shadow:0 0 0 1px rgba(47,224,142,.4),0 8px 26px rgba(47,224,142,.24)}
+  .btn-primary:hover{box-shadow:0 0 0 1px rgba(47,224,142,.7),0 12px 40px rgba(47,224,142,.4);transform:translateY(-2px)}
+  .btn-ghost{background:var(--frost2);color:#fff;box-shadow:inset 0 0 0 1px var(--hair)}.btn-ghost:hover{background:var(--frost3)}
+  .btn .arrow{transition:transform .3s var(--ease)}.btn:hover .arrow{transform:translateX(3px)}
+
+  header.nav{position:sticky;top:0;z-index:60;transition:.3s}
+  header.nav .bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+  header.nav.scrolled{background:rgba(5,6,15,.72);backdrop-filter:saturate(1.5) blur(16px);-webkit-backdrop-filter:saturate(1.5) blur(16px);box-shadow:0 1px 0 var(--hair)}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:600;font-size:18px;color:#fff}
+  .brand .mark{width:28px;height:28px;border-radius:8px;background:linear-gradient(150deg,#121826,#0a0d18);color:#fff;display:grid;place-items:center;font-weight:700;font-size:15px;position:relative;box-shadow:var(--glow)}
+  .brand .mark::after{content:"";position:absolute;top:5px;right:5px;width:5px;height:5px;border-radius:50%;background:var(--acc);box-shadow:0 0 8px var(--acc)}
+  .backlink{font-size:13.5px;color:var(--moon);display:inline-flex;align-items:center;gap:7px}.backlink:hover{color:#fff}
+
+  .phead{padding:70px 0 8px;text-align:center}
+  .phead h1{font-size:clamp(38px,6vw,62px);font-weight:500;color:var(--ice);margin-top:16px;text-wrap:balance;max-width:16ch;margin-inline:auto}
+  .phead p{font-size:18px;color:var(--moon);max-width:60ch;margin:20px auto 0;line-height:1.55}
+  .phead .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:26px}
+  .phead .chips a{font-size:12.5px;color:var(--moon);background:var(--frost2);box-shadow:inset 0 0 0 1px var(--hair);padding:7px 13px;border-radius:999px;transition:.2s}
+  .phead .chips a:hover{color:#fff;box-shadow:inset 0 0 0 1px var(--hair2),0 0 20px rgba(47,224,142,.12)}
+
+  .deptsec{padding:64px 0 0}
+  .dhead{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+  .dhead .di{width:44px;height:44px;border-radius:9999px;background:var(--frost2);box-shadow:inset 0 0 0 1px var(--hair),inset 0 0 16px rgba(47,224,142,.1);display:grid;place-items:center;flex:none}
+  .dhead .di svg{width:20px;height:20px;stroke:var(--acc-ink);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .dhead h2{font-size:clamp(24px,3vw,34px);font-weight:500;color:#fff}
+  .dhead .ct{margin-left:auto;font:400 12px var(--mono);color:var(--acc-ink);background:var(--acc-soft);padding:5px 11px;border-radius:999px}
+  .dintro{font-size:15.5px;color:var(--moon);max-width:70ch;margin:0 0 26px;line-height:1.55}
+  .agrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media(max-width:900px){.agrid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.agrid{grid-template-columns:1fr}}
+  .acard{border-radius:16px;background:var(--frost);box-shadow:var(--shadow-card);padding:20px;position:relative;overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+  .acard::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .4s;background:radial-gradient(240px 240px at var(--mx,50%) var(--my,50%),rgba(47,224,142,.12),transparent 62%)}
+  .acard:hover{transform:translateY(-4px);box-shadow:var(--shadow-float)}.acard:hover::after{opacity:1}
+  .acard.feat{box-shadow:var(--shadow-float),0 0 40px rgba(47,224,142,.12);grid-column:span 3}
+  @media(max-width:900px){.acard.feat{grid-column:span 2}}@media(max-width:600px){.acard.feat{grid-column:span 1}}
+  .acard.feat::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;pointer-events:none;background:linear-gradient(150deg,var(--acc),transparent 55%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+  .acard .an{display:flex;align-items:center;gap:9px;position:relative;z-index:1}
+  .acard .an .adot{width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 8px var(--acc);flex:none}
+  .acard .an h4{font-size:15.5px;font-weight:600;color:#fff}
+  .acard .an .badge{margin-left:auto;font:500 9px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:#04160d;background:linear-gradient(100deg,var(--acc),var(--acc-d));padding:3px 8px;border-radius:999px}
+  .acard .ad{font-size:13.5px;color:var(--moon);margin-top:10px;line-height:1.55;position:relative;z-index:1}
+  .acard .abens{margin-top:14px;display:flex;flex-direction:column;gap:8px;position:relative;z-index:1}
+  .acard .ben{display:flex;gap:9px;font-size:12.5px;color:#eef3ff;line-height:1.45}
+  .acard .ben .bl{font:500 9px var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--acc-ink);background:var(--acc-soft);padding:3px 7px;border-radius:6px;flex:none;height:fit-content;margin-top:1px;width:56px;text-align:center}
+  .feat .ftwocol{display:grid;grid-template-columns:1.1fr 1fr;gap:22px;align-items:center;margin-top:14px;position:relative;z-index:1}
+  @media(max-width:700px){.feat .fwviz{display:none}}
+  .fwviz{border-radius:14px;background:rgba(10,13,22,.5);box-shadow:inset 0 0 0 1px var(--hair);padding:16px;display:flex;flex-direction:column;gap:11px}
+  .fwrow{display:grid;grid-template-columns:96px 1fr 40px;gap:10px;align-items:center;font-size:11.5px;color:var(--moon)}
+  .fwrow .m{height:11px;border-radius:999px;background:var(--frost3);overflow:hidden}.fwrow .m i{display:block;height:100%;border-radius:999px;background:var(--fog2)}
+  .fwrow.win{color:#eef3ff}.fwrow.win .m i{background:linear-gradient(90deg,var(--acc-d),var(--acc));box-shadow:0 0 12px rgba(47,224,142,.5)}
+  .fwrow .v{text-align:right;font-family:var(--mono);color:var(--acc-ink)}
+
+  .cta-band{padding:110px 0 20px;text-align:center}
+  .cta-band .box{border-radius:28px;background:linear-gradient(180deg,rgba(12,16,26,.7),rgba(7,9,16,.72));padding:60px 28px;position:relative;overflow:hidden;box-shadow:var(--shadow-float),var(--glow)}
+  .cta-band .box::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 100% at 50% 0,rgba(47,224,142,.2),transparent 60%)}
+  .cta-band .box>*{position:relative;z-index:1}
+  .cta-band h2{font-size:clamp(28px,4vw,44px);font-weight:500;color:var(--ice);max-width:20ch;margin:0 auto;text-wrap:balance}
+  .cta-band p{font-size:16.5px;color:var(--moon);margin:16px auto 0;max-width:52ch}
+  .cta-band .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+
+  footer{box-shadow:inset 0 1px 0 var(--hair);padding:56px 0 46px;color:var(--moon);margin-top:40px}
+  .fbot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--fog)}
+  .fbot a{color:var(--moon)}.fbot a:hover{color:#fff}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  .brandlogo{height:34px;width:auto;display:block}
+</style>
+</head>
+<body>
+<div class="grid-bg" aria-hidden="true"></div><div class="halo" aria-hidden="true"></div>
+
+<header class="nav" id="nav"><div class="wrap bar">
+  <a class="brand" href="/"><img class="brandlogo" src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
+  <a class="backlink" href="/"><span class="arrow" style="transform:scaleX(-1);display:inline-block">→</span> Back to overview</a>
+</div></header>
+
+<section class="phead"><div class="wrap">
+  <span class="eye reveal">The fleet, in detail</span>
+  <h1 class="reveal">Meet the 40+ agents that <span class="skywash">run your shop</span>.</h1>
+  <p class="reveal">Each one is a specialist that owns a single job, does it around the clock, and hands a human the calls that need judgment. Here's exactly what every agent does, how it makes your team's day easier, and how it grows the business.</p>
+  <div class="chips reveal">
+    <a href="#front-desk">Front Desk</a><a href="#growth">Growth</a><a href="#money">Money</a><a href="#shop-floor">Shop Floor</a><a href="#reputation">Reputation</a><a href="#insurance">Insurance</a><a href="#intelligence">Intelligence</a><a href="#people">People</a>
+  </div>
+</div></section>
+
+<!-- FRONT DESK -->
+<section class="deptsec" id="front-desk"><div class="wrap">
+  <div class="dhead reveal"><span class="di"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg></span><h2>Front Desk</h2><span class="ct">7 agents</span></div>
+  <p class="dintro reveal">The busiest, highest-leverage corner of the shop. These agents make sure no call, text, or photo ever slips through, and that the customer gets a fast, human-sounding answer while your advisors keep working the counter.</p>
+  <div class="agrid">
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Missed-Call Rescue</h4></div><p class="ad">The second a call goes unanswered, it fires back a friendly text, "Sorry we missed you! Windshield, repair, or detail? Reply here and we'll get you booked."</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No frantic callback list, the customer is already handled.</div><div class="ben"><span class="bl">Business</span>Recovers the 30–50% of missed callers who'd otherwise call a competitor.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Inbox Triage</h4></div><p class="ad">Reads every incoming text, DM, and web form, labels it (lead / question / status / spam), sorts oldest-value-first, and attaches a drafted reply.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>Opens to a sorted queue with replies ready, inbox zero in minutes.</div><div class="ben"><span class="bl">Business</span>Leads get answered first, before they cool off.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Lead Intake</h4></div><p class="ad">Captures every new lead with its source and the page it came from, then drafts the first response and books it into the pipeline automatically.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No manual data entry, the lead is logged and ready.</div><div class="ben"><span class="bl">Business</span>You finally know which marketing actually produces jobs.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Quote Nurture</h4></div><p class="ad">Turns every estimate into a tracked job with an automatic follow-up arc, a day-2 nudge, a day-7 value re-frame, and a day-30 last call, all in your voice.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>Nobody has to remember to chase old quotes.</div><div class="ben"><span class="bl">Business</span>Recaptures estimates that used to quietly expire, pure found revenue.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Photo Estimate</h4></div><p class="ad">A customer texts a photo of the dent, chip, or interior. A vision model triages the severity, matches it to past jobs, and drafts a range-quote with a booking link.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>Skips the "come by and we'll look" back-and-forth.</div><div class="ben"><span class="bl">Business</span>Turns a 50%-no-show into a five-minute answer that books.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Call Intel</h4></div><p class="ad">Transcribes every call privately on your own hardware, then logs who called about what, flags any quote given verbally, and notes who's still owed a callback.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No note-taking, the call writes itself down.</div><div class="ben"><span class="bl">Business</span>Verbal quotes stop vanishing; every promise is tracked.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Receptionist Audit</h4></div><p class="ad">Listens across the week for missed opportunities, unanswered questions, un-booked interest, calls that went nowhere, and reports the patterns.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>Kind, specific feedback instead of guesswork.</div><div class="ben"><span class="bl">Business</span>Lifts the booking rate on calls you're already paying to receive.</div></div></div>
+  </div>
+</div></section>
+
+<!-- GROWTH -->
+<section class="deptsec" id="growth"><div class="wrap">
+  <div class="dhead reveal"><span class="di"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 14l3-4 4 3 5-7"/></svg></span><h2>Growth</h2><span class="ct">8 agents</span></div>
+  <p class="dintro reveal">A full marketing department that never sleeps, writing content, buying media, tuning the website, and building your local presence, all measured against booked repair orders instead of vanity clicks.</p>
+  <div class="agrid">
+    <div class="acard feat spot reveal">
+      <div class="an"><span class="adot"></span><h4>CRO Optimizer, your self-optimizing website</h4><span class="badge">Signature</span></div>
+      <div class="ftwocol fwrap fwcol"><div class="fwtxt">
+        <p class="ad">The CRO agent watches how real visitors behave in Google Analytics 4, then cross-references it against your CRM, who actually became a booked repair order, not just a click. It finds what's costing you bookings, automatically A/B tests a better version of the page, and ships the winner on its own. Your website quietly gets better every single week, with no designer and no developer.</p>
+        <div class="abens"><div class="ben"><span class="bl">Staff</span>Nobody has to touch the website, it improves itself.</div><div class="ben"><span class="bl">Business</span>Higher booking rate from the exact same traffic, compounding, every week.</div></div>
+      </div>
+      <div class="fwviz">
+        <div class="fwrow"><span>Variant A</span><span class="m"><i style="width:41%"></i></span><span class="v">4.1%</span></div>
+        <div class="fwrow win"><span>Variant B ✓</span><span class="m"><i style="width:78%"></i></span><span class="v">7.8%</span></div>
+        <div style="font:400 10.5px var(--mono);color:var(--fog);line-height:1.5">GA4 behavior × 214 CRM outcomes → shipped Variant B · <span style="color:var(--acc-ink)">+90% booking rate</span></div>
+      </div></div>
+    </div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>SEO / AEO Writer</h4></div><p class="ad">Writes and publishes genuinely useful articles that close the ranking gaps competitors are winning, tuned for both Google and the new AI answer engines.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No blog to write or update, ever.</div><div class="ben"><span class="bl">Business</span>Free, compounding search traffic that books jobs for years.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>SERP Scout</h4></div><p class="ad">Tracks where you rank for every service and ZIP you care about, and spots the fresh openings worth writing for next.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No rank-checking spreadsheets.</div><div class="ben"><span class="bl">Business</span>Effort always aimed at the keywords that actually convert.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Media Buyer</h4></div><p class="ad">Watches every ad dollar across Google and Meta and moves spend to the channel and campaign that produces the cheapest booked jobs, never paying for what you already rank #1 on.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No agency calls, no guessing at budgets.</div><div class="ben"><span class="bl">Business</span>"$18/lead on Google vs $40 on Meta", acted on, not just reported.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Content Studio</h4></div><p class="ad">Keeps your social feed alive with before/afters, review highlights, and seasonal offers, drafted for your approval, scheduled once you say go.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>The "we should post more" guilt disappears.</div><div class="ben"><span class="bl">Business</span>A steady, professional presence that keeps you top-of-mind.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Backlinks</h4></div><p class="ad">Finds and pitches local partners, suppliers, and directories worth a link, and tracks every reply.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No cold outreach to write.</div><div class="ben"><span class="bl">Business</span>Stronger local authority, you outrank the shop down the street.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Citations</h4></div><p class="ad">Audits your name, address, and phone across every directory and fixes the mismatches that quietly hurt local ranking.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No tedious directory cleanup.</div><div class="ben"><span class="bl">Business</span>More trust from Google's map pack, more calls from nearby drivers.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Competitor Monitor</h4></div><p class="ad">Keeps an eye on nearby shops, their pricing, offers, reviews, and rankings, and flags what's worth reacting to.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No manual competitor snooping.</div><div class="ben"><span class="bl">Business</span>You react to the market in days, not quarters.</div></div></div>
+  </div>
+</div></section>
+
+<!-- MONEY -->
+<section class="deptsec" id="money"><div class="wrap">
+  <div class="dhead reveal"><span class="di"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><h2>Money</h2><span class="ct">6 agents</span></div>
+  <p class="dintro reveal">The CFO a small shop can't afford. These agents reconcile every dollar's journey, catch the money quietly leaking out the back, and tell you what's coming, in plain English, not spreadsheets.</p>
+  <div class="agrid">
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>CFO Brief</h4></div><p class="ad">Turns your books and shop numbers into one weekly money story per shop: what you grossed, where margin moved, and why.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No month-end scramble to make sense of the numbers.</div><div class="ben"><span class="bl">Business</span>Decisions backed by the real picture, every Friday.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Controller</h4></div><p class="ad">Keeps the day-to-day books honest, categorizing, matching, and flagging anything that looks off before it becomes a problem.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>Cleaner books with far less bookkeeping time.</div><div class="ben"><span class="bl">Business</span>Fewer surprises, an easier relationship with your CPA.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>AR Collections</h4></div><p class="ad">Tracks aging invoices, customer and insurer, and drafts a courteous, escalating reminder arc so nothing owed gets forgotten.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No awkward "you still owe us" calls to make.</div><div class="ben"><span class="bl">Business</span>Cash you already earned actually lands in the bank.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Leak Sweep</h4></div><p class="ad">Runs a daily cross-check no human can sustain: jobs closed but never invoiced, invoices under the estimate, discounts drifting up, fees creeping.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No manual auditing of every RO.</div><div class="ben"><span class="bl">Business</span>Every leak it catches is pure margin back in your pocket.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Membership</h4></div><p class="ad">Runs your recurring-revenue plans, flags churn risk, nudges unused benefits, and drafts renewals so memberships keep paying.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No manual tracking of who's due or lapsing.</div><div class="ben"><span class="bl">Business</span>Predictable monthly revenue, the thing that makes a shop sellable.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Pricing</h4></div><p class="ad">Reviews your costs, win-rates, and local competitor pricing each quarter and recommends where you're leaving money on the table.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No agonizing over what to charge.</div><div class="ben"><span class="bl">Business</span>Prices set by evidence, not folklore, margin without losing jobs.</div></div></div>
+  </div>
+</div></section>
+
+<!-- SHOP FLOOR -->
+<section class="deptsec" id="shop-floor"><div class="wrap">
+  <div class="dhead reveal"><span class="di"><svg viewBox="0 0 24 24"><path d="M14 6a2 2 0 1 1 4 0v4l4 2v8H2v-8l4-2V6a2 2 0 1 1 4 0"/></svg></span><h2>Shop Floor</h2><span class="ct">6 agents</span></div>
+  <p class="dintro reveal">Between "car arrives" and "car leaves" lives all the margin. These agents are the shop's working memory, what's where, what's stuck, what's next, without anyone updating a whiteboard.</p>
+  <div class="agrid">
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Repair Status</h4></div><p class="ad">Knows every vehicle's stage, bay, and promise date straight from your shop system, and drafts the status text customers keep calling to ask for.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>Fewer "is my car ready?" calls to field.</div><div class="ben"><span class="bl">Business</span>Customers feel informed, and they leave better reviews.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Parts Readiness</h4></div><p class="ad">Tracks which jobs are waiting on parts, chases vendors for ETAs, and scores which suppliers are chronically late.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No calling around for part status.</div><div class="ben"><span class="bl">Business</span>Fewer stalled bays and blown promise dates.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Estimate Recovery</h4></div><p class="ad">Watches for estimates that were written but never approved and drafts the nudge that gets the customer off the fence.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No digging through old estimates.</div><div class="ben"><span class="bl">Business</span>Turns dead estimates back into booked work.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Capacity Forecast</h4></div><p class="ad">Blends your bookings with the shop's history to predict next week's load, names the bottleneck, and suggests the one move that smooths it.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>Fewer overbooked chaos days.</div><div class="ben"><span class="bl">Business</span>More cars through the same bays, without burning out the team.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Cycle-Time</h4></div><p class="ad">Measures how long each stage really takes, intake to delivery, and names the step that's slowing you down each week.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>Objective proof of where the day gets stuck.</div><div class="ben"><span class="bl">Business</span>Faster cars out the door, and the number insurers buy for DRP.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Ops Scoreboard</h4></div><p class="ad">Closes out each day in a few plain sentences: cars in and out, dollars, what got stuck, what tomorrow needs.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>Nobody compiles a report at close.</div><div class="ben"><span class="bl">Business</span>A daily pulse on the shop without walking every bay.</div></div></div>
+  </div>
+</div></section>
+
+<!-- REPUTATION -->
+<section class="deptsec" id="reputation"><div class="wrap">
+  <div class="dhead reveal"><span class="di"><svg viewBox="0 0 24 24"><path d="m12 2 3 6.5 7 .9-5 4.8 1.3 7L12 18l-6.6 3.2L6.7 14l-5-4.8 7-.9Z"/></svg></span><h2>Reputation</h2><span class="ct">6 agents</span></div>
+  <p class="dintro reveal">Your reviews and your repeat customers are the moat competitors can't copy. These agents turn every finished job into a five-star review and every past customer into a returning one.</p>
+  <div class="agrid">
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Reputation</h4></div><p class="ad">Sends a personalized review request the moment a job is done, and drafts a reply to every review that comes in, good or bad.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No remembering to ask, no wording to agonize over.</div><div class="ben"><span class="bl">Business</span>More five-star reviews, the #1 driver of new local customers.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Review-to-Content</h4></div><p class="ad">Takes your best reviews and turns them into social posts and website proof automatically.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>Free content with zero effort.</div><div class="ben"><span class="bl">Business</span>Social proof working for you everywhere at once.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Service Recovery</h4></div><p class="ad">Catches an unhappy customer early and drafts a thoughtful save before a bad review ever gets posted.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>A calm, ready response instead of a scramble.</div><div class="ben"><span class="bl">Business</span>Fewer public one-stars; more rescued relationships.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Lifecycle Reminders</h4></div><p class="ad">Sends service reminders based on each vehicle's real mileage, history, and season, "the Tacoma's due for brake fluid before winter," not a blast.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No campaign to build or list to pull.</div><div class="ben"><span class="bl">Business</span>Reads as memory, not marketing, and it re-books cars.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Card Sender</h4></div><p class="ad">Times small delights perfectly, a first-job thank-you, a "ten years with us," a post-complaint gesture.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>Thoughtfulness on autopilot.</div><div class="ben"><span class="bl">Business</span>The little touches that turn customers into regulars.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Upsell</h4></div><p class="ad">Spots honest, well-timed add-ons from the vehicle's history and drafts them for the advisor to offer.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>Suggestions ready at the counter, no memory required.</div><div class="ben"><span class="bl">Business</span>Higher average ticket, without pressure selling.</div></div></div>
+  </div>
+</div></section>
+
+<!-- INSURANCE -->
+<section class="deptsec" id="insurance"><div class="wrap">
+  <div class="dhead reveal"><span class="di"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></span><h2>Insurance</h2><span class="ct">4 agents</span></div>
+  <p class="dintro reveal">Collision and glass are half-paperwork businesses. These agents run the adjuster dance so your estimators get their afternoons back, and win the cycle-time numbers that land DRP relationships.</p>
+  <div class="agrid">
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Insurance Tracking</h4></div><p class="ad">Keeps every claim moving on one board, estimate, approval, parts, repair, delivered, with alarms for anything aging or stalled.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No claim falls through the cracks.</div><div class="ben"><span class="bl">Business</span>Faster payments; less money frozen in limbo.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Insurance Liaison</h4></div><p class="ad">Drafts supplements with photo evidence, keeps adjusters updated on cadence, and texts customers their claim status without them calling.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>The estimator's paperwork afternoon, returned.</div><div class="ben"><span class="bl">Business</span>Approved supplements captured, not left on the table.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>DRP Relationship</h4></div><p class="ad">Works your direct-repair pipeline, application status, monthly touches, and seasonal angles, with your cycle-time scorecards attached.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No relationship-nurturing to remember.</div><div class="ben"><span class="bl">Business</span>A steady stream of insurer-referred work.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>ADAS Capture</h4></div><p class="ad">Logs every calibration with pre/post scans and photo proof, auto-attached to the invoice and insurer file.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>Documentation handled without a second thought.</div><div class="ben"><span class="bl">Business</span>Liability armor and a justified upsell few small shops can produce.</div></div></div>
+  </div>
+</div></section>
+
+<!-- INTELLIGENCE -->
+<section class="deptsec" id="intelligence"><div class="wrap">
+  <div class="dhead reveal"><span class="di"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></span><h2>Intelligence</h2><span class="ct">6 agents</span></div>
+  <p class="dintro reveal">The brain under everything. These agents keep one source of truth, watch for trouble, and answer any question you can think to ask about your shop.</p>
+  <div class="agrid">
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>The General</h4></div><p class="ad">Your always-on assistant, ask it anything ("how many brake jobs last month?", "what's our comeback policy?") and get a sourced answer in seconds.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>New hires get instant answers instead of interrupting you.</div><div class="ben"><span class="bl">Business</span>The shop's knowledge lives in the system, not one person's head.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Daily Brief</h4></div><p class="ad">Every morning, a five-second read of what needs you today across all your shops, drafts waiting, risks, and wins.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>Walk in already knowing the priorities.</div><div class="ben"><span class="bl">Business</span>Nothing important slips on a busy morning.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Watchman</h4></div><p class="ad">Watches every feed and agent for anomalies and quietly raises a flag the moment something looks wrong.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>Problems surface before customers notice.</div><div class="ben"><span class="bl">Business</span>Small issues caught early, never snowballing.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Market Watch</h4></div><p class="ad">Keeps a pulse on local demand, seasonality, and trends worth acting on in your area.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>Context without the research.</div><div class="ben"><span class="bl">Business</span>You get ahead of seasonal swings instead of reacting to them.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Weather Watch</h4></div><p class="ad">Anticipates weather that drives demand, hail, first freeze, storm season, and preps the right offers and staffing notes.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>Ready for the rush before it hits.</div><div class="ben"><span class="bl">Business</span>Capture the weather-driven work competitors miss.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Identity Graph</h4></div><p class="ad">Resolves one customer across every system, their vehicles, jobs, dollars, and conversations into a single profile.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>One clean history instead of five half-records.</div><div class="ben"><span class="bl">Business</span>Powers every reminder, winback, and cross-sell in the platform.</div></div></div>
+  </div>
+</div></section>
+
+<!-- PEOPLE -->
+<section class="deptsec" id="people"><div class="wrap">
+  <div class="dhead reveal"><span class="di"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/></svg></span><h2>People</h2><span class="ct">3 agents</span></div>
+  <p class="dintro reveal">Turnover is the quiet killer at this size, knowledge walks out the door. These agents hire, onboard, and coach so the shop trains itself.</p>
+  <div class="agrid">
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Hiring</h4></div><p class="ad">Drafts role posts in your voice, screens applicants, builds interview kits, and keeps a bench of past candidates worth re-approaching.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>No job post to write or resumes to wade through.</div><div class="ben"><span class="bl">Business</span>A good hire ready faster when someone quits on a Friday.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>HR Ops</h4></div><p class="ad">Generates day-one-to-day-30 onboarding checklists per role and keeps them current as your process changes.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>New people ramp without shadowing you all week.</div><div class="ben"><span class="bl">Business</span>Consistent training, every hire learns it the right way.</div></div></div>
+    <div class="acard spot reveal"><div class="an"><span class="adot"></span><h4>Counter Coaching</h4></div><p class="ad">Turns your real call recordings into weekly, kindly-framed coaching, the phrases that book work vs. the ones that lose it, per advisor.</p><div class="abens"><div class="ben"><span class="bl">Staff</span>Specific, private tips instead of vague "sell more."</div><div class="ben"><span class="bl">Business</span>A sales trainer you couldn't otherwise afford, from data you already have.</div></div></div>
+  </div>
+</div></section>
+
+<section class="cta-band"><div class="wrap"><div class="box reveal">
+  <h2>Put the whole fleet to work in your shop.</h2>
+  <p>Book a 20-minute demo and we'll show you which agents would move the needle first, against your own numbers.</p>
+  <div class="cta"><a class="btn btn-primary" href="/demo/">Book a demo <span class="arrow">→</span></a><a class="btn btn-ghost" href="/#platform">Explore the platform</a></div>
+</div></div></section>
+
+<footer><div class="wrap"><div class="fbot"><span>© 2026 RevvOS. All rights reserved.</span><span><a href="/">← Back to overview</a></span></div></div></footer>
+
+<script>
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const nav=document.getElementById('nav');
+  const onScroll=()=>nav.classList.toggle('scrolled',scrollY>8);onScroll();addEventListener('scroll',onScroll,{passive:true});
+  const reveals=[...document.querySelectorAll('.reveal')];
+  if(reduce||!('IntersectionObserver'in window)){reveals.forEach(r=>r.classList.add('in'));}
+  else{const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;const sibs=[...(el.parentElement?el.parentElement.children:[])].filter(c=>c.classList.contains('reveal'));el.style.transitionDelay=Math.min(Math.max(0,sibs.indexOf(el))*45,260)+'ms';el.classList.add('in');io.unobserve(el);});},{threshold:.1,rootMargin:'0px 0px -6% 0px'});reveals.forEach(r=>io.observe(r));}
+  if(!reduce){document.querySelectorAll('.spot').forEach(c=>c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');}));}
+</script>
+</body>
+</html>

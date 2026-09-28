@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact — RevvOS</title>
+<meta name="description" content="Get in touch with the RevvOS team.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080a14'/%3E%3Cpath d='M9 22V10h6.2a3.9 3.9 0 0 1 1.5 7.5L20 22h-3.3l-2.9-4.2H12V22H9Zm3-6.7h2.9a1.6 1.6 0 0 0 0-3.2H12v3.2Z' fill='%23eaf1ff'/%3E%3Ccircle cx='23' cy='11' r='2.4' fill='%232fe08e'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/base.css">
+<style>
+  .cwrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start;padding:60px 0 40px}
+  @media(max-width:840px){.cwrap{grid-template-columns:1fr;gap:32px}}
+  .cside h1{font-size:clamp(32px,4.4vw,46px);font-weight:500;color:var(--ice);text-wrap:balance}
+  .cside p{font-size:16.5px;color:var(--moon);margin-top:16px;line-height:1.6}
+  .cways{margin-top:28px;display:flex;flex-direction:column;gap:12px}
+  .cway{display:flex;gap:13px;align-items:center;padding:15px 16px;border-radius:14px;background:var(--frost);box-shadow:var(--shadow-card)}
+  .cway .ci{width:38px;height:38px;border-radius:9999px;background:var(--acc-soft);box-shadow:inset 0 0 0 1px rgba(47,224,142,.2);display:grid;place-items:center;flex:none}
+  .cway .ci svg{width:18px;height:18px;stroke:var(--acc-ink);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .cway .cl{font-size:11px;color:var(--fog);text-transform:uppercase;letter-spacing:.06em;font-family:var(--mono)}
+  .cway .cv{font-size:14.5px;color:#fff;font-weight:500;margin-top:2px}.cway .cv a:hover{color:var(--acc-ink)}
+</style>
+</head>
+<body>
+<div class="grid-bg" aria-hidden="true"></div><div class="halo" aria-hidden="true"></div>
+
+<header class="nav" id="nav"><div class="wrap bar">
+  <a class="brand" href="/"><img class="brandlogo" src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
+  <a class="backlink" href="/"><span class="bk">→</span> Back to overview</a>
+</div></header>
+
+<div class="wrap"><div class="cwrap">
+  <div class="cside reveal">
+    <span class="eye">Contact</span>
+    <h1>Let's talk about <span class="skywash">your shop</span>.</h1>
+    <p>Questions about the platform, pricing, or whether RevvOS fits how you run things? We answer every message ourselves, usually within one business day.</p>
+    <div class="cways">
+      <div class="cway"><span class="ci"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="m2 7 10 6 10-6"/></svg></span><div><div class="cl">Email</div><div class="cv"><a href="mailto:team@simplufy.com">team@simplufy.com</a></div></div></div>
+      <div class="cway"><span class="ci"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg></span><div><div class="cl">Want a walkthrough?</div><div class="cv"><a href="/demo/">Book a 20-minute demo →</a></div></div></div>
+    </div>
+  </div>
+
+  <div class="glasscard reveal">
+    <form id="cForm" novalidate>
+      <div class="row2">
+        <div class="field"><label>Name <span class="req">*</span></label><input name="name" required placeholder="Your name"></div>
+        <div class="field"><label>Shop</label><input name="shop" placeholder="Your shop"></div>
+      </div>
+      <div class="field"><label>Email <span class="req">*</span></label><input name="email" type="email" required placeholder="you@yourshop.com"></div>
+      <div class="field"><label>How can we help? <span class="req">*</span></label><textarea name="message" required placeholder="Tell us what's on your mind..."></textarea></div>
+      <button class="btn btn-primary btn-lg" type="submit" style="width:100%;justify-content:center">Send message <span class="arrow">→</span></button>
+      <p class="formnote">We'll only use this to reply. See our <a href="/legal/privacy/" style="color:var(--acc-ink)">Privacy Policy</a>.</p>
+    </form>
+    <div class="ok" id="ok">
+      <div class="tick"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <h3>Ready to send</h3>
+      <p>Your email app just opened with your message. Send it and we'll get back to you shortly. If nothing opened, reach us at <a href="mailto:team@simplufy.com" style="color:var(--acc-ink)">team@simplufy.com</a>.</p>
+    </div>
+  </div>
+</div></div>
+
+<footer><div class="wrap"><div class="fbot">
+  <span>© 2026 RevvOS. All rights reserved.</span>
+  <span class="fl"><a href="/legal/privacy/">Privacy</a><a href="/legal/terms/">Terms</a><a href="/legal/security/">Security</a><a href="/demo/">Book a demo</a></span>
+</div></div></footer>
+
+<script>
+  const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>8),{passive:true});
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.reveal').forEach((r,i)=>{if(reduce){r.classList.add('in');return;}const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*80);io.disconnect();}}),{threshold:.1});io.observe(r);});
+  const f=document.getElementById('cForm'),ok=document.getElementById('ok');
+  f.addEventListener('submit',(e)=>{e.preventDefault();if(!f.checkValidity()){f.reportValidity();return;}
+    const d=new FormData(f),g=k=>(d.get(k)||'').toString().trim();
+    const body=`Name: ${g('name')}%0D%0AShop: ${g('shop')}%0D%0AEmail: ${g('email')}%0D%0A%0D%0A${g('message')}`;
+    window.location.href=`mailto:team@simplufy.com?subject=${encodeURIComponent('RevvOS enquiry — '+(g('name')))}&body=${body}`;
+    f.style.display='none';ok.classList.add('show');});
+</script>
+</body>
+</html>
