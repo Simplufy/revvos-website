@@ -97,6 +97,8 @@ for (const file of await htmlFiles(root)) {
     let resolved = target;
     if (!(await exists(resolved))) resolved = path.join(target, "index.html");
     else if ((await access(resolved).then(() => true, () => false)) && !path.extname(resolved)) resolved = path.join(resolved, "index.html");
+    // Cloudflare Pages serves /slug from slug.html (content-factory pages ship this way)
+    if (!(await exists(resolved)) && !path.extname(target)) resolved = `${target}.html`;
     if (!(await exists(resolved))) {
       errors.push(`Broken link in ${relative}: ${href}`);
       continue;
