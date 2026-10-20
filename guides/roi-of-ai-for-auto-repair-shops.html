@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ROI of AI for Auto Repair Shops: Build the Number | RevvOS</title>
+  <meta name="description" content="Every ROI figure you have seen for AI in a repair shop uses somebody else's inputs. Here are the inputs that actually drive yours, and how to compute the number.">
+  <meta property="og:title" content="ROI of AI for Auto Repair Shops | RevvOS">
+  <meta property="og:description" content="The inputs that drive the ROI of AI in your shop, written out as arithmetic you control, plus what vendor claims leave out.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://revvos.xyz/guides/roi-of-ai-for-auto-repair-shops">
+  <meta name="theme-color" content="#05060f">
+  <link rel="canonical" href="https://revvos.xyz/guides/roi-of-ai-for-auto-repair-shops">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080a14'/%3E%3Cpath d='M9 22V10h6.2a3.9 3.9 0 0 1 1.5 7.5L20 22h-3.3l-2.9-4.2H12V22H9Zm3-6.7h2.9a1.6 1.6 0 0 0 0-3.2H12v3.2Z' fill='%23eaf1ff'/%3E%3Ccircle cx='23' cy='11' r='2.4' fill='%232fe08e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/marketing.css?v=6">
+  <link rel="stylesheet" href="/assets/pages-flow.css">
+  <link rel="stylesheet" href="/assets/brand-alignment.css">
+  <link rel="stylesheet" href="/assets/os-story.css?v=9">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "ROI of AI for Auto Repair Shops",
+        "url": "https://revvos.xyz/guides/roi-of-ai-for-auto-repair-shops",
+        "description": "How to compute the ROI of AI for a repair shop from your own inputs, and why vendor figures mislead.",
+        "isPartOf": { "@type": "WebSite", "name": "RevvOS", "url": "https://revvos.xyz/" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://revvos.xyz/" },
+          { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://revvos.xyz/resources" },
+          { "@type": "ListItem", "position": 3, "name": "ROI of AI for Auto Repair Shops", "item": "https://revvos.xyz/guides/roi-of-ai-for-auto-repair-shops" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="flow-page action-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="/platform">Platform</a>
+      <details class="nav-group"><summary>Solutions</summary><div class="nav-menu"><a href="/solutions/multi-location">Multi-location operations</a><a href="/solutions/daily-operations">Daily operations</a><a href="/solutions/executive-visibility">Executive visibility</a></div></details>
+      <details class="nav-group"><summary>Roles</summary><div class="nav-menu"><a href="/roles/owner">Owners</a><a href="/roles/operations">Operations leaders</a><a href="/roles/marketing">Marketing leaders</a></div></details>
+      <details class="nav-group"><summary>Use cases</summary><div class="nav-menu"><a href="/use-cases/reputation">Reputation</a><a href="/use-cases/local-seo">Local SEO</a><a href="/use-cases/social-media">Social media</a><a href="/use-cases/customer-engagement">Customer engagement</a><a href="/use-cases/operational-visibility">Operational visibility</a><a href="/use-cases/compliance">Compliance</a></div></details>
+      <a href="/resources">Resources</a>
+      <a href="/support/">Support</a>
+    </nav>
+    <div class="nav-actions"><a class="btn btn-secondary" href="/contact">Contact</a><a class="btn btn-primary" href="/demo">Get an assessment</a><button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button></div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="action-hero" aria-labelledby="roi-title">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/resources">Resources</a><span>/</span><span aria-current="page">ROI of AI for Auto Repair Shops</span></nav>
+      <div class="action-hero-copy reveal">
+        <p class="eyebrow">Guide</p>
+        <h1 id="roi-title">Every ROI number you have seen for shop AI was built with somebody else's inputs.</h1>
+        <p class="lede">A vendor figure assumes a missed-call rate, a close rate, an average ticket, and a recovery rate. Get those wrong and a good decision looks bad, or a bad one looks excellent. This page does not give you a number. It gives you the formula and the inputs, so the number you end up with is yours and you can defend it.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/demo">Work through your own inputs <span class="arrow">-&gt;</span></a>
+          <a class="btn btn-secondary" href="/resources">More resources</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding: 64px 0; border-top: 1px solid var(--line);" aria-labelledby="warn-title">
+    <div class="wrap">
+      <div style="max-width: 840px; background: var(--canvas-2); border: 1px solid var(--line); border-left: 3px solid var(--green); border-radius: 12px; padding: 28px;" class="reveal">
+        <p class="eyebrow">Read This Part First</p>
+        <h2 id="warn-title" style="font-size: 26px; color: var(--ice); margin-bottom: 14px;">Why a single ROI percentage cannot apply to your shop.</h2>
+        <p style="color: var(--moon); font-size: 16px; line-height: 1.7; margin-bottom: 14px;">Any figure you did not compute from your own inputs describes a different building, a different labor market, and a different customer mix. That is true of numbers published by vendors, by trade publications, and by this page. We do not publish an expected ROI for a shop we have not seen.</p>
+        <p style="color: var(--moon); font-size: 16px; line-height: 1.7; margin: 0;">What follows is the structure of the calculation, the inputs that decide it, and where an optimistic assumption does the most damage.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding: 72px 0; background: var(--canvas-2); border-top: 1px solid var(--line);" aria-labelledby="inputs-title">
+    <div class="wrap">
+      <div style="max-width: 760px; margin-bottom: 36px;" class="reveal">
+        <p class="eyebrow">The Inputs</p>
+        <h2 id="inputs-title" style="font-size: 30px; color: var(--ice); margin-bottom: 12px;">Five inputs decide almost the entire answer.</h2>
+        <p style="color: var(--moon); font-size: 17px;">Each of these you can measure this week from your own phone log and your own closed tickets. None requires a new system to find out.</p>
+      </div>
+      <div style="display: grid; gap: 14px;" class="reveal">
+        <div style="background: var(--canvas); border: 1px solid var(--line); border-radius: 12px; padding: 24px 26px; display: grid; grid-template-columns: 190px 1fr; gap: 24px;">
+          <div style="font-family: var(--mono); font-size: 14px; color: var(--green);">Missed calls per week</div>
+          <p style="font-size: 15px; color: var(--moon); margin: 0;">From your phone system's call log, not from memory. Count abandoned calls, voicemails, and after-hours rings. Owners guess low, because a call that never got answered never became a person in front of them.</p>
+        </div>
+        <div style="background: var(--canvas); border: 1px solid var(--line); border-radius: 12px; padding: 24px 26px; display: grid; grid-template-columns: 190px 1fr; gap: 24px;">
+          <div style="font-family: var(--mono); font-size: 14px; color: var(--green);">Close rate on inbound calls</div>
+          <p style="font-size: 15px; color: var(--moon); margin: 0;">Of the inbound calls that reach a person, what share becomes a booked appointment. Pull it from your booking log. Do not import an industry figure, because yours is the one applied to your call volume.</p>
+        </div>
+        <div style="background: var(--canvas); border: 1px solid var(--line); border-radius: 12px; padding: 24px 26px; display: grid; grid-template-columns: 190px 1fr; gap: 24px;">
+          <div style="font-family: var(--mono); font-size: 14px; color: var(--green);">Average repair order</div>
+          <p style="font-size: 15px; color: var(--moon); margin: 0;">Your own, from closed tickets. Be honest about the mix: if much of your work is oil changes, the blended average is lower than owners tend to quote, and the lower number is the correct one.</p>
+        </div>
+        <div style="background: var(--canvas); border: 1px solid var(--line); border-radius: 12px; padding: 24px 26px; display: grid; grid-template-columns: 190px 1fr; gap: 24px;">
+          <div style="font-family: var(--mono); font-size: 14px; color: var(--green);">Declined lines per week</div>
+          <p style="font-size: 15px; color: var(--moon); margin: 0;">Count the individual recommendations a customer said no to, not the tickets. One declined ticket may hold three lines. <span style="color: var(--dim);">If your system does not log declines individually, this is the first input you cannot measure, and that gap is itself the finding.</span></p>
+        </div>
+        <div style="background: var(--canvas); border: 1px solid var(--line); border-radius: 12px; padding: 24px 26px; display: grid; grid-template-columns: 190px 1fr; gap: 24px;">
+          <div style="font-family: var(--mono); font-size: 14px; color: var(--green);">Average declined line value</div>
+          <p style="font-size: 15px; color: var(--moon); margin: 0;">Again your own. Declines skew toward larger work than the average ticket, because a customer says no to a four-figure job more readily than to a service. More value per line recovered, but a lower recovery rate.</p>
+        </div>
+      </div>
+      <div style="margin-top: 22px; padding: 20px 24px; background: var(--canvas); border: 1px solid var(--line); border-radius: 10px; max-width: 840px;" class="reveal">
+        <p style="font-size: 15px; color: var(--moon); margin: 0;"><strong style="color: var(--ice);">The sixth input is the suppression dial:</strong> what share of each pool is actually recoverable. No honest model recovers all of it. Some missed callers have already gone elsewhere. Some declined work was declined for a reason that has not changed. If the case only works at a recovery rate you would not defend out loud, it does not work.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding: 72px 0; border-top: 1px solid var(--line);" aria-labelledby="formula-title">
+    <div class="wrap">
+      <div style="max-width: 780px; margin-bottom: 32px;" class="reveal">
+        <p class="eyebrow">The Arithmetic</p>
+        <h2 id="formula-title" style="font-size: 30px; color: var(--ice); margin-bottom: 12px;">Three terms, written in plain language.</h2>
+        <p style="color: var(--moon); font-size: 17px;">The calculation below is the whole model. It is deliberately unglamorous: no multiplier, no compounding curve, and no assumed growth from month to month, because those are the parts that turn a defensible estimate into a sales document.</p>
+      </div>
+
+      <div style="background: var(--canvas-2); border: 1px solid var(--line); border-radius: 14px; padding: 28px; font-family: var(--mono); font-size: 14px; line-height: 2.1; color: var(--moon); overflow-x: auto;" class="reveal">
+        <div><span style="color: var(--green);">Term 1, recovered calls:</span></div>
+        <div style="padding-left: 20px;">missed calls per week x 4.33 x close rate x recovery rate x average repair order</div>
+        <div style="margin-top: 14px;"><span style="color: var(--green);">Term 2, recovered declined work:</span></div>
+        <div style="padding-left: 20px;">declined lines per week x 4.33 x recovery rate x average declined line value</div>
+        <div style="margin-top: 14px;"><span style="color: var(--green);">Term 3, advisor time returned:</span></div>
+        <div style="padding-left: 20px;">advisor hours per week on manual follow-up x 4.33 x loaded hourly cost</div>
+        <div style="margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line);"><span style="color: var(--green-bright);">Monthly value = Term 1 + Term 2 + Term 3</span></div>
+      </div>
+
+      <div style="margin-top: 20px; max-width: 840px;" class="reveal">
+        <p style="font-size: 15px; color: var(--moon); line-height: 1.7;">Term 3 is not revenue, it is capacity. Returning five advisor hours a week is worth something only if those hours go into work that would not otherwise have happened; if they go into a slower morning, the term is real but smaller than it looks. Nothing here accounts for the cost side, which is deliberate and is the whole subject of <a href="/guides/" style="color: var(--green);">the companion guide on what this actually costs</a>. A value figure without a cost figure is half a decision.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding: 72px 0; background: var(--canvas-2); border-top: 1px solid var(--line);" aria-labelledby="calc-title">
+    <div class="wrap">
+      <div style="max-width: 780px; margin-bottom: 32px;" class="reveal">
+        <p class="eyebrow">Your Inputs, Not Ours</p>
+        <h2 id="calc-title" style="font-size: 30px; color: var(--ice); margin-bottom: 12px;">Every field starts at zero. Nothing is pre-filled.</h2>
+        <p style="color: var(--moon); font-size: 17px;">If we shipped this with a house example already loaded, you would anchor on our numbers. Enter yours. The panel runs entirely in this page, sends nothing anywhere, and stores nothing.</p>
+      </div>
+
+      <div style="background: var(--canvas); border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;" class="reveal">        <div>
+          <div style="font-family: var(--mono); font-size: 11px; color: var(--fog); text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 18px;">Your shop</div>
+          <div style="display: grid; gap: 16px;">
+            <label style="display: block;">
+              <span style="display: block; font-size: 14px; color: var(--ice); margin-bottom: 7px;">Missed calls per week</span>
+              <input id="roi-calls" type="number" min="0" max="2000" value="0" style="width: 100%; background: var(--canvas-2); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; color: var(--ice); font-family: var(--mono); font-size: 15px;">
+            </label>
+            <label style="display: block;">
+              <span style="display: block; font-size: 14px; color: var(--ice); margin-bottom: 7px;">Close rate on inbound calls (%)</span>
+              <input id="roi-close" type="number" min="0" max="100" value="0" style="width: 100%; background: var(--canvas-2); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; color: var(--ice); font-family: var(--mono); font-size: 15px;">
+            </label>
+            <label style="display: block;">
+              <span style="display: block; font-size: 14px; color: var(--ice); margin-bottom: 7px;">Average repair order ($)</span>
+              <input id="roi-aro" type="number" min="0" max="100000" value="0" style="width: 100%; background: var(--canvas-2); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; color: var(--ice); font-family: var(--mono); font-size: 15px;">
+            </label>
+            <label style="display: block;">
+              <span style="display: block; font-size: 14px; color: var(--ice); margin-bottom: 7px;">Declined lines per week</span>
+              <input id="roi-lines" type="number" min="0" max="2000" value="0" style="width: 100%; background: var(--canvas-2); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; color: var(--ice); font-family: var(--mono); font-size: 15px;">
+            </label>
+            <label style="display: block;">
+              <span style="display: block; font-size: 14px; color: var(--ice); margin-bottom: 7px;">Average declined line value ($)</span>
+              <input id="roi-lineval" type="number" min="0" max="100000" value="0" style="width: 100%; background: var(--canvas-2); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; color: var(--ice); font-family: var(--mono); font-size: 15px;">
+            </label>
+            <label style="display: block;">
+              <span style="display: block; font-size: 14px; color: var(--ice); margin-bottom: 7px;">Advisor hours per week on manual follow-up</span>
+              <input id="roi-hours" type="number" min="0" max="200" value="0" style="width: 100%; background: var(--canvas-2); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; color: var(--ice); font-family: var(--mono); font-size: 15px;">
+            </label>
+            <label style="display: block;">
+              <span style="display: block; font-size: 14px; color: var(--ice); margin-bottom: 7px;">Loaded advisor cost per hour ($)</span>
+              <input id="roi-rate" type="number" min="0" max="1000" value="0" style="width: 100%; background: var(--canvas-2); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; color: var(--ice); font-family: var(--mono); font-size: 15px;">
+            </label>
+            <label style="display: block;">
+              <span style="display: block; font-size: 14px; color: var(--ice); margin-bottom: 7px;">Share of each pool you believe is recoverable (%)</span>
+              <input id="roi-recover" type="number" min="0" max="100" value="0" style="width: 100%; background: var(--canvas-2); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; color: var(--ice); font-family: var(--mono); font-size: 15px;">
+            </label>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: center; border-left: 1px solid var(--line); padding-left: 28px;">
+          <div style="font-family: var(--mono); font-size: 11px; color: var(--fog); text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 18px;">Monthly value of the work recovered</div>
+          <div style="display: grid; gap: 20px;">
+            <div>
+              <div style="font-family: var(--mono); font-size: 32px; color: var(--green); line-height: 1;" id="roi-phone">$0</div>
+              <div style="font-size: 13px; color: var(--fog); margin-top: 6px;">Term 1, recovered calls</div>
+            </div>
+            <div>
+              <div style="font-family: var(--mono); font-size: 32px; color: var(--green); line-height: 1;" id="roi-declined">$0</div>
+              <div style="font-size: 13px; color: var(--fog); margin-top: 6px;">Term 2, recovered declined work</div>
+            </div>
+            <div>
+              <div style="font-family: var(--mono); font-size: 32px; color: var(--ice); line-height: 1;" id="roi-advisor">$0</div>
+              <div style="font-size: 13px; color: var(--fog); margin-top: 6px;">Term 3, advisor capacity returned</div>
+            </div>
+            <div style="padding-top: 18px; border-top: 1px solid var(--line);">
+              <div style="font-family: var(--mono); font-size: 40px; color: var(--green-bright); line-height: 1;" id="roi-total">$0</div>
+              <div style="font-size: 13px; color: var(--fog); margin-top: 6px;">Monthly total, before any cost</div>
+            </div>
+          </div>
+          <p style="font-size: 13px; color: var(--dim); margin: 20px 0 0 0; line-height: 1.6;" id="roi-note">Enter your own figures to populate the panel. Until you do, every output stays at zero on purpose.</p>
+        </div>
+      </div>
+      <p style="margin-top: 18px; font-size: 14px; color: var(--fog); max-width: 780px;" class="reveal">This is arithmetic on your inputs, not a projection, a forecast, or a RevvOS result. It also says nothing about what any of this would cost. For that, see <a href="/guides/" style="color: var(--green);">what automation actually costs a shop</a>.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding: 72px 0; border-top: 1px solid var(--line);" aria-labelledby="work-title">
+    <div class="wrap">
+      <div style="max-width: 800px; margin-bottom: 32px;" class="reveal">
+        <p class="eyebrow">A Worked Example, With Placeholders</p>
+        <h2 id="work-title" style="font-size: 30px; color: var(--ice); margin-bottom: 12px;">Fill in the brackets. The blanks are yours.</h2>
+          <p style="font-size: 15px; color: var(--moon); margin: 0 0 12px 0;">This page will not put numbers in these fields, because any number we chose would be a claim about your shop that we cannot make. The structure is the part that transfers.</p>
+      </div>
+      <div style="background: var(--canvas-2); border: 1px solid var(--line); border-radius: 14px; padding: 28px; overflow-x: auto;" class="reveal">
+        <table style="width: 100%; border-collapse: collapse; font-family: var(--mono); font-size: 13px; min-width: 660px;">
+          <thead>
+            <tr style="text-align: left;">
+              <th style="color: var(--fog); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; padding: 0 16px 12px 0; border-bottom: 1px solid var(--line);">Line</th>
+              <th style="color: var(--fog); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; padding: 0 16px 12px 0; border-bottom: 1px solid var(--line);">Your input</th>
+              <th style="color: var(--fog); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; padding: 0 0 12px 0; border-bottom: 1px solid var(--line);">Where you find it</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="color: var(--ice); padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line);">Missed calls per week</td>
+              <td style="color: var(--green); padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line);">[ ______ ]</td>
+              <td style="color: var(--moon); padding: 14px 0; border-bottom: 1px solid var(--line);">Phone system call log, last four weeks</td>
+            </tr>
+            <tr>
+              <td style="color: var(--ice); padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line);">Close rate</td>
+              <td style="color: var(--green); padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line);">[ ____ % ]</td>
+              <td style="color: var(--moon); padding: 14px 0; border-bottom: 1px solid var(--line);">Booked appointments divided by answered calls</td>
+            </tr>
+            <tr>
+              <td style="color: var(--ice); padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line);">Average repair order</td>
+              <td style="color: var(--green); padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line);">[ $ ______ ]</td>
+              <td style="color: var(--moon); padding: 14px 0; border-bottom: 1px solid var(--line);">Closed tickets, last quarter</td>
+            </tr>
+            <tr>
+              <td style="color: var(--ice); padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line);">Recoverable share, calls</td>
+              <td style="color: var(--green); padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line);">[ ____ % ]</td>
+              <td style="color: var(--moon); padding: 14px 0; border-bottom: 1px solid var(--line);">Your judgement, stated conservatively</td>
+            </tr>
+            <tr>
+              <td style="color: var(--ice); padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line);">Declined lines per week</td>
+              <td style="color: var(--green); padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line);">[ ______ ]</td>
+              <td style="color: var(--moon); padding: 14px 0; border-bottom: 1px solid var(--line);">Decline log, counted per line rather than per ticket</td>
+            </tr>
+            <tr>
+              <td style="color: var(--ice); padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line);">Average declined line value</td>
+              <td style="color: var(--green); padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line);">[ $ ______ ]</td>
+              <td style="color: var(--moon); padding: 14px 0; border-bottom: 1px solid var(--line);">Decline log, averaged</td>
+            </tr>
+            <tr>
+              <td style="color: var(--ice); padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line);">Recoverable share, declines</td>
+              <td style="color: var(--green); padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line);">[ ____ % ]</td>
+              <td style="color: var(--moon); padding: 14px 0; border-bottom: 1px solid var(--line);">Your judgement, stated conservatively</td>
+            </tr>
+            <tr>
+              <td style="color: var(--ice); padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line);">Advisor hours per week</td>
+              <td style="color: var(--green); padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line);">[ ______ ]</td>
+              <td style="color: var(--moon); padding: 14px 0; border-bottom: 1px solid var(--line);">A week of time-tracking, or an honest estimate</td>
+            </tr>
+            <tr>
+              <td style="color: var(--ice); padding: 14px 16px 0 0;">Loaded advisor cost per hour</td>
+              <td style="color: var(--green); padding: 14px 16px 0 0;">[ $ ______ ]</td>
+              <td style="color: var(--moon); padding: 14px 0 0 0;">Wage plus payroll burden, not wage alone</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top: 20px; font-size: 15px; color: var(--moon); max-width: 840px;" class="reveal">If you fill in that table and the total does not justify a change, that is a valid result and you have saved yourself a project. Writing it down is how you say no to something that does not clear the bar, as much as how you say yes to something that does.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding: 72px 0; background: var(--canvas-2); border-top: 1px solid var(--line);" aria-labelledby="sensitivity-title">
+    <div class="wrap">
+      <div style="max-width: 840px;" class="reveal">
+        <p class="eyebrow">Where The Answer Moves</p>
+        <h2 id="sensitivity-title" style="font-size: 30px; color: var(--ice); margin-bottom: 16px;">Two inputs carry most of the risk of being wrong.</h2>
+        <p style="color: var(--moon); font-size: 16px; line-height: 1.7; margin-bottom: 20px;">Term 1 multiplies four inputs together, so an optimism error in any one propagates straight through and errors in two compound. Term 3 adds its inputs once each, so it is far harder to inflate by accident and usually the smaller term.</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px;">
+          <div style="background: var(--canvas); border: 1px solid var(--line); border-radius: 10px; padding: 20px;">
+            <div style="font-family: var(--mono); font-size: 12px; color: var(--green); letter-spacing: 0.08em; margin-bottom: 8px;">MOST FRAGILE</div>
+            <p style="font-size: 14px; color: var(--moon); margin: 0;">Missed calls per week. The number nobody measures and everybody underestimates, and the one that multiplies into everything else.</p>
+          </div>
+          <div style="background: var(--canvas); border: 1px solid var(--line); border-radius: 10px; padding: 20px;">
+            <div style="font-family: var(--mono); font-size: 12px; color: var(--green); letter-spacing: 0.08em; margin-bottom: 8px;">EASIEST TO OVERSTATE</div>
+            <p style="font-size: 14px; color: var(--moon); margin: 0;">The recovery rate. It is the one input with no source document behind it, which is exactly why optimistic models lean on it hardest.</p>
+          </div>
+          <div style="background: var(--canvas); border: 1px solid var(--line); border-radius: 10px; padding: 20px;">
+            <div style="font-family: var(--mono); font-size: 12px; color: var(--green); letter-spacing: 0.08em; margin-bottom: 8px;">MOST DEFENSIBLE</div>
+            <p style="font-size: 14px; color: var(--moon); margin: 0;">Average repair order and line values from closed tickets. Past performance is not a forecast, but it is at least evidence.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding: 72px 0; border-top: 1px solid var(--line);" aria-labelledby="verbs-title">
+    <div class="wrap">
+      <div style="max-width: 840px;" class="reveal">
+        <p class="eyebrow">Reading A Vendor Claim</p>
+        <h2 id="verbs-title" style="font-size: 30px; color: var(--ice); margin-bottom: 16px;">Four questions that separate a model from a pitch.</h2>
+        <p style="color: var(--moon); font-size: 16px; line-height: 1.7; margin-bottom: 22px;">None of these are hostile. A vendor with a real model will answer all four easily, and the answers will be the same numbers you would use.</p>
+        <div style="display: grid; gap: 12px;">
+          <div style="background: var(--canvas-2); border: 1px solid var(--line); border-left: 3px solid var(--green); border-radius: 10px; padding: 20px 24px;">
+            <p style="font-size: 15px; color: var(--ice); margin: 0 0 6px 0;"><strong>1. What missed-call volume is this built on?</strong></p>
+            <p style="font-size: 14px; color: var(--moon); margin: 0;">If the answer is an industry average rather than a range the model tests, the output describes an average shop, not yours.</p>
+          </div>
+          <div style="background: var(--canvas-2); border: 1px solid var(--line); border-left: 3px solid var(--green); border-radius: 10px; padding: 20px 24px;">
+            <p style="font-size: 15px; color: var(--ice); margin: 0 0 6px 0;"><strong>2. What recovery rate, and why that one?</strong></p>
+            <p style="font-size: 14px; color: var(--moon); margin: 0;">A model that assumes most of a pool comes back is not modelling, it is asserting. Ask what happens to the answer at half that rate.</p>
+          </div>
+          <div style="background: var(--canvas-2); border: 1px solid var(--line); border-left: 3px solid var(--green); border-radius: 10px; padding: 20px 24px;">
+            <p style="font-size: 15px; color: var(--ice); margin: 0 0 6px 0;"><strong>3. Is the forecast compounding?</strong></p>
+            <p style="font-size: 14px; color: var(--moon); margin: 0;">Multi-year projections that grow the benefit every year assume the first year's gains multiply. Usually they repeat.</p>
+          </div>
+          <div style="background: var(--canvas-2); border: 1px solid var(--line); border-left: 3px solid var(--green); border-radius: 10px; padding: 20px 24px;">
+            <p style="font-size: 15px; color: var(--ice); margin: 0 0 6px 0;"><strong>4. Does it include the running cost?</strong></p>
+            <p style="font-size: 14px; color: var(--moon); margin: 0;">A value figure without the subscription, the implementation, and the staff time to run it is not an ROI. It is a revenue estimate with the word ROI attached.</p>
+          </div>
+        </div>
+        <p style="margin-top: 24px; font-size: 15px; color: var(--moon); line-height: 1.7;">Applied here: we gave you the structure and refused to supply the inputs, which means we cannot hand you a return figure at all. That is the intended outcome. An honest ROI for your shop depends on numbers only you have, and anyone quoting you a percentage without asking for them is describing their reference customer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="flow-close" style="padding: 72px 0; background: var(--canvas-2); border-top: 1px solid var(--line);">
+    <div class="wrap flow-close-inner reveal">
+      <div>
+        <p class="flow-kicker">Bring your inputs</p>
+        <h2 style="font-size: 30px; color: var(--ice); margin-bottom: 12px;">We will build the model with your numbers, and tell you if it does not clear the bar.</h2>
+        <p style="color: var(--moon); font-size: 16px; margin-bottom: 24px;">Four weeks of call logs and a quarter of closed tickets is enough.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/demo">Book an operating gap assessment <span class="arrow">-&gt;</span></a>
+        <a class="btn btn-secondary" href="/guides/">What it costs</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
+        <p>RevvOS shows your team what needs attention, prepares the next step, and keeps people in control.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column"><h3>Platform</h3><a href="/platform">Overview</a><a href="/agents">Agents</a><a href="/integrations">Integrations</a><a href="/security">Security</a></div>
+        <div class="footer-column"><h3>Solutions</h3><a href="/solutions/multi-location">Multi-location</a><a href="/solutions/daily-operations">Daily operations</a><a href="/solutions/executive-visibility">Executive visibility</a></div>
+        <div class="footer-column"><h3>Explore</h3><a href="/use-cases/operational-visibility">Operational visibility</a><a href="/case-studies">Scenarios</a><a href="/resources">Resources</a><a href="/pricing">Pricing</a></div>
+        <div class="footer-column"><h3>Company</h3><a href="/demo">Get an operating gap assessment</a><a href="/contact">Contact</a><a href="/support/">Support</a><a href="/legal/privacy">Privacy</a><a href="/legal/terms">Terms</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 RevvOS. All rights reserved.</span>
+      <span class="footer-bottom-links"><a href="/legal/security">Legal security</a><a href="mailto:team@simplufy.com">team@simplufy.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/marketing.js?v=8" defer></script>
+<script src="/assets/plain-pages.js?v=9" defer></script>
+<script src="/assets/pages-flow.js" defer></script>
+<script>
+(function () {
+  var WEEKS = 4.33;
+  var ids = ["roi-calls", "roi-close", "roi-aro", "roi-lines", "roi-lineval", "roi-hours", "roi-rate", "roi-recover"];
+  var el = {};
+  var missing = false;
+  ids.forEach(function (id) {
+    el[id] = document.getElementById(id);
+    if (!el[id]) { missing = true; }
+  });
+  var out = {
+    phone: document.getElementById("roi-phone"),
+    declined: document.getElementById("roi-declined"),
+    advisor: document.getElementById("roi-advisor"),
+    total: document.getElementById("roi-total"),
+    note: document.getElementById("roi-note")
+  };
+  if (missing || !out.total) { return; }
+
+  function num(input, max) {
+    var v = parseFloat(input.value);
+    if (!isFinite(v) || v < 0) { v = 0; }
+    if (typeof max === "number" && v > max) { v = max; }
+    return v;
+  }
+  function money(n) {
+    return "$" + Math.round(n).toLocaleString("en-US");
+  }
+  function blank(input) {
+    return input.value === "" || input.value === null;
+  }
+
+  function calc() {
+    var calls = num(el["roi-calls"], 2000);
+    var close = num(el["roi-close"], 100) / 100;
+    var aro = num(el["roi-aro"], 100000);
+    var lines = num(el["roi-lines"], 2000);
+    var lineval = num(el["roi-lineval"], 100000);
+    var hours = num(el["roi-hours"], 200);
+    var rate = num(el["roi-rate"], 1000);
+    var recover = num(el["roi-recover"], 100) / 100;
+
+    var phone = calls * WEEKS * close * recover * aro;
+    var declined = lines * WEEKS * recover * lineval;
+    var advisor = hours * WEEKS * rate;
+    var total = phone + declined + advisor;
+
+    out.phone.textContent = money(phone);
+    out.declined.textContent = money(declined);
+    out.advisor.textContent = money(advisor);
+    out.total.textContent = money(total);
+
+    var anyMissing = ids.some(function (id) { return blank(el[id]); });
+    if (anyMissing) {
+      out.note.textContent = "One or more fields are still empty. Fill every input, including the recovery dial, to get a total that means anything.";
+    } else if (recover === 0) {
+      out.note.textContent = "Your recovery dial is at zero percent, so no recoverable work is being counted. That is a valid conservative floor, and it leaves only advisor capacity in the total.";
+    } else if (recover > 0.5) {
+      out.note.textContent = "A recovery rate above half is an optimistic assumption. Try halving it and check whether the case still stands.";
+    } else if (total === 0) {
+      out.note.textContent = "Every field is filled and the result is zero. Either there is nothing to recover here, or an input is entered as a percentage where a count was expected.";
+    } else {
+      out.note.textContent = "This is arithmetic on the values you entered. It is not a forecast and it carries no RevvOS figures.";
+    }
+  }
+
+  ids.forEach(function (id) {
+    el[id].addEventListener("input", calc);
+    el[id].addEventListener("change", calc);
+  });
+  calc();
+})();
+</script>
+</body>
+</html>
