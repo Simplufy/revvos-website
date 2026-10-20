@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>AI for Auto Body Shops | Collision Repair Guide | RevvOS</title>
+  <meta name="description" content="How AI fits a collision repair shop: estimates, supplements, parts rules, production stages and sublet, plus which parts of the workflow still need a person.">
+  <meta property="og:title" content="AI for Auto Body Shops | RevvOS">
+  <meta property="og:description" content="Collision is a different business from mechanical repair, so the AI conversation is different too.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://revvos.xyz/industries/ai-for-auto-body-shops">
+  <meta name="theme-color" content="#05060f">
+  <link rel="canonical" href="https://revvos.xyz/industries/ai-for-auto-body-shops">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080a14'/%3E%3Cpath d='M9 22V10h6.2a3.9 3.9 0 0 1 1.5 7.5L20 22h-3.3l-2.9-4.2H12V22H9Zm3-6.7h2.9a1.6 1.6 0 0 0 0-3.2H12v3.2Z' fill='%23eaf1ff'/%3E%3Ccircle cx='23' cy='11' r='2.4' fill='%232fe08e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/marketing.css?v=6">
+  <link rel="stylesheet" href="/assets/pages-flow.css">
+  <link rel="stylesheet" href="/assets/brand-alignment.css">
+  <link rel="stylesheet" href="/assets/os-story.css?v=9">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "AI for Auto Body Shops",
+        "url": "https://revvos.xyz/industries/ai-for-auto-body-shops",
+        "description": "A stage-by-stage account of where AI fits the collision repair workflow, from intake and tow through estimate, supplement, parts, production and sublet, and what still requires a person.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "RevvOS",
+          "url": "https://revvos.xyz/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://revvos.xyz/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Automotive AI Software",
+            "item": "https://revvos.xyz/automotive-ai-software"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "AI for Auto Body Shops",
+            "item": "https://revvos.xyz/industries/ai-for-auto-body-shops"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Which AI is best for automotive repair?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There is no single best system, because collision and mechanical repair need different things. A collision shop's constraint is cycle time against an insurer's rules: the estimate is a negotiation, the supplement is routine rather than exceptional, and every day a vehicle sits in the wrong stage costs rental and goodwill. Evaluate AI against the stage that is holding your vehicles, not against a general feature list."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What software do collision estimators use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Collision estimators work in an estimating platform, and CCC ONE is one of the platforms used in collision repair. Those systems carry the OEM procedure data, the labor times, and the insurer connections that a written estimate depends on. An operating layer such as RevvOS is not an estimating platform and does not replace one. It sits alongside, handling the intake, follow-up, status and exception work around the estimate rather than producing the estimate itself."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does CCC ONE software cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Estimating platform pricing is not published as a single figure and is not something we can quote for another vendor. Licensing typically varies with the modules a shop uses, the number of users, and the volume of estimates and claims the shop processes, and it is normally arranged directly with the vendor. What is worth budgeting for alongside it is the labor cost of the work that happens before and after the estimate, which is where cycle time is usually lost."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What software do auto repair shops use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mechanical repair shops generally run a shop management system for repair orders, scheduling and parts, with Tekmetric, Shopmonkey and AutoLeap among the platforms in that category. Collision shops run an estimating platform plus a production management process instead. Some larger groups run both, because a body shop inside a mechanical business is a different workflow with different paperwork."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can AI write the estimate on its own?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Photo-based appraisal assistance can speed up the first pass, and the industry is investing heavily in it. A person still owns the final estimate and every supplement, because someone has to be accountable for an OEM procedure being followed and for the negotiation with the appraiser."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="flow-page action-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="/platform">Platform</a>
+      <details class="nav-group"><summary>Solutions</summary><div class="nav-menu"><a href="/solutions/multi-location">Multi-location operations</a><a href="/solutions/daily-operations">Daily operations</a><a href="/solutions/executive-visibility">Executive visibility</a></div></details>
+      <details class="nav-group"><summary>Roles</summary><div class="nav-menu"><a href="/roles/owner">Owners</a><a href="/roles/operations">Operations leaders</a><a href="/roles/marketing">Marketing leaders</a></div></details>
+      <details class="nav-group"><summary>Use cases</summary><div class="nav-menu"><a href="/use-cases/reputation">Reputation</a><a href="/use-cases/local-seo">Local SEO</a><a href="/use-cases/social-media">Social media</a><a href="/use-cases/customer-engagement">Customer engagement</a><a href="/use-cases/operational-visibility">Operational visibility</a><a href="/use-cases/compliance">Compliance</a></div></details>
+      <a href="/resources">Resources</a>
+      <a href="/support/">Support</a>
+    </nav>
+    <div class="nav-actions"><a class="btn btn-secondary" href="/contact">Contact</a><a class="btn btn-primary" href="/demo">Get an assessment</a><button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button></div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="action-hero" aria-labelledby="body-title">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/automotive-ai-software">Automotive AI Software</a><span>/</span><span aria-current="page">AI for Auto Body Shops</span></nav>
+      <div class="action-hero-copy reveal">
+        <p class="eyebrow">Collision Repair</p>
+        <h1 id="body-title">AI for auto body shops, where the workflow is nothing like a mechanical repair.</h1>
+        <p class="lede">An insurer pays. The estimate is a negotiation rather than a quote. The customer is in a rental with a clock running. Cycle time decides whether the shop makes money, because every day a vehicle sits in the wrong stage costs rental and storage.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/demo">Walk your collision workflow <span class="arrow">-&gt;</span></a>
+          <a class="btn btn-secondary" href="/use-cases/">Cycle time</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding: 72px 0; border-top: 1px solid var(--line);" aria-labelledby="difference-title">
+    <div class="wrap">
+      <div style="max-width: 780px;" class="reveal">
+        <p class="eyebrow">Why The Conversation Is Different</p>
+        <h2 id="difference-title" style="font-size: 30px; color: var(--ice); margin-bottom: 16px;">Four things that make a body shop different.</h2>
+        <p style="color: var(--moon); font-size: 16px; line-height: 1.75; margin-bottom: 22px;">Advice written for mechanical repair shops transfers badly, because the money, the authority, and the clock all sit somewhere else.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;" class="reveal">
+        <div style="background: var(--canvas-2); border: 1px solid var(--line); border-radius: 12px; padding: 24px;">
+          <h3 style="font-size: 17px; color: var(--ice); margin: 0 0 10px 0;">Someone else pays</h3>
+          <p style="font-size: 14px; color: var(--moon); line-height: 1.7; margin: 0;">The insurer pays and the customer decides. Work authorized by one is often declined by the other, and the shop absorbs the gap while it waits.</p>
+        </div>
+        <div style="background: var(--canvas-2); border: 1px solid var(--line); border-radius: 12px; padding: 24px;">
+          <h3 style="font-size: 17px; color: var(--ice); margin: 0 0 10px 0;">The estimate is a negotiation</h3>
+          <p style="font-size: 14px; color: var(--moon); line-height: 1.7; margin: 0;">It is presented to an appraiser who may adjust it, and it will change. The supplement is not an exception in collision work. It is the normal shape of the job.</p>
+        </div>
+        <div style="background: var(--canvas-2); border: 1px solid var(--line); border-radius: 12px; padding: 24px;">
+          <h3 style="font-size: 17px; color: var(--ice); margin: 0 0 10px 0;">The customer is mobile</h3>
+          <p style="font-size: 14px; color: var(--moon); line-height: 1.7; margin: 0;">They are in a rental with a clock running, often on someone else's policy, and they judge the shop by how informed they feel while the vehicle is gone.</p>
+        </div>
+        <div style="background: var(--panel-strong); border: 1px solid var(--line-strong); border-radius: 12px; padding: 24px;">
+          <h3 style="font-size: 17px; color: var(--ice); margin: 0 0 10px 0;">Cycle time is the whole game</h3>
+          <p style="font-size: 14px; color: var(--moon); line-height: 1.7; margin: 0;">Throughput in a body shop is measured in days per vehicle from key tag to delivery. Every stage that stalls, whether on a supplement approval, an OEM part, or a sublet slot, extends it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding: 72px 0; background: var(--canvas-2); border-top: 1px solid var(--line);" aria-labelledby="stages-title">
+    <div class="wrap">
+      <div style="max-width: 760px; margin-bottom: 36px;" class="reveal">
+        <p class="eyebrow">Stage By Stage</p>
+        <h2 id="stages-title" style="font-size: 30px; color: var(--ice); margin-bottom: 12px;">Where AI touches the collision workflow.</h2>
+        <p style="color: var(--moon); font-size: 17px;">Seven stages, each with an honest line between what the software handles and what a person still owns.</p>
+      </div>
+      <div style="display: grid; gap: 16px;" class="reveal">
+
+        <div style="background: var(--canvas); border: 1px solid var(--line); border-radius: 12px; padding: 26px 28px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: baseline; margin-bottom: 14px;">
+            <span style="font-family: var(--mono); font-size: 12px; color: var(--fog);">STAGE 01</span>
+            <h3 style="font-size: 19px; color: var(--ice); margin: 0;">Intake and tow</h3>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+            <p style="font-size: 15px; color: var(--moon); line-height: 1.7; margin: 0;"><strong style="color: var(--green); font-weight: 600;">AI can:</strong> capture every inbound call including the ones that hit a busy signal, log the tow, and record who authorized the arrival before the shop has to reconstruct it.</p>
+            <p style="font-size: 15px; color: var(--moon); line-height: 1.7; margin: 0;"><strong style="color: var(--fog); font-weight: 600;">A person owns:</strong> whether the shop takes the job, the DRP obligation it carries, and any total loss conversation the customer needs to have with the insurer.</p>
+          </div>
+        </div>
+
+        <div style="background: var(--canvas); border: 1px solid var(--line); border-radius: 12px; padding: 26px 28px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: baseline; margin-bottom: 14px;">
+            <span style="font-family: var(--mono); font-size: 12px; color: var(--fog);">STAGE 02</span>
+            <h3 style="font-size: 19px; color: var(--ice); margin: 0;">The estimate and photo-based appraisal</h3>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+            <p style="font-size: 15px; color: var(--moon); line-height: 1.7; margin: 0;"><strong style="color: var(--green); font-weight: 600;">AI can:</strong> help assemble a first pass from photographs, organize the damage documentation, and make sure the photos an appraiser will ask for were taken at teardown instead of after reassembly.</p>
+            <p style="font-size: 15px; color: var(--moon); line-height: 1.7; margin: 0;"><strong style="color: var(--fog); font-weight: 600;">A person owns:</strong> the written estimate, the labor times, the OEM procedure that must be followed, and the negotiation with the appraiser. The estimator signs it.</p>
+          </div>
+        </div>
+
+        <div style="background: var(--panel-strong); border: 1px solid var(--line-strong); border-radius: 12px; padding: 26px 28px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: baseline; margin-bottom: 14px;">
+            <span style="font-family: var(--mono); font-size: 12px; color: var(--green);">STAGE 03</span>
+            <h3 style="font-size: 19px; color: var(--ice); margin: 0;">The supplement</h3>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+            <p style="font-size: 15px; color: var(--moon); line-height: 1.7; margin: 0;"><strong style="color: var(--green); font-weight: 600;">AI can:</strong> track which vehicle is waiting on a supplement approval and for how long, prompt the estimator when one has been sitting, and keep documentation attached to the right job.</p>
+            <p style="font-size: 15px; color: var(--moon); line-height: 1.7; margin: 0;"><strong style="color: var(--fog); font-weight: 600;">A person owns:</strong> the supplement itself, the justification, and the relationship with the appraiser. That relationship is human work, and it is what a shop's reputation with an insurer is built from.</p>
+          </div>
+        </div>
+
+        <div style="background: var(--canvas); border: 1px solid var(--line); border-radius: 12px; padding: 26px 28px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: baseline; margin-bottom: 14px;">
+            <span style="font-family: var(--mono); font-size: 12px; color: var(--fog);">STAGE 04</span>
+            <h3 style="font-size: 19px; color: var(--ice); margin: 0;">Parts: OEM, aftermarket, recycled</h3>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+            <p style="font-size: 15px; color: var(--moon); line-height: 1.7; margin: 0;"><strong style="color: var(--green); font-weight: 600;">AI can:</strong> hold the insurer's parts rules against the job, flag when an ordered part kind is outside what the estimate allows, and surface the vehicles blocked on a part before the daily production meeting.</p>
+            <p style="font-size: 15px; color: var(--moon); line-height: 1.7; margin: 0;"><strong style="color: var(--fog); font-weight: 600;">A person owns:</strong> the substitution decision, the OEM procedure requirement, and the customer conversation about a recycled panel. Those are liability decisions.</p>
+          </div>
+        </div>
+
+        <div style="background: var(--canvas); border: 1px solid var(--line); border-radius: 12px; padding: 26px 28px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: baseline; margin-bottom: 14px;">
+            <span style="font-family: var(--mono); font-size: 12px; color: var(--fog);">STAGE 05</span>
+            <h3 style="font-size: 19px; color: var(--ice); margin: 0;">Production scheduling across the stages</h3>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+            <p style="font-size: 15px; color: var(--moon); line-height: 1.7; margin: 0;"><strong style="color: var(--green); font-weight: 600;">AI can:</strong> age every vehicle across teardown, frame, body, refinish, reassembly, quality control and detail, and name the one sitting in a stage longer than the shop's norm.</p>
+            <p style="font-size: 15px; color: var(--moon); line-height: 1.7; margin: 0;"><strong style="color: var(--fog); font-weight: 600;">A person owns:</strong> the sequencing decision. Which car gets the booth next depends on paint color, drying, insurance pressure and the technician's judgment, and it changes every morning.</p>
+          </div>
+        </div>
+
+        <div style="background: var(--canvas); border: 1px solid var(--line); border-radius: 12px; padding: 26px 28px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: baseline; margin-bottom: 14px;">
+            <span style="font-family: var(--mono); font-size: 12px; color: var(--fog);">STAGE 06</span>
+            <h3 style="font-size: 19px; color: var(--ice); margin: 0;">Sublet: glass, alignment, ADAS calibration</h3>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+            <p style="font-size: 15px; color: var(--moon); line-height: 1.7; margin: 0;"><strong style="color: var(--green); font-weight: 600;">AI can:</strong> hold the sublet booking against the vehicle's production stage, so a car is not sent out early or left waiting for a slot after paint has cured.</p>
+            <p style="font-size: 15px; color: var(--moon); line-height: 1.7; margin: 0;"><strong style="color: var(--fog); font-weight: 600;">A person owns:</strong> the vendor relationship and the calibration sign-off. A calibration documented incorrectly is a safety problem, not a scheduling one.</p>
+          </div>
+        </div>
+
+        <div style="background: var(--canvas); border: 1px solid var(--line); border-radius: 12px; padding: 26px 28px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: baseline; margin-bottom: 14px;">
+            <span style="font-family: var(--mono); font-size: 12px; color: var(--fog);">STAGE 07</span>
+            <h3 style="font-size: 19px; color: var(--ice); margin: 0;">Customer and insurer updates</h3>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+            <p style="font-size: 15px; color: var(--moon); line-height: 1.7; margin: 0;"><strong style="color: var(--green); font-weight: 600;">AI can:</strong> send the status update the customer is about to phone and ask for, keep the insurer informed at the points the file requires, and free the front desk from repeating one answer all day.</p>
+            <p style="font-size: 15px; color: var(--moon); line-height: 1.7; margin: 0;"><strong style="color: var(--fog); font-weight: 600;">A person owns:</strong> the delivery date commitment and the difficult call when a supplement changes it. Telling someone their car needs another week is not an autopilot message.</p>
+          </div>
+        </div>
+
+      </div>
+      <div style="margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px;" class="reveal">
+        <a class="btn btn-secondary" href="/use-cases/">Estimate automation</a>
+        <a class="btn btn-secondary" href="/use-cases/">Supplement automation</a>
+        <a class="btn btn-secondary" href="/use-cases/">Body shop automation</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding: 72px 0; border-top: 1px solid var(--line);" aria-labelledby="where-title">
+    <div class="wrap">
+      <div style="max-width: 800px;" class="reveal">
+        <p class="eyebrow">The Honest Summary</p>
+        <h2 id="where-title" style="font-size: 30px; color: var(--ice); margin-bottom: 16px;">The gain is at the edges of the repair, not the repair.</h2>
+        <p style="color: var(--moon); font-size: 16px; line-height: 1.75; margin-bottom: 14px;">Most of what stretches a collision cycle time is not panel work. It is a vehicle waiting on an approval, a part, a sublet slot, or a decision nobody chased because everyone assumed someone else had. Those waits are invisible on a production board and unmistakable in a stage-age report.</p>
+        <p style="color: var(--moon); font-size: 16px; line-height: 1.75; margin-bottom: 14px;">So the honest answer is unglamorous: intake capture, approval chasing, stage aging, parts flagging, and status communication. It does not refinish a panel, and any system claiming to should be treated with suspicion.</p>
+        <div style="margin-top: 24px; padding: 22px 26px; background: var(--canvas-2); border: 1px solid var(--line-strong); border-left: 3px solid var(--green); border-radius: 10px;">
+          <p style="font-size: 15px; color: var(--ice); margin: 0;"><strong style="color: var(--green);">One measurement to start with:</strong> <span style="color: var(--moon);">pick the stage where vehicles sit longest, count how many are in it right now, and check how many of them are waiting on something a phone call could have cleared yesterday.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="action-faq" style="padding: 72px 0; background: var(--canvas-2); border-top: 1px solid var(--line);" aria-labelledby="faq-title">
+    <div class="wrap action-faq-grid">
+      <div class="reveal">
+        <p class="flow-kicker">Collision Questions</p>
+        <h2 id="faq-title" style="font-size: 32px; color: var(--ice);">What operators ask.</h2>
+        <p style="color: var(--moon); font-size: 16px; margin-top: 12px;">Answering the questions this search carries, including the ones about software we do not sell.</p>
+      </div>
+      <div class="flow-faq">
+        <details class="reveal">
+          <summary>Which AI is best for automotive repair?</summary>
+          <p>There is no single best system, because collision and mechanical repair need different things. A collision shop's constraint is cycle time against an insurer's rules: the estimate is a negotiation, the supplement is routine rather than exceptional, and every day a vehicle sits in the wrong stage costs rental and goodwill. Evaluate AI against the stage that is holding your vehicles, not against a general feature list.</p>
+        </details>
+        <details class="reveal">
+          <summary>What software do collision estimators use?</summary>
+          <p>Collision estimators work in an estimating platform, and CCC ONE is one of the platforms used in collision repair. Those systems carry the OEM procedure data, the labor times, and the insurer connections that a written estimate depends on. An operating layer such as RevvOS is not an estimating platform and does not replace one. It sits alongside, handling the intake, follow-up, status and exception work around the estimate rather than producing the estimate itself.</p>
+        </details>
+        <details class="reveal">
+          <summary>How much does CCC ONE software cost?</summary>
+          <p>Estimating platform pricing is not published as a single figure and is not something we can quote for another vendor. Licensing typically varies with the modules a shop uses, the number of users, and the volume of estimates and claims the shop processes, and it is normally arranged directly with the vendor. What is worth budgeting for alongside it is the labor cost of the work that happens before and after the estimate, which is where cycle time is usually lost.</p>
+        </details>
+        <details class="reveal">
+          <summary>What software do auto repair shops use?</summary>
+          <p>Mechanical repair shops generally run a shop management system for repair orders, scheduling and parts, with Tekmetric, Shopmonkey and AutoLeap among the platforms in that category. Collision shops run an estimating platform plus a production management process instead. Some larger groups run both, because a body shop inside a mechanical business is a different workflow with different paperwork.</p>
+        </details>
+        <details class="reveal">
+          <summary>Can AI write the estimate on its own?</summary>
+          <p>Photo-based appraisal assistance can speed up the first pass, and the industry is investing heavily in it. A person still owns the final estimate and every supplement, because someone has to be accountable for an OEM procedure being followed and for the negotiation with the appraiser.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="flow-close" style="padding: 72px 0; border-top: 1px solid var(--line);">
+    <div class="wrap flow-close-inner reveal">
+      <div>
+        <p class="flow-kicker">Collision groups and single shops</p>
+        <h2 style="font-size: 30px; color: var(--ice); margin-bottom: 12px;">Bring your production board. We will find the stalled stage.</h2>
+        <p style="color: var(--moon); font-size: 16px; margin-bottom: 24px;">We will look at where your vehicles actually wait, and separate the delays a phone call can clear from the ones that need a decision you have not made yet.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/demo">Book an operating gap assessment <span class="arrow">-&gt;</span></a>
+        <a class="btn btn-secondary" href="/industries/">Collision MSOs</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
+        <p>RevvOS shows your team what needs attention, prepares the next step, and keeps people in control.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column"><h3>Platform</h3><a href="/platform">Overview</a><a href="/agents">Agents</a><a href="/integrations">Integrations</a><a href="/security">Security</a></div>
+        <div class="footer-column"><h3>Solutions</h3><a href="/solutions/multi-location">Multi-location</a><a href="/solutions/daily-operations">Daily operations</a><a href="/solutions/executive-visibility">Executive visibility</a></div>
+        <div class="footer-column"><h3>Explore</h3><a href="/use-cases/operational-visibility">Operational visibility</a><a href="/case-studies">Scenarios</a><a href="/resources">Resources</a><a href="/pricing">Pricing</a></div>
+        <div class="footer-column"><h3>Company</h3><a href="/demo">Get an operating gap assessment</a><a href="/contact">Contact</a><a href="/support/">Support</a><a href="/legal/privacy">Privacy</a><a href="/legal/terms">Terms</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 RevvOS. All rights reserved.</span>
+      <span class="footer-bottom-links"><a href="/legal/security">Legal security</a><a href="mailto:team@simplufy.com">team@simplufy.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/marketing.js?v=8" defer></script>
+<script src="/assets/plain-pages.js?v=9" defer></script>
+<script src="/assets/pages-flow.js" defer></script>
+</body>
+</html>
