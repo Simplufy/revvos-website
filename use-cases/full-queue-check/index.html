@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Auto Repair Technician Scheduling: The Full Queue Check</title>
+  <meta name="description" content="A one-page board setup for auto repair technician scheduling: software proposes each tech&#x27;s next job, flags stuck cars, and the foreman approves.">
+  <link rel="canonical" href="https://revvos.xyz/use-cases/full-queue-check">
+  <meta property="og:title" content="Auto Repair Technician Scheduling: The Full Queue Check">
+  <meta property="og:description" content="A one-page board setup for auto repair technician scheduling: software proposes each tech&#x27;s next job, flags stuck cars, and the foreman approves.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://revvos.xyz/use-cases/full-queue-check">
+  <meta name="theme-color" content="#132419">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080a14'/%3E%3Cpath d='M9 22V10h6.2a3.9 3.9 0 0 1 1.5 7.5L20 22h-3.3l-2.9-4.2H12V22H9Zm3-6.7h2.9a1.6 1.6 0 0 0 0-3.2H12v3.2Z' fill='%23eaf1ff'/%3E%3Ccircle cx='23' cy='11' r='2.4' fill='%232fe08e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/marketing.css?v=6">
+  <link rel="stylesheet" href="/assets/brand-alignment.css">
+  <link rel="stylesheet" href="/assets/guides.css?v=1">
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "The Full Queue Check: a one-page board setup for auto repair technician scheduling", "description": "A one-page board setup for auto repair technician scheduling: software proposes each tech's next job, flags stuck cars, and the foreman approves.", "mainEntityOfPage": "https://revvos.xyz/use-cases/full-queue-check", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "author": {"@type": "Organization", "name": "RevvOS", "url": "https://revvos.xyz/"}, "publisher": {"@type": "Organization", "name": "RevvOS", "url": "https://revvos.xyz"}, "citation": ["https://www.bls.gov/ooh/installation-maintenance-and-repair/automotive-service-technicians-and-mechanics.htm", "https://www.ratchetandwrench.com/running-a-shop/human-resources/article/55038486/numbers-how-auto-repair-shops-pay-technicians", "https://www.ratchetandwrench.com/running-a-shop/operations/article/33016639/the-sop-whats-the-best-and-most-effective-pay-plan-for-technicians", "https://www.ratchetandwrench.com/running-a-shop/article/11462798/winning-workflow-an-inside-look-at-the-most-efficient-shops", "https://blog.autovitals.com/5-must-have-features-to-look-for-in-technician-scheduling-software", "https://www.fenderbender.com/running-a-shop/operations/article/55288651/optimize-the-labor-hours-available-to-your-body-shop"]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Should AI assign technicians to jobs automatically?", "acceptedAnswer": {"@type": "Answer", "text": "No. Let it propose each tech's next job with a reason, and have the foreman or service manager approve it. Who gets the hard diagnostic, overtime and fairness are judgment calls tied to pay and morale."}}, {"@type": "Question", "name": "What should a technician scheduling board show?", "acceptedAnswer": {"@type": "Answer", "text": "One lane per tech with the current job, the proposed next job and its reason, plus a held tray for cars waiting on a part or an approval. Promised times and a skills list sit beside it."}}, {"@type": "Question", "name": "Why does an empty work queue matter for flat rate techs?", "acceptedAnswer": {"@type": "Answer", "text": "A flat rate tech is paid on hours produced, so time spent waiting for the next job is unpaid. Ratchet+Wrench's 2024 write-up put flat rate at 23% of shops."}}, {"@type": "Question", "name": "How do I start without new software?", "acceptedAnswer": {"@type": "Answer", "text": "Run the board on a whiteboard or spreadsheet for two weeks, log every time a tech waited with no next job, then decide what a tool should do for you."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "RevvOS", "item": "https://revvos.xyz/"}, {"@type": "ListItem", "position": 2, "name": "The Full Queue Check: a one-page board setup for auto repair technician scheduling", "item": "https://revvos.xyz/use-cases/full-queue-check"}]}]</script>
+</head>
+<body class="page-guide">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="/platform">Platform</a>
+      <details class="nav-group"><summary>Solutions</summary><div class="nav-menu"><a href="/solutions/multi-location">Multi-location operations</a><a href="/solutions/daily-operations">Daily operations</a><a href="/solutions/executive-visibility">Executive visibility</a></div></details>
+      <details class="nav-group"><summary>Roles</summary><div class="nav-menu"><a href="/roles/owner">Owners</a><a href="/roles/operations">Operations leaders</a><a href="/roles/marketing">Marketing leaders</a></div></details>
+      <details class="nav-group"><summary>Use cases</summary><div class="nav-menu"><a href="/use-cases/reputation">Reputation</a><a href="/use-cases/local-seo">Local SEO</a><a href="/use-cases/social-media">Social media</a><a href="/use-cases/customer-engagement">Customer engagement</a><a href="/use-cases/operational-visibility">Operational visibility</a><a href="/use-cases/compliance">Compliance</a></div></details>
+      <a href="/resources">Resources</a>
+      <a href="/support/">Support</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-secondary" href="/contact">Contact</a>
+      <a class="btn btn-primary" href="/demo">Get an assessment</a>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+<main id="main" class="guide">
+  <article class="guide-wrap">
+    <nav class="guide-crumbs" aria-label="Breadcrumb"><a href="/">RevvOS</a> <span>/</span> <a href="/resources">Resources</a> <span>/</span> <span>Use cases</span></nav>
+    <p class="guide-kicker">Resources</p>
+    <h1>The Full Queue Check: a one-page board setup for auto repair technician scheduling</h1>
+    <p class="guide-summary">Auto repair technician scheduling works best when every tech always has a next job waiting, and the Full Queue Check is a simple board setup for that. Software proposes each tech&#x27;s next job with its reason, flags any car stuck on a part or an approval before someone walks over to it, and the foreman approves every assignment, because who gets which job is about skill, fairness and pay.</p>
+    <p class="guide-meta">Updated October 21, 2026 &middot; 7 min read</p>
+    
+    <div class="guide-body">
+<p>This is the board setup from our video on technician scheduling AI. It follows the video's order:</p>
+<ol>
+<li><strong>Propose the next job.</strong> For each tech, the board shows one proposed next job with the reason it was picked.</li>
+<li><strong>Flag the stuck car.</strong> Any car waiting on a part or an approval is flagged and held, so nobody walks over to a job they can't start.</li>
+<li><strong>The foreman approves.</strong> Nothing moves into a tech's lane until the foreman or service manager says yes.</li>
+</ol>
+<p>You can run it on a whiteboard, a spreadsheet or the scheduling view in your shop system. The software part is optional at first. The rules are what matter.</p>
+<h2>Why an empty queue costs more than it looks</h2>
+<p>When a tech finishes a job and has to walk up front to ask what's next, the shop loses those minutes. For many techs it's also their own money. The Bureau of Labor Statistics notes that <a href="https://www.bls.gov/ooh/installation-maintenance-and-repair/automotive-service-technicians-and-mechanics.htm" rel="noopener">some repair shops pay technicians hourly, while others pay based on the amount of work completed</a>. In a 2024 Ratchet+Wrench write-up of its survey, <a href="https://www.ratchetandwrench.com/running-a-shop/human-resources/article/55038486/numbers-how-auto-repair-shops-pay-technicians" rel="noopener">flat rate was 23% of shops and hourly plus commission another 23%</a> (the article's figures add to 102% and cite two years of reports). For a tech paid on hours produced, a gap in the queue is a pay cut.</p>
+<p>Consultant Cecil Bullard makes the same point about pay plans: if a shop only has 30 available hours a week, <a href="https://www.ratchetandwrench.com/running-a-shop/operations/article/33016639/the-sop-whats-the-best-and-most-effective-pay-plan-for-technicians" rel="noopener">a bonus that starts at 40 hours can never be earned</a>. The schedule is what makes the hours available.</p>
+<h2>What you need before you start</h2>
+<ul>
+<li><strong>One person who owns the board.</strong> In a Ratchet+Wrench profile of efficient shops, one used <a href="https://www.ratchetandwrench.com/running-a-shop/article/11462798/winning-workflow-an-inside-look-at-the-most-efficient-shops" rel="noopener">a shop foreman, a former top technician, who schedules work after the initial inspection</a>. In a small shop it may be the service manager or the owner.</li>
+<li><strong>A skills list.</strong> For each tech, the work they're certified or trusted for: diagnostics, electrical, brakes, alignment, maintenance.</li>
+<li><strong>Today's work list.</strong> Every open repair order with its status: approved, waiting on approval, waiting on a part, in progress.</li>
+<li><strong>Promised times.</strong> Which cars were promised for today, and when.</li>
+</ul>
+<h2>Step 1. Propose the next job</h2>
+<p>Set up one lane per tech with three slots: current job, next job, and on deck. The rule is that the next slot is never empty while there's approved work in the shop.</p>
+<p>A proposal has three parts, and the reason matters as much as the job:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Example (demo data)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tech</td>
+<td>Marcus, A-tech</td>
+</tr>
+<tr>
+<td>Proposed next job</td>
+<td>RO 5124, check engine light</td>
+</tr>
+<tr>
+<td>Reason</td>
+<td>free at 10:40, diagnostics certified, promised today</td>
+</tr>
+</tbody>
+</table>
+<p>The inputs for the reason are the ones the video named: who's free, who's qualified and what's waiting. Add the promised time as a tiebreaker. A tool can help here. AutoVitals says scheduling software should at minimum <a href="https://blog.autovitals.com/5-must-have-features-to-look-for-in-technician-scheduling-software" rel="noopener">track labor hours per job, and better tools also measure non-billable work such as training, dispatching and estimating</a>. That's a vendor's checklist, so treat it as features to ask about, not proof of results.</p>
+<p>Copy these proposal rules:</p>
+<ol>
+<li>Promised-today cars first.</li>
+<li>Match the job to the skill list, then to who frees up first.</li>
+<li>Keep the next slot filled for every tech who is clocked in.</li>
+<li>Show the reason in one line. If you can't write the reason, it isn't a good proposal.</li>
+</ol>
+<h2>Step 2. Flag the stuck car</h2>
+<p>A job only goes in a next slot if it can start the moment the tech gets to it. FenderBender's advice on labor hours puts it plainly: keep technicians in their stalls, with <a href="https://www.fenderbender.com/running-a-shop/operations/article/55288651/optimize-the-labor-hours-available-to-your-body-shop" rel="noopener">parts, supplies, approvals, tooling and training ready so they don't wait</a>.</p>
+<p>So every proposed job gets a readiness check:</p>
+<ul>
+<li><strong>Parts:</strong> on the shelf, or the expected arrival time.</li>
+<li><strong>Approval:</strong> customer approved, or still waiting.</li>
+<li><strong>Bay and equipment:</strong> the lift or alignment rack free when the tech frees up.</li>
+</ul>
+<p>Anything that fails goes to a held tray with a flag and a time ("struts, part arriving 2 PM"). It gets proposed again when the flag clears. A scheduling tool can't fix a parts delay, but it can make the delay visible before someone walks over.</p>
+<h2>Step 3. The foreman approves</h2>
+<p>The software proposes. The foreman decides. These are the calls that stay with a person, every time:</p>
+<ul>
+<li><strong>Who gets the hard diagnostic.</strong> Training, certifications and trust are judgment calls.</li>
+<li><strong>Fairness.</strong> Giving the best-paying jobs to the same tech every time affects pay and morale.</li>
+<li><strong>Overtime and pay questions.</strong> Those come from the owner and the pay plan.</li>
+<li><strong>What the customer is promised.</strong> The advisor says it, with the board as input.</li>
+</ul>
+<p>Approving should be quick: the foreman reads each proposal and its reason, accepts it, swaps it or moves it. When a job finishes early or extra work gets approved, the board proposes a new next job and the foreman approves that one too, instead of working from the morning's guess.</p>
+<h2>The one-page setup</h2>
+<ol>
+<li>One lane per tech, three slots: current, next, on deck.</li>
+<li>A skills list pinned beside the board.</li>
+<li>Every open RO on the work list with its status and promised time.</li>
+<li>Proposal rule: promised-today first, then skill match, then who frees up first.</li>
+<li>Each proposal shows its reason in one line.</li>
+<li>Readiness check before a job enters a next slot: parts, approval, bay.</li>
+<li>Failed checks go to the held tray with a flag and a time.</li>
+<li>The foreman approves, swaps or moves every proposal.</li>
+<li>Re-propose when a job finishes, a part arrives or work is approved.</li>
+<li>Before you close up, note every time a tech waited with no next job, and why.</li>
+</ol>
+<h2>How to tell it's working</h2>
+<p>Run it in suggest mode for two weeks and keep a short log. Each day, write down how many times a tech had an empty next slot and what caused it. You're looking for the log to get shorter, and for the causes to shift from "nobody staged it" to real constraints like a late part. Compare the proposals with what the foreman chose. Keep the rules that matched his picks and change the ones he kept overriding.</p>
+<p>Hiring is hard, which makes the hours you already have worth more. The BLS projects <a href="https://www.bls.gov/ooh/installation-maintenance-and-repair/automotive-service-technicians-and-mechanics.htm" rel="noopener">about 66,200 openings a year for automotive service technicians and mechanics on average from 2025 to 2035</a>. A full queue won't fix that, but it means the techs you have aren't waiting for work.</p>
+<h2>Where RevvOS fits</h2>
+<p>RevvOS isn't a dispatch board and doesn't assign technicians. It sits beside the shop system and calendar you already use, and its <a href="/solutions/daily-operations/">daily operations view</a> puts aging repair orders, delayed parts and capacity in one short list, each with where it came from and when it was last updated. Proposals and drafts wait for a person. For more on the topic see <a href="/use-cases/technician-scheduling-ai">technician scheduling AI</a> and <a href="/auto-repair-shop-automation">auto repair shop automation</a>.</p>
+    </div>
+    <section class="guide-faq faq" aria-labelledby="faq-h"><h2 id="faq-h">Questions people ask</h2><details><summary>Should AI assign technicians to jobs automatically?</summary><p>No. Let it propose each tech's next job with a reason, and have the foreman or service manager approve it. Who gets the hard diagnostic, overtime and fairness are judgment calls tied to pay and morale.</p></details><details><summary>What should a technician scheduling board show?</summary><p>One lane per tech with the current job, the proposed next job and its reason, plus a held tray for cars waiting on a part or an approval. Promised times and a skills list sit beside it.</p></details><details><summary>Why does an empty work queue matter for flat rate techs?</summary><p>A flat rate tech is paid on hours produced, so time spent waiting for the next job is unpaid. Ratchet+Wrench's 2024 write-up put flat rate at 23% of shops.</p></details><details><summary>How do I start without new software?</summary><p>Run the board on a whiteboard or spreadsheet for two weeks, log every time a tech waited with no next job, then decide what a tool should do for you.</p></details></section>
+    <aside class="guide-cta">
+      <h2>Get a RevvOS assessment</h2>
+      <p>We review how your shop handles calls, estimates, follow-up and reporting today, and show where RevvOS agents would take work off the desk.</p>
+      <a class="btn btn-primary" href="/demo">Get an assessment</a>
+    </aside>
+    <section class="guide-sources sources"><h2>Sources</h2><ol><li><a href="https://www.bls.gov/ooh/installation-maintenance-and-repair/automotive-service-technicians-and-mechanics.htm" rel="noopener">Automotive Service Technicians and Mechanics</a>, U.S. Bureau of Labor Statistics</li><li><a href="https://www.ratchetandwrench.com/running-a-shop/human-resources/article/55038486/numbers-how-auto-repair-shops-pay-technicians" rel="noopener">Numbers: How Auto Repair Shops Pay Technicians</a>, Ratchet+Wrench</li><li><a href="https://www.ratchetandwrench.com/running-a-shop/operations/article/33016639/the-sop-whats-the-best-and-most-effective-pay-plan-for-technicians" rel="noopener">The SOP: best pay plan for technicians</a>, Ratchet+Wrench</li><li><a href="https://www.ratchetandwrench.com/running-a-shop/article/11462798/winning-workflow-an-inside-look-at-the-most-efficient-shops" rel="noopener">Winning Workflow: an inside look at the most efficient shops</a>, Ratchet+Wrench</li><li><a href="https://blog.autovitals.com/5-must-have-features-to-look-for-in-technician-scheduling-software" rel="noopener">5 Must-Have Features to Look for in Technician Scheduling Software</a>, AutoVitals</li><li><a href="https://www.fenderbender.com/running-a-shop/operations/article/55288651/optimize-the-labor-hours-available-to-your-body-shop" rel="noopener">Optimize the labor hours available to your body shop</a>, FenderBender</li></ol></section>
+  </article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about"><a href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a><p>RevvOS helps automotive teams organize operating gaps into clear, reviewable work.</p></div>
+      <div class="footer-links">
+        <div class="footer-column"><h3>Platform</h3><a href="/platform">Overview</a><a href="/agents">Agents</a><a href="/integrations">Integrations</a><a href="/security">Security</a></div>
+        <div class="footer-column"><h3>Solutions</h3><a href="/solutions/multi-location">Multi-location</a><a href="/solutions/daily-operations">Daily operations</a><a href="/solutions/executive-visibility">Executive visibility</a></div>
+        <div class="footer-column"><h3>Use cases</h3><a href="/use-cases/reputation">Reputation</a><a href="/use-cases/local-seo">Local SEO</a><a href="/use-cases/social-media">Social media</a><a href="/use-cases/customer-engagement">Customer engagement</a></div>
+        <div class="footer-column"><h3>Company</h3><a href="/demo">Get an assessment</a><a href="/contact">Contact</a><a href="/support/">Support</a><a href="/legal/privacy">Privacy</a><a href="/legal/terms">Terms</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 RevvOS. All rights reserved.</span><span class="footer-bottom-links"><a href="/legal/security">Legal security</a><a href="mailto:team@simplufy.com">team@simplufy.com</a></span></div>
+  </div>
+</footer>
+<script src="/assets/marketing.js?v=8" defer></script>
+</body>
+</html>
