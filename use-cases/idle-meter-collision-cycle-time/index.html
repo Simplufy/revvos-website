@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Idle Meter: Collision Cycle Time by Stage | RevvOS</title>
+  <meta name="description" content="The Idle Meter splits collision cycle time into stages, so you can see the four quiet ones where days go, with a late signal and an owner for each.">
+  <link rel="canonical" href="https://revvos.xyz/use-cases/idle-meter-collision-cycle-time">
+  <meta property="og:title" content="The Idle Meter: Collision Cycle Time by Stage | RevvOS">
+  <meta property="og:description" content="The Idle Meter splits collision cycle time into stages, so you can see the four quiet ones where days go, with a late signal and an owner for each.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://revvos.xyz/use-cases/idle-meter-collision-cycle-time">
+  <meta name="theme-color" content="#132419">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080a14'/%3E%3Cpath d='M9 22V10h6.2a3.9 3.9 0 0 1 1.5 7.5L20 22h-3.3l-2.9-4.2H12V22H9Zm3-6.7h2.9a1.6 1.6 0 0 0 0-3.2H12v3.2Z' fill='%23eaf1ff'/%3E%3Ccircle cx='23' cy='11' r='2.4' fill='%232fe08e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/marketing.css?v=6">
+  <link rel="stylesheet" href="/assets/brand-alignment.css">
+  <link rel="stylesheet" href="/assets/guides.css?v=1">
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "The Idle Meter: a one-page sheet for collision cycle time", "description": "The Idle Meter splits collision cycle time into stages, so you can see the four quiet ones where days go, with a late signal and an owner for each.", "mainEntityOfPage": "https://revvos.xyz/use-cases/idle-meter-collision-cycle-time", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "author": {"@type": "Organization", "name": "RevvOS", "url": "https://revvos.xyz/"}, "publisher": {"@type": "Organization", "name": "RevvOS", "url": "https://revvos.xyz"}, "citation": ["https://www.repairerdrivennews.com/2025/09/24/new-ccc-report-scans-and-calibrations-now-routine-at-drp-shops-other-industry-trends/", "https://www.autobodynews.com/news/calibrations-surge-past-35-of-repairs-as-total-losses-head-toward-second-straight-record", "https://www.repairerdrivennews.com/2025/12/18/ccc-crash-course-examines-the-collision-trends-of-2025/", "https://www.bodyshopbusiness.com/back-to-basics-track-kpis/", "https://www.fenderbender.com/articles/8465-characteristics-of-the-most-profitable-collision-shops"]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between keys to keys and touch time?", "acceptedAnswer": {"@type": "Answer", "text": "Keys to keys runs from the customer dropping off the car to driving it away, so it includes every day of waiting. Touch time is the average billed hours produced per day per repair order, which only measures the work on the floor. A shop can be strong on one and weak on the other."}}, {"@type": "Question", "name": "Which stage should I fix first?", "acceptedAnswer": {"@type": "Answer", "text": "Start with the finished car. A car that passed QC and is waiting for pickup needs one phone call, not a technician, a part or an insurer, so it is the cheapest day to recover. Then take whichever stage your ten-job tally shows the most letters for."}}, {"@type": "Question", "name": "Why do supplements add so many days?", "acceptedAnswer": {"@type": "Answer", "text": "A supplement sends the file back to the insurer while the car is already apart, so the repair waits on a review. In CCC's 2025 data, about half of calibrations only appeared on a supplement, so checking procedures for calibrations before the first estimate is one of the few ways to avoid a second round."}}, {"@type": "Question", "name": "Do I need software to run the Idle Meter?", "acceptedAnswer": {"@type": "Answer", "text": "No. Ten closed repair orders, a spreadsheet and one person who owns it for two weeks is enough. Software helps once you have several locations or want late stages flagged for you instead of found in a morning meeting."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "RevvOS", "item": "https://revvos.xyz/"}, {"@type": "ListItem", "position": 2, "name": "The Idle Meter: a one-page sheet for collision cycle time", "item": "https://revvos.xyz/use-cases/idle-meter-collision-cycle-time"}]}]</script>
+</head>
+<body class="page-guide">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="/platform">Platform</a>
+      <details class="nav-group"><summary>Solutions</summary><div class="nav-menu"><a href="/solutions/multi-location">Multi-location operations</a><a href="/solutions/daily-operations">Daily operations</a><a href="/solutions/executive-visibility">Executive visibility</a></div></details>
+      <details class="nav-group"><summary>Roles</summary><div class="nav-menu"><a href="/roles/owner">Owners</a><a href="/roles/operations">Operations leaders</a><a href="/roles/marketing">Marketing leaders</a></div></details>
+      <details class="nav-group"><summary>Use cases</summary><div class="nav-menu"><a href="/use-cases/reputation">Reputation</a><a href="/use-cases/local-seo">Local SEO</a><a href="/use-cases/social-media">Social media</a><a href="/use-cases/customer-engagement">Customer engagement</a><a href="/use-cases/operational-visibility">Operational visibility</a><a href="/use-cases/compliance">Compliance</a></div></details>
+      <a href="/resources">Resources</a>
+      <a href="/support/">Support</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-secondary" href="/contact">Contact</a>
+      <a class="btn btn-primary" href="/demo">Get an assessment</a>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+<main id="main" class="guide">
+  <article class="guide-wrap">
+    <nav class="guide-crumbs" aria-label="Breadcrumb"><a href="/">RevvOS</a> <span>/</span> <a href="/resources">Resources</a> <span>/</span> <span>The Idle Meter</span></nav>
+    <p class="guide-kicker">Resources</p>
+    <h1>The Idle Meter: a one-page sheet for collision cycle time</h1>
+    <p class="guide-summary">The Idle Meter is a simple way to break collision cycle time into the stages a repair passes through, so you can see which days were repair work and which were waiting. Four stages run quietly in most shops: authorization, the supplement, the parts wait and the finished car nobody called about. This sheet gives each one a late signal, an owner and a first move, plus a tally you can run on ten closed jobs this week.</p>
+    <p class="guide-meta">Updated October 21, 2026 &middot; 8 min read</p>
+    
+    <div class="guide-body">
+<p>The Idle Meter splits one keys-to-keys number into the stages a repair passes through, and gives each stage its own meter. Four of those meters run while nobody touches the car:</p>
+<ol>
+<li><strong>Authorization.</strong> The car is on your lot, nothing is signed, and no work can start.</li>
+<li><strong>The supplement.</strong> The file is back with the insurer after teardown, often for an item the first estimate missed.</li>
+<li><strong>The parts wait.</strong> An ETA moves and the promise to the customer doesn't.</li>
+<li><strong>The finished car.</strong> It passed QC and sits in the lot because nobody called the customer.</li>
+</ol>
+<p>The rest of this sheet goes deeper on each one, gives you a tally sheet to copy, and shows how to tell the meter is working. It's written for collision shop owners, production managers and the person who answers to the DRP scorecard, whether you run one location or several.</p>
+<h2>Why one number hides the days</h2>
+<p>Keys to keys is the time from drop-off to delivery, and touch time is the average billed hours produced per day per RO. BodyShop Business notes insurers generally judge touch time against <a href="https://www.bodyshopbusiness.com/back-to-basics-track-kpis/" rel="noopener">four hours a day</a>, with some asking for five. Those are two different clocks. A shop can produce strong hours per day on the cars it is working and still post a slow keys-to-keys average, because the second number also counts every hour a car spends waiting for a signature, an insurer, a part or a phone call.</p>
+<p>The gap has grown. CCC's 2025 Crash Course data, as reported by Repairer Driven News, says <a href="https://www.repairerdrivennews.com/2025/09/24/new-ccc-report-scans-and-calibrations-now-routine-at-drp-shops-other-industry-trends/" rel="noopener">repair days remain up four to five days relative to 2020</a>, even though they are down about two days from the peak. Some of that is real repair work on more complex cars. Some of it is waiting, and waiting is the half you can fix without hiring a technician.</p>
+<p>Good shops watch both clocks. In a FenderBender look at its 2016 KPI survey, <a href="https://www.fenderbender.com/articles/8465-characteristics-of-the-most-profitable-collision-shops" rel="noopener">71% of shops with a net margin of 16% or more</a> reported a key-to-key cycle time of seven days or less, and 58% reported four or more touch hours a day. That's a correlation, not proof, but it says the profitable shops track both numbers.</p>
+<h2>What you need before you start</h2>
+<ul>
+<li>Ten closed repair orders from last month, mixed severity. Don't pick your best or your worst.</li>
+<li>For each RO: the drop-off date, the authorization date, the estimate and every supplement date, the date each part was ordered and received, the QC date and the delivery date. Your management system or the file notes usually have all of these.</li>
+<li>One person who owns the sheet for two weeks. It can be the production manager or the office lead, but it has to be one name.</li>
+<li>A plain spreadsheet or a clipboard. Nothing here needs new software to start.</li>
+</ul>
+<h2>Step 1. Draw the meter for ten closed jobs</h2>
+<p>Write each RO as one row and mark every day from keys in to keys out. For each day, put one letter in the cell: <strong>W</strong> if a technician billed time on the car that day, or the letter of the stage it was waiting in if nobody did.</p>
+<table>
+<thead>
+<tr>
+<th>Letter</th>
+<th>Stage it was waiting in</th>
+<th>What counts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Authorization</td>
+<td>On site, no signed authorization or no direction to start</td>
+</tr>
+<tr>
+<td>S</td>
+<td>Supplement</td>
+<td>Supplement written, insurer hasn't answered</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Parts</td>
+<td>Work can't continue until a part arrives</td>
+</tr>
+<tr>
+<td>L</td>
+<td>Sublet</td>
+<td>Out for alignment, glass, calibration or a dealer visit</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Delivery</td>
+<td>Passed QC, customer not yet picked up</td>
+</tr>
+<tr>
+<td>Q</td>
+<td>Queue</td>
+<td>Waiting for a tech or a booth inside your own building</td>
+</tr>
+</tbody>
+</table>
+<p>Count the letters per row and across all ten rows. The total of A, S, P, L and D days is the ceiling of what better follow-up can recover. Q days belong to your production plan, which is a different fix.</p>
+<h2>Step 2. Set a late signal for each quiet stage</h2>
+<p>A late signal is the moment a stage has been quiet for longer than your own normal. Use your ten jobs to pick the number, then write it down so everyone uses the same one.</p>
+<h3>Authorization</h3>
+<p><strong>Late signal:</strong> the car has been checked in for more than half a day and there's no signed authorization on the file.
+<strong>Owner:</strong> the front office.
+<strong>First move:</strong> call or text the customer the same day with the one document that's missing, and note the time you asked.</p>
+<h3>The supplement</h3>
+<p>This is the stage that surprises people. You'd think calibrations slow a job down in the bay, but in CCC's Q3 2025 data reported by Autobody News, <a href="https://www.autobodynews.com/news/calibrations-surge-past-35-of-repairs-as-total-losses-head-toward-second-straight-record" rel="noopener">just 48.5% of calibrations appear on initial estimates and 51.5% show up on supplements</a>, which means another insurer review while the car is already apart. The same report found repairs with several calibrations averaged more than 17 days keys to keys, against 13 days for repairs with none.</p>
+<p><strong>Late signal:</strong> a supplement has been with the insurer longer than your own normal (from Step 1) with no reply.
+<strong>Owner:</strong> the estimator.
+<strong>First move:</strong> a person follows up with the appraiser and notes the time. Before the next teardown, check the repair procedures for calibrations so they land on the first estimate instead of the second.</p>
+<h3>The parts wait</h3>
+<p>Electronic parts have been the hard ones. CCC's review of 2025, covered by <a href="https://www.repairerdrivennews.com/2025/12/18/ccc-crash-course-examines-the-collision-trends-of-2025/" rel="noopener">Repairer Driven News</a>, describes repairers explaining to customers why a bumper repair was waiting on a back-ordered sensor.</p>
+<p><strong>Late signal:</strong> an ETA changes, or a part on order has no tracking, and the customer's promised date hasn't been updated.
+<strong>Owner:</strong> parts, with the estimator.
+<strong>First move:</strong> update the customer the same day the ETA moves, with the new date and the reason, then update every job that depends on that part.</p>
+<h3>The finished car</h3>
+<p><strong>Late signal:</strong> the car passed QC and there's no pickup time booked by the end of that day.
+<strong>Owner:</strong> the front office.
+<strong>First move:</strong> call the customer the moment QC is signed off. This is the cheapest day in the whole cycle to get back, because the repair is already done.</p>
+<p>Sublet (letter L) follows the same pattern. The late signal is a sublet past its quoted turnaround, the owner is whoever sent it out, and the first move is a call to the vendor before the delivery date slips.</p>
+<h2>Step 3. Run it for two weeks</h2>
+<p>Copy this into the top of your sheet and fill it in every morning for open jobs:</p>
+<pre><code class="language-text">RO | Stage now | Days in this stage | Late? (Y/N) | Owner | Last contact (date, who) | Next move
+</code></pre>
+<p>Every morning the owner of the sheet reads the rows marked Y out loud at the production meeting, and each owner says what they did since yesterday. That's the whole routine. If a stage keeps showing up late, that is your bottleneck, and it's usually a handoff rather than a person working slowly.</p>
+<h2>What to watch out for</h2>
+<ul>
+<li><strong>One definition.</strong> Decide when your clock starts and stops (keys in to keys out, not estimate to delivery) and keep it. Comparing a week measured one way with a week measured another is how reporting quietly breaks.</li>
+<li><strong>Severity.</strong> Don't compare a bumper cover with a structural hit. Compare jobs of similar size, or a shop against its own trend.</li>
+<li><strong>Blame.</strong> The meter shows waiting, not effort. If the sheet turns into a scorecard for people, the letters stop being honest.</li>
+<li><strong>The insurer's side.</strong> You can't make an appraiser answer faster. You can make sure nobody at your shop is the reason the file is quiet.</li>
+</ul>
+<h2>How to tell it worked</h2>
+<p>After two weeks, redo Step 1 on ten newly closed jobs and compare the counts. The signs it's working: fewer D days (finished cars go home the day they pass QC), fewer A days at the start of a job, and every late supplement and parts row has a dated contact next to it. Your touch time may not change at all. That's fine, because the point is the days around it.</p>
+<h2>When one sheet stops being enough</h2>
+<p>A sheet works for one shop and a few weeks. With several locations, or once you want the late signals raised for you instead of found at a morning meeting, that is what <a href="/use-cases/operational-visibility/">operational visibility in RevvOS</a> is for: it reads your systems and puts a stage that went quiet in front of the person who owns it, and a person still makes every call. You can see how it works across shops in <a href="/ai-software-for-auto-shops">AI software for auto shops</a>, or <a href="/demo/">book a demo</a> and we'll walk your own stages with you.</p>
+    </div>
+    <section class="guide-faq faq" aria-labelledby="faq-h"><h2 id="faq-h">Questions people ask</h2><details><summary>What is the difference between keys to keys and touch time?</summary><p>Keys to keys runs from the customer dropping off the car to driving it away, so it includes every day of waiting. Touch time is the average billed hours produced per day per repair order, which only measures the work on the floor. A shop can be strong on one and weak on the other.</p></details><details><summary>Which stage should I fix first?</summary><p>Start with the finished car. A car that passed QC and is waiting for pickup needs one phone call, not a technician, a part or an insurer, so it is the cheapest day to recover. Then take whichever stage your ten-job tally shows the most letters for.</p></details><details><summary>Why do supplements add so many days?</summary><p>A supplement sends the file back to the insurer while the car is already apart, so the repair waits on a review. In CCC's 2025 data, about half of calibrations only appeared on a supplement, so checking procedures for calibrations before the first estimate is one of the few ways to avoid a second round.</p></details><details><summary>Do I need software to run the Idle Meter?</summary><p>No. Ten closed repair orders, a spreadsheet and one person who owns it for two weeks is enough. Software helps once you have several locations or want late stages flagged for you instead of found in a morning meeting.</p></details></section>
+    <aside class="guide-cta">
+      <h2>Get a RevvOS assessment</h2>
+      <p>We review how your shop handles calls, estimates, follow-up and reporting today, and show where RevvOS agents would take work off the desk.</p>
+      <a class="btn btn-primary" href="/demo">Get an assessment</a>
+    </aside>
+    <section class="guide-sources sources"><h2>Sources</h2><ol><li><a href="https://www.repairerdrivennews.com/2025/09/24/new-ccc-report-scans-and-calibrations-now-routine-at-drp-shops-other-industry-trends/" rel="noopener">New CCC report: Scans and calibrations now &#x27;routine&#x27; at DRP shops, other industry trends</a>, Repairer Driven News</li><li><a href="https://www.autobodynews.com/news/calibrations-surge-past-35-of-repairs-as-total-losses-head-toward-second-straight-record" rel="noopener">Calibrations surge past 35% of repairs as total losses head toward second straight record</a>, Autobody News</li><li><a href="https://www.repairerdrivennews.com/2025/12/18/ccc-crash-course-examines-the-collision-trends-of-2025/" rel="noopener">CCC Crash Course examines the collision trends of 2025</a>, Repairer Driven News</li><li><a href="https://www.bodyshopbusiness.com/back-to-basics-track-kpis/" rel="noopener">Back to Basics: Tracking KPIs in Your Auto Body Shop</a>, BodyShop Business</li><li><a href="https://www.fenderbender.com/articles/8465-characteristics-of-the-most-profitable-collision-shops" rel="noopener">Characteristics of the Most Profitable Collision Shops</a>, FenderBender</li></ol></section>
+  </article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about"><a href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a><p>RevvOS helps automotive teams organize operating gaps into clear, reviewable work.</p></div>
+      <div class="footer-links">
+        <div class="footer-column"><h3>Platform</h3><a href="/platform">Overview</a><a href="/agents">Agents</a><a href="/integrations">Integrations</a><a href="/security">Security</a></div>
+        <div class="footer-column"><h3>Solutions</h3><a href="/solutions/multi-location">Multi-location</a><a href="/solutions/daily-operations">Daily operations</a><a href="/solutions/executive-visibility">Executive visibility</a></div>
+        <div class="footer-column"><h3>Use cases</h3><a href="/use-cases/reputation">Reputation</a><a href="/use-cases/local-seo">Local SEO</a><a href="/use-cases/social-media">Social media</a><a href="/use-cases/customer-engagement">Customer engagement</a></div>
+        <div class="footer-column"><h3>Company</h3><a href="/demo">Get an assessment</a><a href="/contact">Contact</a><a href="/support/">Support</a><a href="/legal/privacy">Privacy</a><a href="/legal/terms">Terms</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 RevvOS. All rights reserved.</span><span class="footer-bottom-links"><a href="/legal/security">Legal security</a><a href="mailto:team@simplufy.com">team@simplufy.com</a></span></div>
+  </div>
+</footer>
+<script src="/assets/marketing.js?v=8" defer></script>
+</body>
+</html>
