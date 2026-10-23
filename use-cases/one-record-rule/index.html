@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Auto Repair CRM Setup: The One Record Rule Field List</title>
+  <meta name="description" content="The One Record Rule for auto repair CRM setup: one source of truth, a field list of what automation may write, and sync checks before reminders.">
+  <link rel="canonical" href="https://revvos.xyz/use-cases/one-record-rule">
+  <meta property="og:title" content="Auto Repair CRM Setup: The One Record Rule Field List">
+  <meta property="og:description" content="The One Record Rule for auto repair CRM setup: one source of truth, a field list of what automation may write, and sync checks before reminders.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://revvos.xyz/use-cases/one-record-rule">
+  <meta name="theme-color" content="#132419">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080a14'/%3E%3Cpath d='M9 22V10h6.2a3.9 3.9 0 0 1 1.5 7.5L20 22h-3.3l-2.9-4.2H12V22H9Zm3-6.7h2.9a1.6 1.6 0 0 0 0-3.2H12v3.2Z' fill='%23eaf1ff'/%3E%3Ccircle cx='23' cy='11' r='2.4' fill='%232fe08e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/marketing.css?v=6">
+  <link rel="stylesheet" href="/assets/brand-alignment.css">
+  <link rel="stylesheet" href="/assets/guides.css?v=1">
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "The One Record Rule: a field list for auto repair CRM setup", "description": "The One Record Rule for auto repair CRM setup: one source of truth, a field list of what automation may write, and sync checks before reminders.", "mainEntityOfPage": "https://revvos.xyz/use-cases/one-record-rule", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "author": {"@type": "Organization", "name": "RevvOS", "url": "https://revvos.xyz/"}, "publisher": {"@type": "Organization", "name": "RevvOS", "url": "https://revvos.xyz"}, "citation": ["https://www.tekmetric.com/integrations", "https://www.shopmonkey.io/product/automotive-marketing/concierge", "https://support.shopgenie.io/support/setting-up-webhooks-in-tekmetric", "https://img.ratchetandwrench.com/files/base/ebm/ratchetandwrench/document/2026/06/6a4277e469691969c387beca-2026_rwindustry_survey_fnl.pdf"]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do auto repair shops need a separate CRM?", "acceptedAnswer": {"@type": "Answer", "text": "Often not at first. Most shop management systems already hold the customer, vehicle and repair order records. Decide where the record lives, then add automation on top before buying another system."}}, {"@type": "Question", "name": "What should CRM automation be allowed to change?", "acceptedAnswer": {"@type": "Answer", "text": "Tags, tasks, routing, reminders from approved templates and data-quality flags. Names, phone numbers, prices, merges and opt-outs should be changed by a person."}}, {"@type": "Question", "name": "Why do automated reminders sometimes go out for cancelled appointments?", "acceptedAnswer": {"@type": "Answer", "text": "Usually because the tool sending them works from data synced on a schedule. If the appointment was cancelled after the last sync, the reminder doesn't know. Ask how often each tool syncs and whether changes can be pushed."}}, {"@type": "Question", "name": "How should a shop clean its customer data before automating?", "acceptedAnswer": {"@type": "Answer", "text": "Run a duplicate report and a missing-field report and fix them by hand, then turn on one automation rule at a time."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "RevvOS", "item": "https://revvos.xyz/"}, {"@type": "ListItem", "position": 2, "name": "The One Record Rule: a field list for auto repair CRM setup", "item": "https://revvos.xyz/use-cases/one-record-rule"}]}]</script>
+</head>
+<body class="page-guide">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="/platform">Platform</a>
+      <details class="nav-group"><summary>Solutions</summary><div class="nav-menu"><a href="/solutions/multi-location">Multi-location operations</a><a href="/solutions/daily-operations">Daily operations</a><a href="/solutions/executive-visibility">Executive visibility</a></div></details>
+      <details class="nav-group"><summary>Roles</summary><div class="nav-menu"><a href="/roles/owner">Owners</a><a href="/roles/operations">Operations leaders</a><a href="/roles/marketing">Marketing leaders</a></div></details>
+      <details class="nav-group"><summary>Use cases</summary><div class="nav-menu"><a href="/use-cases/reputation">Reputation</a><a href="/use-cases/local-seo">Local SEO</a><a href="/use-cases/social-media">Social media</a><a href="/use-cases/customer-engagement">Customer engagement</a><a href="/use-cases/operational-visibility">Operational visibility</a><a href="/use-cases/compliance">Compliance</a></div></details>
+      <a href="/resources">Resources</a>
+      <a href="/support/">Support</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-secondary" href="/contact">Contact</a>
+      <a class="btn btn-primary" href="/demo">Get an assessment</a>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+<main id="main" class="guide">
+  <article class="guide-wrap">
+    <nav class="guide-crumbs" aria-label="Breadcrumb"><a href="/">RevvOS</a> <span>/</span> <a href="/resources">Resources</a> <span>/</span> <span>Use cases</span></nav>
+    <p class="guide-kicker">Resources</p>
+    <h1>The One Record Rule: a field list for auto repair CRM setup</h1>
+    <p class="guide-summary">Auto repair CRM setup starts with one decision: where the customer record lives, and the One Record Rule makes that the first step. Pick one source of truth, usually your shop system, let automation do the cheap jobs like tags, tasks and reminders, keep changes to names, phone numbers and prices with a person, and check how fresh each sync is before a reminder can fire on old data.</p>
+    <p class="guide-meta">Updated October 21, 2026 &middot; 6 min read</p>
+    
+    <div class="guide-body">
+<p>This is the field list from our video on auto repair CRM automation. It follows the video's three parts:</p>
+<ol>
+<li><strong>One record.</strong> Pick where the customer record lives, usually your shop system, and make every other tool read from it.</li>
+<li><strong>Cheap jobs automated.</strong> Tags, tasks, routing and reminders can run on their own. Names, phone numbers and prices wait for a person.</li>
+<li><strong>Fresh data checked.</strong> Ask how often each tool syncs, because a reminder built on hour-old data can text about an appointment that was just cancelled.</li>
+</ol>
+<p>The usual reason CRM automation misfires is two systems editing the same customer. The rule fixes that before anything is switched on.</p>
+<h2>Why the record drifts</h2>
+<p>Your shop management system is the record of work: customers, vehicles, repair orders, parts, labor and payments. A CRM is the record of the relationship: every contact, what was promised, when to reach out next. Shop systems have added messaging and marketing, and shops add outside tools on top. <a href="https://www.tekmetric.com/integrations" rel="noopener">Tekmetric's integrations page</a> lists more than 70 integrations, and each tool you connect is one more place a customer record can drift.</p>
+<p>Drift looks small. A phone number with two digits swapped, a duplicate customer under a first initial, a car with no mileage since its last visit. Then an automation texts the wrong number, or marks a customer inactive who was in last month.</p>
+<h2>Part 1. One record</h2>
+<p>Write down, for your shop, which system is the source of truth for each kind of data. For most shops it's the shop system for almost everything.</p>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Source of truth</th>
+<th>Everyone else</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Customer name and contact</td>
+<td>shop system</td>
+<td>read only</td>
+</tr>
+<tr>
+<td>Vehicle, VIN and mileage</td>
+<td>shop system</td>
+<td>read only</td>
+</tr>
+<tr>
+<td>Repair orders, prices, payments</td>
+<td>shop system</td>
+<td>read only</td>
+</tr>
+<tr>
+<td>Marketing consent and opt-outs</td>
+<td>wherever STOP is recorded, synced to all</td>
+<td>must honor it</td>
+</tr>
+<tr>
+<td>Notes from calls and texts</td>
+<td>the tool that captured them, linked to the customer</td>
+<td>read</td>
+</tr>
+<tr>
+<td>Tags and follow-up tasks</td>
+<td>the CRM or automation tool</td>
+<td>read</td>
+</tr>
+</tbody>
+</table>
+<p>Then clean before you automate. Run a duplicate report and a missing-field report (no phone, no email, no mileage) and fix them by hand. Automation on a messy list makes the mess faster.</p>
+<h2>Part 2. Cheap jobs automated, the field list</h2>
+<p>This is the list to copy. Start with every field read only, then open the "automation may write" column one rule at a time.</p>
+<p><strong>Automation may write (low risk, easy to undo):</strong></p>
+<ul>
+<li>Tags by what happened: service type, declined recommendation, complaint, fleet customer.</li>
+<li>Tasks with an owner and a date: "declined front brakes, call Tuesday," "text unanswered for a day."</li>
+<li>Routing: fleet inquiries to the owner, warranty questions to the manager, everything else to an advisor. <a href="https://www.shopmonkey.io/product/automotive-marketing/concierge" rel="noopener">Shopmonkey says its Concierge assistant</a> creates follow-up tasks from calls, which is the same idea.</li>
+<li>Reminders: next service due by date or mileage, sent from approved templates.</li>
+<li>Flags: duplicate suspected, phone missing, mileage missing.</li>
+</ul>
+<p><strong>A person changes (high risk, hard to undo):</strong></p>
+<ul>
+<li>Customer name, phone number and email.</li>
+<li>Prices, discounts and anything on a repair order.</li>
+<li>Merging two customer records.</li>
+<li>Marking a customer inactive or lost.</li>
+<li>Removing an opt-out.</li>
+</ul>
+<p>A useful test: if the automation got it wrong, could someone undo it in one click without the customer noticing? If not, a person makes that change.</p>
+<h2>Part 3. Fresh data checked</h2>
+<p>This is the part vendors rarely explain. Systems exchange data in one of two ways: they check on a schedule, or they get told when something changes. One Tekmetric partner's help page says Tekmetric offers <a href="https://support.shopgenie.io/support/setting-up-webhooks-in-tekmetric" rel="noopener">webhooks for appointment and repair order updates</a>, added by an admin under Settings, then Integrations, and that without them the partner's account data syncs once per hour. That's one vendor's description of its own connection, not a rule for every tool, but it shows why the question matters.</p>
+<p>Ask every tool these questions before a reminder rule goes live:</p>
+<ol>
+<li>How often does it pull data from the shop system, and can the shop system push changes to it?</li>
+<li>What happens to a queued reminder if the appointment is cancelled after the last sync?</li>
+<li>Does it show when each record was last updated?</li>
+<li>When a field conflicts between two systems, which one wins?</li>
+</ol>
+<p>Then set a rule of thumb: no appointment reminder fires from data older than your sync interval. If a tool can't tell you its interval, assume the worst.</p>
+<h2>A setup order that works</h2>
+<ol>
+<li>Write the source-of-truth table.</li>
+<li>Clean duplicates and missing fields by hand.</li>
+<li>Turn on one automation rule, for example a task for every declined safety item.</li>
+<li>Run it for two weeks and read every task it created.</li>
+<li>Add the next rule only when the first one is boring.</li>
+<li>Give every automation an owner who notices when it breaks.</li>
+</ol>
+<h2>How to tell it's working</h2>
+<p>After a month, your duplicate report should be short, every task should have an owner and a date, and nobody should be texting customers about appointments that no longer exist. Watch the reasons shops give for holding back on AI. In the <a href="https://img.ratchetandwrench.com/files/base/ebm/ratchetandwrench/document/2026/06/6a4277e469691969c387beca-2026_rwindustry_survey_fnl.pdf" rel="noopener">2026 Ratchet+Wrench survey</a>, shops not using AI cited not knowing what's trustworthy (23%), cost (20%) and lack of time (19%). A small, read-only first step answers all three.</p>
+<h2>Where RevvOS fits</h2>
+<p>RevvOS sits alongside the system you already have. It reads from your shop, customer and marketing systems, shows where each item came from and when it was last updated, says when data is missing, and prepares next steps for a named person to approve. It doesn't replace your shop system and isn't a standalone CRM. See <a href="/use-cases/auto-repair-crm-automation">auto repair CRM automation</a> and the <a href="/integrations/">integrations page</a>.</p>
+    </div>
+    <section class="guide-faq faq" aria-labelledby="faq-h"><h2 id="faq-h">Questions people ask</h2><details><summary>Do auto repair shops need a separate CRM?</summary><p>Often not at first. Most shop management systems already hold the customer, vehicle and repair order records. Decide where the record lives, then add automation on top before buying another system.</p></details><details><summary>What should CRM automation be allowed to change?</summary><p>Tags, tasks, routing, reminders from approved templates and data-quality flags. Names, phone numbers, prices, merges and opt-outs should be changed by a person.</p></details><details><summary>Why do automated reminders sometimes go out for cancelled appointments?</summary><p>Usually because the tool sending them works from data synced on a schedule. If the appointment was cancelled after the last sync, the reminder doesn't know. Ask how often each tool syncs and whether changes can be pushed.</p></details><details><summary>How should a shop clean its customer data before automating?</summary><p>Run a duplicate report and a missing-field report and fix them by hand, then turn on one automation rule at a time.</p></details></section>
+    <aside class="guide-cta">
+      <h2>Get a RevvOS assessment</h2>
+      <p>We review how your shop handles calls, estimates, follow-up and reporting today, and show where RevvOS agents would take work off the desk.</p>
+      <a class="btn btn-primary" href="/demo">Get an assessment</a>
+    </aside>
+    <section class="guide-sources sources"><h2>Sources</h2><ol><li><a href="https://www.tekmetric.com/integrations" rel="noopener">Integrations</a>, Tekmetric</li><li><a href="https://www.shopmonkey.io/product/automotive-marketing/concierge" rel="noopener">Concierge</a>, Shopmonkey</li><li><a href="https://support.shopgenie.io/support/setting-up-webhooks-in-tekmetric" rel="noopener">Setting up webhooks in Tekmetric</a>, Shopgenie support</li><li><a href="https://img.ratchetandwrench.com/files/base/ebm/ratchetandwrench/document/2026/06/6a4277e469691969c387beca-2026_rwindustry_survey_fnl.pdf" rel="noopener">2026 Ratchet+Wrench Industry Survey</a>, Ratchet+Wrench</li></ol></section>
+  </article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about"><a href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a><p>RevvOS helps automotive teams organize operating gaps into clear, reviewable work.</p></div>
+      <div class="footer-links">
+        <div class="footer-column"><h3>Platform</h3><a href="/platform">Overview</a><a href="/agents">Agents</a><a href="/integrations">Integrations</a><a href="/security">Security</a></div>
+        <div class="footer-column"><h3>Solutions</h3><a href="/solutions/multi-location">Multi-location</a><a href="/solutions/daily-operations">Daily operations</a><a href="/solutions/executive-visibility">Executive visibility</a></div>
+        <div class="footer-column"><h3>Use cases</h3><a href="/use-cases/reputation">Reputation</a><a href="/use-cases/local-seo">Local SEO</a><a href="/use-cases/social-media">Social media</a><a href="/use-cases/customer-engagement">Customer engagement</a></div>
+        <div class="footer-column"><h3>Company</h3><a href="/demo">Get an assessment</a><a href="/contact">Contact</a><a href="/support/">Support</a><a href="/legal/privacy">Privacy</a><a href="/legal/terms">Terms</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 RevvOS. All rights reserved.</span><span class="footer-bottom-links"><a href="/legal/security">Legal security</a><a href="mailto:team@simplufy.com">team@simplufy.com</a></span></div>
+  </div>
+</footer>
+<script src="/assets/marketing.js?v=8" defer></script>
+</body>
+</html>
