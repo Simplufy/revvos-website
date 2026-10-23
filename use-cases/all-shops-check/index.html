@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Multi-Location Auto Shop Reporting: The All-Shops Check</title>
+  <meta name="description" content="The All-Shops Check makes multi-location auto shop reporting comparable: shared definitions, one screen of what to act on, and honest gaps.">
+  <link rel="canonical" href="https://revvos.xyz/use-cases/all-shops-check">
+  <meta property="og:title" content="Multi-Location Auto Shop Reporting: The All-Shops Check">
+  <meta property="og:description" content="The All-Shops Check makes multi-location auto shop reporting comparable: shared definitions, one screen of what to act on, and honest gaps.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://revvos.xyz/use-cases/all-shops-check">
+  <meta name="theme-color" content="#132419">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080a14'/%3E%3Cpath d='M9 22V10h6.2a3.9 3.9 0 0 1 1.5 7.5L20 22h-3.3l-2.9-4.2H12V22H9Zm3-6.7h2.9a1.6 1.6 0 0 0 0-3.2H12v3.2Z' fill='%23eaf1ff'/%3E%3Ccircle cx='23' cy='11' r='2.4' fill='%232fe08e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/marketing.css?v=6">
+  <link rel="stylesheet" href="/assets/brand-alignment.css">
+  <link rel="stylesheet" href="/assets/guides.css?v=1">
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "The All-Shops Check: a definitions sheet for multi-location auto shop reporting", "description": "The All-Shops Check makes multi-location auto shop reporting comparable: shared definitions, one screen of what to act on, and honest gaps.", "mainEntityOfPage": "https://revvos.xyz/use-cases/all-shops-check", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "author": {"@type": "Organization", "name": "RevvOS", "url": "https://revvos.xyz/"}, "publisher": {"@type": "Organization", "name": "RevvOS", "url": "https://revvos.xyz"}, "citation": ["https://tekmetric.com/post/6-features-auto-repair-shops-need-to-support-multi-shop-growth", "https://www.repairerdrivennews.com/2025/02/18/focus-advisors-predicts-significant-consolidation-this-year-big-five-now-hold-30-of-market-share/", "https://ratchetandwrench.com/home/article/55243081/numbers-technician-efficiency", "https://www.shopmonkey.io/blog/how-auto-shops-can-take-advantage-of-ai-today", "https://grow.shop4d.com/?p=4068"]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What should a multi-location auto shop report show?", "acceptedAnswer": {"@type": "Answer", "text": "One column per shop with feed state, stale estimates, aging repair orders, late parts, callbacks owed and open capacity. Each number should show its source and when it was last updated."}}, {"@type": "Question", "name": "Why don't my shops' weekly numbers line up?", "acceptedAnswer": {"@type": "Answer", "text": "Usually because they count differently. If one shop closes repair orders on Friday and another on Monday, or defines a stale estimate differently, the weekly numbers can't be compared until you agree on shared definitions."}}, {"@type": "Question", "name": "What should a dashboard do when a shop's data is missing?", "acceptedAnswer": {"@type": "Answer", "text": "Say unavailable and leave the cells empty, with the time the feed went down. Carrying last week's numbers forward or filling in an average leads to decisions based on numbers that aren't real."}}, {"@type": "Question", "name": "Should decisions move to the owner once there is one screen for all shops?", "acceptedAnswer": {"@type": "Answer", "text": "No. The screen is for seeing. Hiring, pricing within your guardrails and customer conversations work better with the shop manager."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "RevvOS", "item": "https://revvos.xyz/"}, {"@type": "ListItem", "position": 2, "name": "The All-Shops Check: a definitions sheet for multi-location auto shop reporting", "item": "https://revvos.xyz/use-cases/all-shops-check"}]}]</script>
+</head>
+<body class="page-guide">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="/platform">Platform</a>
+      <details class="nav-group"><summary>Solutions</summary><div class="nav-menu"><a href="/solutions/multi-location">Multi-location operations</a><a href="/solutions/daily-operations">Daily operations</a><a href="/solutions/executive-visibility">Executive visibility</a></div></details>
+      <details class="nav-group"><summary>Roles</summary><div class="nav-menu"><a href="/roles/owner">Owners</a><a href="/roles/operations">Operations leaders</a><a href="/roles/marketing">Marketing leaders</a></div></details>
+      <details class="nav-group"><summary>Use cases</summary><div class="nav-menu"><a href="/use-cases/reputation">Reputation</a><a href="/use-cases/local-seo">Local SEO</a><a href="/use-cases/social-media">Social media</a><a href="/use-cases/customer-engagement">Customer engagement</a><a href="/use-cases/operational-visibility">Operational visibility</a><a href="/use-cases/compliance">Compliance</a></div></details>
+      <a href="/resources">Resources</a>
+      <a href="/support/">Support</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-secondary" href="/contact">Contact</a>
+      <a class="btn btn-primary" href="/demo">Get an assessment</a>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+<main id="main" class="guide">
+  <article class="guide-wrap">
+    <nav class="guide-crumbs" aria-label="Breadcrumb"><a href="/">RevvOS</a> <span>/</span> <a href="/resources">Resources</a> <span>/</span> <span>Use cases</span></nav>
+    <p class="guide-kicker">Resources</p>
+    <h1>The All-Shops Check: a definitions sheet for multi-location auto shop reporting</h1>
+    <p class="guide-summary">Multi-location auto shop reporting only works when every shop counts the same way, and the All-Shops Check is the definitions sheet and screen layout that makes that happen. First every shop agrees on what each stage means and when a repair order closes, then one screen shows only what you can act on, each line with its source and update time, and a shop whose data is missing says unavailable instead of showing a guess.</p>
+    <p class="guide-meta">Updated October 21, 2026 &middot; 6 min read</p>
+    
+    <div class="guide-body">
+<p>This is the sheet from our video on multi-location auto shop AI. It follows the video's three parts:</p>
+<ol>
+<li><strong>Same words.</strong> Every shop agrees on what each stage means and when a repair order closes.</li>
+<li><strong>One screen.</strong> Only what an owner can act on, like stale estimates and late parts, each with its source and update time.</li>
+<li><strong>Honest gaps.</strong> When a shop's feed is down, the screen says unavailable. It never carries last week's numbers forward.</li>
+</ol>
+<p>The definitions sheet below is the part most groups skip, so fill it in first.</p>
+<h2>Why the third shop goes quiet</h2>
+<p>The second shop is usually fine because you're still in it most days. Somewhere around the third, you start hearing about problems after the customer does. The usual reason isn't the people. It's that each shop counts differently, so the numbers you get can't be lined up.</p>
+<p>Tekmetric, a shop-management vendor, listed what it saw shops need for multi-shop growth: <a href="https://tekmetric.com/post/6-features-auto-repair-shops-need-to-support-multi-shop-growth" rel="noopener">a standard inspection template across locations, shared customer history, unified reporting and a way to test a campaign at one shop before scaling it</a>. Read as a list of what breaks, it's the same problem: processes drift between locations and reports come shop by shop.</p>
+<p>It's common to inherit that drift. In collision repair, Focus Advisors reported the five largest operators <a href="https://www.repairerdrivennews.com/2025/02/18/focus-advisors-predicts-significant-consolidation-this-year-big-five-now-hold-30-of-market-share/" rel="noopener">ran 3,836 shops and added 319 in 2024</a>. That's collision, not general repair, but every group that buys a shop also buys its habits.</p>
+<h2>Part 1. Same words, the definitions sheet</h2>
+<p>Many shops don't track the basics in the first place. In the 2024 Ratchet+Wrench survey, <a href="https://ratchetandwrench.com/home/article/55243081/numbers-technician-efficiency" rel="noopener">18% of shops didn't track technician efficiency and 22% didn't track productivity</a>. Before you compare anything, agree on the words. Copy this sheet, fill in the right-hand column with your managers, and pin it in every shop.</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Write your group's definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Estimate sent</td>
+<td>sent how (text, email, in person) and recorded where</td>
+</tr>
+<tr>
+<td>Stale estimate</td>
+<td>no recorded answer after how many days</td>
+</tr>
+<tr>
+<td>Approved</td>
+<td>approved by whom, recorded how</td>
+</tr>
+<tr>
+<td>RO closed</td>
+<td>closed when (paid, picked up, or end of day)</td>
+</tr>
+<tr>
+<td>Week</td>
+<td>which day the week starts and ends</td>
+</tr>
+<tr>
+<td>Aging RO</td>
+<td>in one stage longer than how many hours or days</td>
+</tr>
+<tr>
+<td>Late part</td>
+<td>past the ETA by how long, or no ETA recorded</td>
+</tr>
+<tr>
+<td>Callback owed</td>
+<td>promised to whom, by when</td>
+</tr>
+<tr>
+<td>Car count</td>
+<td>what counts (diagnosis only, warranty, comebacks)</td>
+</tr>
+</tbody>
+</table>
+<p>Two rules make the sheet stick. Every shop uses the same week and the same closing rule, or weekly numbers can't be compared. And a term only goes on the shared screen once all shops define it the same way.</p>
+<h2>Part 2. One screen, what an owner can act on</h2>
+<p>Keep the all-shops screen to things you can act on in a few minutes. A good layout is one column per shop and these rows:</p>
+<ol>
+<li><strong>Feed state.</strong> Current, needs review, or unavailable.</li>
+<li><strong>Stale estimates.</strong> Using the sheet's definition.</li>
+<li><strong>Aging repair orders.</strong> Orders sitting in one stage past your limit.</li>
+<li><strong>Late parts.</strong> Past the ETA, or no ETA recorded.</li>
+<li><strong>Callbacks owed and pickups waiting.</strong></li>
+<li><strong>Open capacity.</strong> Bays or lifts free today, so you can see where work could shift.</li>
+</ol>
+<p>Every cell carries two things under the number: where it came from and when it was last updated ("shop system, 8:10 AM"). A number with no source and no time is a rumor.</p>
+<p>Where AI helps here is the reading and sorting. Shops often run different systems, and software can pull each feed into one table with the source attached, point out a shop with far more stale estimates than usual, and draft the next step for a named person to approve. Shopmonkey notes that analytics can <a href="https://www.shopmonkey.io/blog/how-auto-shops-can-take-advantage-of-ai-today" rel="noopener">surface patterns such as repairs taking longer than expected</a>. Across locations, the same idea shows which shop's repairs run long.</p>
+<h2>Part 3. Honest gaps, when a shop's data is missing</h2>
+<p>This is the test for any multi-shop tool, including ours. Say one location's feed has been down since Tuesday. A weak tool keeps showing last week's numbers or fills the hole with an average, and you make a decision on fiction. A good one marks that column unavailable, leaves the cells empty, and tells you since when.</p>
+<p>Ask every vendor these three questions and write down the answers:</p>
+<ol>
+<li>What does the screen show when a shop's connection is down?</li>
+<li>Does every number show its source system and last update time?</li>
+<li>Can a manager see and correct their own shop's numbers?</li>
+</ol>
+<h2>What stays local</h2>
+<p>The all-shops screen is for seeing. Most decisions should stay at the shop. Hiring, pricing within your guardrails, customer conversations and whether an old estimate is worth chasing belong to the manager who knows the town and the customers. Shop4D names the owner as a bottleneck when <a href="https://grow.shop4d.com/?p=4068" rel="noopener">every decision needs their sign-off</a>. Give managers clearer information, and keep the decisions with them.</p>
+<h2>How to tell it's working</h2>
+<p>After a month, three things should be true. You can read every shop's row in the same few minutes each morning. Nobody argues about what a number means, because the sheet settles it. And when a feed drops, you see "unavailable" the same day instead of finding out from a stale number a week later.</p>
+<h2>Where RevvOS fits</h2>
+<p>RevvOS's <a href="/solutions/multi-location/">multi-location view</a> is an all-shops matrix with each location's feed state, stale estimates, aging work, callbacks, parts and capacity. It works alongside your existing shop systems, keeps the source and last update visible, marks a shop unavailable when its connection is down instead of guessing, and prepares drafts for a named manager to review. For the rollout side read <a href="/use-cases/ai-for-automotive-service-groups">AI for automotive service groups</a>, and for the bigger picture see <a href="/use-cases/multi-location-auto-shop-ai">multi location auto shop AI</a>.</p>
+    </div>
+    <section class="guide-faq faq" aria-labelledby="faq-h"><h2 id="faq-h">Questions people ask</h2><details><summary>What should a multi-location auto shop report show?</summary><p>One column per shop with feed state, stale estimates, aging repair orders, late parts, callbacks owed and open capacity. Each number should show its source and when it was last updated.</p></details><details><summary>Why don&#x27;t my shops&#x27; weekly numbers line up?</summary><p>Usually because they count differently. If one shop closes repair orders on Friday and another on Monday, or defines a stale estimate differently, the weekly numbers can't be compared until you agree on shared definitions.</p></details><details><summary>What should a dashboard do when a shop&#x27;s data is missing?</summary><p>Say unavailable and leave the cells empty, with the time the feed went down. Carrying last week's numbers forward or filling in an average leads to decisions based on numbers that aren't real.</p></details><details><summary>Should decisions move to the owner once there is one screen for all shops?</summary><p>No. The screen is for seeing. Hiring, pricing within your guardrails and customer conversations work better with the shop manager.</p></details></section>
+    <aside class="guide-cta">
+      <h2>Get a RevvOS assessment</h2>
+      <p>We review how your shop handles calls, estimates, follow-up and reporting today, and show where RevvOS agents would take work off the desk.</p>
+      <a class="btn btn-primary" href="/demo">Get an assessment</a>
+    </aside>
+    <section class="guide-sources sources"><h2>Sources</h2><ol><li><a href="https://tekmetric.com/post/6-features-auto-repair-shops-need-to-support-multi-shop-growth" rel="noopener">6 Features Auto Repair Shops Need to Support Multi-Shop Growth</a>, Tekmetric</li><li><a href="https://www.repairerdrivennews.com/2025/02/18/focus-advisors-predicts-significant-consolidation-this-year-big-five-now-hold-30-of-market-share/" rel="noopener">Focus Advisors predicts significant consolidation this year</a>, Repairer Driven News</li><li><a href="https://ratchetandwrench.com/home/article/55243081/numbers-technician-efficiency" rel="noopener">Numbers: Technician Efficiency</a>, Ratchet+Wrench</li><li><a href="https://www.shopmonkey.io/blog/how-auto-shops-can-take-advantage-of-ai-today" rel="noopener">How Auto Shops Can Take Advantage of AI Today</a>, Shopmonkey</li><li><a href="https://grow.shop4d.com/?p=4068" rel="noopener">5 Workflow Bottlenecks</a>, Shop4D</li></ol></section>
+  </article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about"><a href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a><p>RevvOS helps automotive teams organize operating gaps into clear, reviewable work.</p></div>
+      <div class="footer-links">
+        <div class="footer-column"><h3>Platform</h3><a href="/platform">Overview</a><a href="/agents">Agents</a><a href="/integrations">Integrations</a><a href="/security">Security</a></div>
+        <div class="footer-column"><h3>Solutions</h3><a href="/solutions/multi-location">Multi-location</a><a href="/solutions/daily-operations">Daily operations</a><a href="/solutions/executive-visibility">Executive visibility</a></div>
+        <div class="footer-column"><h3>Use cases</h3><a href="/use-cases/reputation">Reputation</a><a href="/use-cases/local-seo">Local SEO</a><a href="/use-cases/social-media">Social media</a><a href="/use-cases/customer-engagement">Customer engagement</a></div>
+        <div class="footer-column"><h3>Company</h3><a href="/demo">Get an assessment</a><a href="/contact">Contact</a><a href="/support/">Support</a><a href="/legal/privacy">Privacy</a><a href="/legal/terms">Terms</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 RevvOS. All rights reserved.</span><span class="footer-bottom-links"><a href="/legal/security">Legal security</a><a href="mailto:team@simplufy.com">team@simplufy.com</a></span></div>
+  </div>
+</footer>
+<script src="/assets/marketing.js?v=8" defer></script>
+</body>
+</html>
