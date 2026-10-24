@@ -1,0 +1,304 @@
+{
+  "_about": "Site architecture config read by scripts/prebuild.mjs. silos: one hub per silo. assign: pages whose silo is not obvious from the URL (null = utility page, no silo). guides: lead-magnet guides wherever they live (new factory lead magnets are added automatically). topics: [group, [words matched in URL + title]], first match wins, last is the fallback. labels: short names for nav and breadcrumbs.",
+  "silos": {
+    "platform": {
+      "name": "Platform",
+      "hub": "/platform/",
+      "more": "More of the platform",
+      "all": "Platform overview",
+      "blurb": "How RevvOS works: the agents, integrations, security model and pricing.",
+      "listHeading": "Explore the platform"
+    },
+    "solutions": {
+      "name": "Solutions",
+      "hub": "/solutions/",
+      "more": "More solutions",
+      "all": "All solutions and roles",
+      "page": {
+        "title": "Solutions for Automotive Service Groups | RevvOS",
+        "description": "How RevvOS fits multi-location groups, daily shop operations and executive reporting, and what it looks like for owners, operations leaders and marketing leaders.",
+        "h1": "Solutions",
+        "intro": "Start with the operating problem you have or the role you hold. Each page explains what RevvOS shows, what it prepares, and what stays with your team.",
+        "groupBy": "path",
+        "groups": {
+          "/solutions/": "By operation",
+          "/roles/": "By role"
+        }
+      },
+      "blurb": "RevvOS by operating problem and by role."
+    },
+    "use-cases": {
+      "name": "Use cases",
+      "hub": "/use-cases/",
+      "more": "More use cases",
+      "all": "All use cases",
+      "page": {
+        "title": "Auto Shop Use Cases for AI Agents and Automation | RevvOS",
+        "description": "Every RevvOS use case in one place: calls and leads, estimates, customer follow-up, reviews, shop workflow and reporting for auto repair, collision and glass shops.",
+        "h1": "Use cases for auto shops",
+        "intro": "Each page below covers one job in an auto shop: what the work involves, where it tends to break down, and what a person should keep doing. The first group is the core RevvOS use cases. The rest go deeper on one workflow each.",
+        "groupBy": "core-topic"
+      },
+      "blurb": "What RevvOS does for one job at a time, from reviews and local search to follow-up and reporting."
+    },
+    "guides": {
+      "name": "Guides",
+      "hub": "/guides/",
+      "more": "More guides",
+      "all": "All guides",
+      "page": {
+        "title": "Free Guides, Checklists and Templates for Auto Shops | RevvOS",
+        "description": "Free working guides for auto repair, collision, glass and detailing shops: phone scripts, checklists, message templates and weekly sheets you can copy and use.",
+        "h1": "Guides for auto shops",
+        "intro": "These are the step-by-step guides that go with our videos. Each one is a sheet, script or checklist you can copy and use in your shop, and every page lists the sources it relies on at the bottom.",
+        "groupBy": "topic"
+      },
+      "blurb": "Scripts, checklists, message templates and weekly sheets you can copy and use."
+    },
+    "compare": {
+      "name": "Software comparisons",
+      "hub": "/compare/",
+      "more": "More software comparisons",
+      "all": "All software comparisons",
+      "page": {
+        "title": "Auto Shop AI Software Comparisons and Buyer Guides | RevvOS",
+        "description": "Plain-language guides to AI software for auto repair shops: shop management systems, AI service advisors, phone agents and automation tools, and what each does.",
+        "h1": "Software comparisons and category guides",
+        "intro": "If you are sorting through AI tools for an auto shop, start here. Each page explains one software category, what the main options do as of the date on the page, and the questions worth asking before you buy.",
+        "groupBy": "none",
+        "groupName": "Category guides and comparisons"
+      },
+      "blurb": "What each category of AI software for auto shops does, compared in plain language."
+    },
+    "resources": {
+      "name": "Resources",
+      "hub": "/resources/",
+      "more": "More resources",
+      "all": "Resources",
+      "blurb": "The 30-minute field guide and representative scenarios.",
+      "listHeading": "The RevvOS library"
+    }
+  },
+  "assign": {
+    "/agents": "platform",
+    "/integrations": "platform",
+    "/security": "platform",
+    "/pricing": "platform",
+    "/demo": "platform",
+    "/case-studies": "resources",
+    "/use-cases/reputation": "use-cases",
+    "/use-cases/local-seo": "use-cases",
+    "/use-cases/social-media": "use-cases",
+    "/use-cases/customer-engagement": "use-cases",
+    "/use-cases/operational-visibility": "use-cases",
+    "/use-cases/compliance": "use-cases",
+    "/contact": null,
+    "/support": null
+  },
+  "core": [
+    "/use-cases/reputation",
+    "/use-cases/local-seo",
+    "/use-cases/social-media",
+    "/use-cases/customer-engagement",
+    "/use-cases/operational-visibility",
+    "/use-cases/compliance",
+    "/solutions/multi-location",
+    "/solutions/daily-operations",
+    "/solutions/executive-visibility"
+  ],
+  "guides": [
+    "/collision-call-map",
+    "/five-blank-workflow-spec",
+    "/four-flag-estimate-check",
+    "/four-reason-declined-work-sort",
+    "/guides/four-leak-ledger",
+    "/guides/four-reason-reminder-plan",
+    "/guides/lapsed-list",
+    "/guides/monday-aging-sweep",
+    "/guides/sellable-hours-count",
+    "/guides/true-stage-rule",
+    "/guides/two-number-split",
+    "/guides/wait-tag-sheet",
+    "/missed-call-catch",
+    "/six-field-intake-record",
+    "/source-test-ai-demo-checklist",
+    "/two-ledger-split",
+    "/use-cases/all-shops-check",
+    "/use-cases/complete-quote-auto-glass",
+    "/use-cases/detail-call-sort-phone-script",
+    "/use-cases/eight-touch-map",
+    "/use-cases/five-door-table-auto-repair-leads",
+    "/use-cases/four-part-glass-day-dispatch",
+    "/use-cases/full-queue-check",
+    "/use-cases/glass-call-sort-phone-script",
+    "/use-cases/glass-work-order-map",
+    "/use-cases/handoff-test",
+    "/use-cases/honest-basics-auto-repair-seo",
+    "/use-cases/idle-meter-collision-cycle-time",
+    "/use-cases/no-silence-update-auto-body",
+    "/use-cases/one-record-rule",
+    "/use-cases/one-screen-report",
+    "/use-cases/one-workflow-pilot",
+    "/use-cases/paid-parts-match",
+    "/use-cases/rate-gap",
+    "/use-cases/real-win-check-google-ads-auto-repair",
+    "/use-cases/same-hour-follow-up-auto-glass",
+    "/use-cases/scope-photo-auto-detailing",
+    "/use-cases/send-line",
+    "/use-cases/seven-oclock-list",
+    "/use-cases/stage-clock",
+    "/use-cases/star-sort-review-triage",
+    "/use-cases/supplement-packet",
+    "/use-cases/trigger-map-auto-repair-marketing",
+    "/use-cases/ugly-call-test",
+    "/use-cases/what-changed-question",
+    "/waiting-list-test"
+  ],
+  "topics": [
+    [
+      "Calls, leads and intake",
+      [
+        "call",
+        "phone",
+        "lead",
+        "intake",
+        "door",
+        "receptionist",
+        "answering",
+        "missed-call"
+      ]
+    ],
+    [
+      "Estimates, quotes and declined work",
+      [
+        "estimate",
+        "quote",
+        "declined",
+        "supplement",
+        "four-flag",
+        "claim",
+        "waiting-list"
+      ]
+    ],
+    [
+      "Shop floor and workflow",
+      [
+        "stage",
+        "clock",
+        "queue",
+        "handoff",
+        "wait",
+        "hours",
+        "dispatch",
+        "cycle",
+        "idle",
+        "workflow",
+        "blank",
+        "seven",
+        "technician",
+        "work-order",
+        "scope",
+        "glass-day",
+        "schedul"
+      ]
+    ],
+    [
+      "Customer messages and follow-up",
+      [
+        "follow",
+        "text",
+        "messag",
+        "send-line",
+        "touch",
+        "remind",
+        "lapsed",
+        "reactivation",
+        "silence",
+        "crm",
+        "record",
+        "engagement",
+        "update"
+      ]
+    ],
+    [
+      "Reviews, marketing and local search",
+      [
+        "review",
+        "star",
+        "seo",
+        "ads",
+        "marketing",
+        "trigger",
+        "reputation",
+        "social"
+      ]
+    ],
+    [
+      "Reporting, money and multi-shop control",
+      [
+        "report",
+        "rate-gap",
+        "ledger",
+        "split",
+        "number",
+        "aging",
+        "parts",
+        "screen",
+        "changed",
+        "all-shops",
+        "multi",
+        "pilot",
+        "source-test",
+        "compliance",
+        "profit",
+        "visibility"
+      ]
+    ],
+    [
+      "AI software and automation",
+      [
+        "ai",
+        "software",
+        "automation",
+        "agent",
+        "mechanic"
+      ]
+    ]
+  ],
+  "topicOverrides": {
+    "/guides/monday-aging-sweep": "Reporting, money and multi-shop control",
+    "/use-cases/one-workflow-pilot": "Reporting, money and multi-shop control",
+    "/use-cases/customer-engagement": "Customer messages and follow-up"
+  },
+  "labels": {
+    "/platform": "Platform",
+    "/agents": "Agents",
+    "/integrations": "Integrations",
+    "/security": "Security",
+    "/pricing": "Pricing",
+    "/demo": "Book a demo",
+    "/solutions": "Solutions",
+    "/solutions/multi-location": "Multi-location operations",
+    "/solutions/daily-operations": "Daily operations",
+    "/solutions/executive-visibility": "Executive visibility",
+    "/roles/owner": "Owners",
+    "/roles/operations": "Operations leaders",
+    "/roles/marketing": "Marketing leaders",
+    "/use-cases": "Use cases",
+    "/use-cases/reputation": "Reputation",
+    "/use-cases/local-seo": "Local SEO",
+    "/use-cases/social-media": "Social media",
+    "/use-cases/customer-engagement": "Customer engagement",
+    "/use-cases/operational-visibility": "Operational visibility",
+    "/use-cases/compliance": "Compliance",
+    "/guides": "Guides",
+    "/compare": "Software comparisons",
+    "/resources": "Resources",
+    "/case-studies": "Scenarios",
+    "/contact": "Contact",
+    "/support": "Support",
+    "/legal/privacy": "Privacy",
+    "/legal/terms": "Terms",
+    "/legal/security": "Legal security"
+  }
+}

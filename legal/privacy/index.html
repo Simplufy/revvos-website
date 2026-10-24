@@ -9,10 +9,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/base.css">
+  <link rel="stylesheet" href="/assets/site-nav.css?v=043f2894" data-site-nav>
 </head>
 <body>
 <div class="grid-bg" aria-hidden="true"></div><div class="halo" aria-hidden="true"></div>
-<header class="nav" id="nav"><div class="wrap bar"><a class="brand" href="/"><img class="brandlogo" src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a><a class="backlink" href="/"><span class="bk">→</span> Back to overview</a></div></header>
+<!-- site-nav:start --><header class="nav" id="nav"><div class="wrap bar">
+  <a class="brand" href="/" aria-label="RevvOS home"><img class="brandlogo" src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
+  <nav class="navlinks" aria-label="Primary navigation"><a href="/platform/">Platform</a><a href="/solutions/">Solutions</a><a href="/use-cases/">Use cases</a><a href="/guides/">Guides</a><a href="/resources/">Resources</a><a href="/support/">Support</a></nav>
+  <div class="nav-cta"><a class="btn btn-ghost" href="https://revvos-demo.pages.dev">Log in</a><span class="mb"><a class="btn btn-primary mag" href="/demo/">Book a demo</a></span></div>
+</div></header><!-- site-nav:end -->
 
 <section class="phead"><div class="wrap">
   <span class="eye">Legal</span>
@@ -77,7 +82,11 @@
   <div class="toc"><a href="/legal/terms/">Terms of Service</a><a href="/legal/security/">Security</a><a href="/contact/">Contact</a></div>
 </div></div>
 
-<footer><div class="wrap"><div class="fbot"><span>© 2026 RevvOS. All rights reserved.</span><span class="fl"><a href="/legal/privacy/">Privacy</a><a href="/legal/terms/">Terms</a><a href="/legal/security/">Security</a><a href="/contact/">Contact</a></span></div></div></footer>
+<!-- site-footer:start --><footer><div class="wrap">
+  <div class="fgrid"><div class="about"><a class="brand" href="/" aria-label="RevvOS home"><img class="brandlogo" src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a><p>RevvOS turns recommendations into clear work with an owner, a check, and proof it is done.</p></div>
+  <div class="fcols"><div class="fcol"><h4>Platform</h4><a href="/platform/">Overview</a><a href="/agents/">Agents</a><a href="/integrations/">Integrations</a><a href="/security/">Security</a><a href="/pricing/">Pricing</a></div><div class="fcol"><h4>Solutions</h4><a href="/solutions/">All solutions</a><a href="/solutions/multi-location/">Multi-location</a><a href="/solutions/daily-operations/">Daily operations</a><a href="/solutions/executive-visibility/">Executive visibility</a><a href="/roles/owner/">Owners</a><a href="/roles/operations/">Operations leaders</a><a href="/roles/marketing/">Marketing leaders</a></div><div class="fcol"><h4>Library</h4><a href="/use-cases/">Use cases</a><a href="/guides/">Guides</a><a href="/compare/">Software comparisons</a><a href="/resources/">Resources</a><a href="/case-studies/">Scenarios</a></div><div class="fcol"><h4>Company</h4><a href="/demo/">Book a demo</a><a href="/contact/">Contact</a><a href="/support/">Support</a></div><div class="fcol"><h4>Legal</h4><a href="/legal/privacy/" aria-current="page">Privacy</a><a href="/legal/terms/">Terms</a><a href="/legal/security/">Legal security</a></div></div></div>
+  <div class="fbot"><span>&copy; 2026 RevvOS. All rights reserved.</span><span>Made for the people who keep the world moving.</span></div>
+</div></footer><!-- site-footer:end -->
 <script>const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>8),{passive:true});</script>
 </body>
 </html>

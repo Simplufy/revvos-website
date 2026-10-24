@@ -106,14 +106,18 @@
   @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
   .brandlogo{height:34px;width:auto;display:block}
 </style>
+  <link rel="stylesheet" href="/assets/site-nav.css?v=043f2894" data-site-nav>
+  <!-- crumbs-ld:start --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://revvos.xyz/"},{"@type":"ListItem","position":2,"name":"Platform","item":"https://revvos.xyz/platform/"},{"@type":"ListItem","position":3,"name":"Agents","item":"https://revvos.xyz/agents/"}]}</script><!-- crumbs-ld:end -->
 </head>
 <body>
 <div class="grid-bg" aria-hidden="true"></div><div class="halo" aria-hidden="true"></div>
 
-<header class="nav" id="nav"><div class="wrap bar">
-  <a class="brand" href="/"><img class="brandlogo" src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
-  <a class="backlink" href="/"><span class="arrow" style="transform:scaleX(-1);display:inline-block">→</span> Back to overview</a>
-</div></header>
+<!-- site-nav:start --><header class="nav" id="nav"><div class="wrap bar">
+  <a class="brand" href="/" aria-label="RevvOS home"><img class="brandlogo" src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
+  <nav class="navlinks" aria-label="Primary navigation"><a href="/platform/">Platform</a><a href="/solutions/">Solutions</a><a href="/use-cases/">Use cases</a><a href="/guides/">Guides</a><a href="/resources/">Resources</a><a href="/support/">Support</a></nav>
+  <div class="nav-cta"><a class="btn btn-ghost" href="https://revvos-demo.pages.dev">Log in</a><span class="mb"><a class="btn btn-primary mag" href="/demo/">Book a demo</a></span></div>
+</div></header><!-- site-nav:end -->
+<!-- crumbs:start --><nav class="site-crumbs site-crumbs--flow" aria-label="Breadcrumb"><div class="wrap"><a href="/">Home</a><span class="sep" aria-hidden="true">/</span><a href="/platform/">Platform</a><span class="sep" aria-hidden="true">/</span><span aria-current="page">Agents</span></div></nav><!-- crumbs:end -->
 
 <section class="phead"><div class="wrap">
   <span class="eye reveal">The fleet, in detail</span>
@@ -251,7 +255,12 @@
   <div class="cta"><a class="btn btn-primary" href="/demo/">Book a demo <span class="arrow">→</span></a><a class="btn btn-ghost" href="/#platform">Explore the platform</a></div>
 </div></div></section>
 
-<footer><div class="wrap"><div class="fbot"><span>© 2026 RevvOS. All rights reserved.</span><span><a href="/">← Back to overview</a></span></div></div></footer>
+<!-- related:start --><div class="wrap silo-more-wrap"><aside class="silo-more silo-more--wide" aria-labelledby="silo-more-h"><h2 id="silo-more-h">More of the platform</h2><ul><li><a href="/security/">Security</a></li><li><a href="/demo/">Book a demo</a></li><li><a href="/integrations/">Integrations</a></li><li><a href="/pricing/">Pricing</a></li></ul><p class="silo-more-all"><a href="/platform/">Platform overview <span aria-hidden="true">&rarr;</span></a></p></aside></div><!-- related:end -->
+<!-- site-footer:start --><footer><div class="wrap">
+  <div class="fgrid"><div class="about"><a class="brand" href="/" aria-label="RevvOS home"><img class="brandlogo" src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a><p>RevvOS turns recommendations into clear work with an owner, a check, and proof it is done.</p></div>
+  <div class="fcols"><div class="fcol"><h4>Platform</h4><a href="/platform/">Overview</a><a href="/agents/" aria-current="page">Agents</a><a href="/integrations/">Integrations</a><a href="/security/">Security</a><a href="/pricing/">Pricing</a></div><div class="fcol"><h4>Solutions</h4><a href="/solutions/">All solutions</a><a href="/solutions/multi-location/">Multi-location</a><a href="/solutions/daily-operations/">Daily operations</a><a href="/solutions/executive-visibility/">Executive visibility</a><a href="/roles/owner/">Owners</a><a href="/roles/operations/">Operations leaders</a><a href="/roles/marketing/">Marketing leaders</a></div><div class="fcol"><h4>Library</h4><a href="/use-cases/">Use cases</a><a href="/guides/">Guides</a><a href="/compare/">Software comparisons</a><a href="/resources/">Resources</a><a href="/case-studies/">Scenarios</a></div><div class="fcol"><h4>Company</h4><a href="/demo/">Book a demo</a><a href="/contact/">Contact</a><a href="/support/">Support</a></div><div class="fcol"><h4>Legal</h4><a href="/legal/privacy/">Privacy</a><a href="/legal/terms/">Terms</a><a href="/legal/security/">Legal security</a></div></div></div>
+  <div class="fbot"><span>&copy; 2026 RevvOS. All rights reserved.</span><span>Made for the people who keep the world moving.</span></div>
+</div></footer><!-- site-footer:end -->
 
 <script>
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;

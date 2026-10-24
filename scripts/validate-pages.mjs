@@ -117,7 +117,7 @@ for (const [slug, visualMarker, pageStyles] of pages) {
   if (!html.includes(`<link rel="stylesheet" href="/assets/${pageStyles}">`)) errors.push(`Missing page styles: ${slug}`);
   if (!html.includes('<link rel="stylesheet" href="/assets/os-story.css?v=9">')) errors.push(`Missing OS story styles: ${slug}`);
   if (!html.includes('<script src="/assets/marketing.js?v=8" defer></script>')) errors.push(`Missing shared script: ${slug}`);
-  if (!html.includes('<script src="/assets/plain-pages.js?v=9" defer></script>')) errors.push(`Missing OS story script: ${slug}`);
+  if (!html.includes('<script src="/assets/plain-pages.js?v=10" defer></script>')) errors.push(`Missing OS story script: ${slug}`);
   if (/<meta name="robots"[^>]*noindex/i.test(html)) errors.push(`noindex must not ship on a public page: ${slug}`);
   if (!html.includes(visualMarker)) errors.push(`Missing unique visual marker ${visualMarker}: ${slug}`);
   if (html.includes("Revvos")) errors.push(`Incorrect brand casing: ${slug}`);

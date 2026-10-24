@@ -1290,11 +1290,19 @@
     </form>
   ` : "";
 
+  // Keep the static breadcrumb trail (Home / hub / page) written by scripts/build-breadcrumbs.mjs.
+  const staticCrumbs = main.querySelector(".site-crumbs .wrap");
+  const crumbTrail = staticCrumbs
+    ? [...staticCrumbs.children].filter((el) => !el.classList.contains("sep")).map((el) => (el.tagName === "A"
+      ? `<a href="${el.getAttribute("href")}">${el.textContent}</a>`
+      : `<span aria-current="page">${el.textContent}</span>`)).join("<span>/</span>")
+    : `<a href="/">Home</a><span>/</span><span>${page.section}</span>`;
+
   main.className = "os-story-main";
   main.innerHTML = `
     <section class="os-hero">
       <div class="wrap">
-        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>${page.section}</span></nav>
+        <nav class="breadcrumbs" aria-label="Breadcrumb">${crumbTrail}</nav>
         <div class="os-hero-grid">
           <div class="os-hero-copy os-reveal">
             <p class="os-eyebrow">${page.eyebrow}</p>

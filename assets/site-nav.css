@@ -1,0 +1,64 @@
+/* Site architecture blocks written by scripts/prebuild.mjs: breadcrumbs, "More in this section", hub lists,
+   and the shared header/footer on base.css pages. Works with marketing.css tokens and base.css tokens. */
+
+/* Breadcrumbs on marketing pages: sits in the top padding of the first section, so no layout shift. */
+.site-crumbs { position: absolute; z-index: 5; left: 0; right: 0; padding-top: 18px; font: 500 12px/1.4 var(--mono, "JetBrains Mono", ui-monospace, monospace); letter-spacing: .02em; color: var(--dim, var(--fog2, #667184)); pointer-events: none; }
+.site-crumbs .wrap { pointer-events: auto; }
+.site-crumbs a { color: var(--fog, #8d99ab); text-decoration: none; }
+.site-crumbs a:hover { color: var(--green, var(--acc, #2fe08e)); }
+.site-crumbs .sep { margin: 0 8px; }
+.site-crumbs--flow { position: static; padding: 18px 0 0; }
+.guide-crumbs [aria-current] { color: var(--dim, #667184); }
+
+/* More in this section */
+.silo-more { margin-top: 56px; padding: 26px 28px 22px; border: 1px solid var(--line, var(--hair, rgba(190,215,245,.13))); border-radius: 16px; background: var(--panel, var(--frost, rgba(190,215,245,.035))); }
+.silo-more h2 { margin: 0 0 10px; font: 600 22px/1.2 var(--display, var(--disp, "Space Grotesk", system-ui, sans-serif)); letter-spacing: -.01em; color: var(--ice, #dcecf8); }
+.silo-more ul { margin: 0; padding: 0; list-style: none; }
+.silo-more li a { display: block; padding: 10px 0; border-bottom: 1px solid var(--line, var(--hair, rgba(190,215,245,.13))); color: var(--moon, #bccbdf); font-size: 15.5px; line-height: 1.45; text-decoration: none; }
+.silo-more li:last-child a { border-bottom: 0; }
+.silo-more li a:hover { color: var(--green-bright, var(--acc-b, #85ffc2)); }
+.silo-more-all { margin: 12px 0 0; font: 500 13px/1.4 var(--mono, "JetBrains Mono", ui-monospace, monospace); }
+.silo-more-all a { color: var(--green, var(--acc, #2fe08e)); text-decoration: none; }
+.silo-more-all a:hover { color: var(--green-bright, var(--acc-b, #85ffc2)); }
+.silo-more-wrap { position: relative; z-index: 2; padding: 64px 0 88px; }
+.silo-more--wide { margin-top: 0; }
+@media (min-width: 900px) {
+  .silo-more--wide ul { display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; }
+  .silo-more--wide li:nth-last-child(2):nth-child(odd) a { border-bottom: 0; }
+}
+
+/* Hub pages */
+.hub-intro { margin-top: 22px; font-size: 18px; line-height: 1.65; color: var(--moon, #bccbdf); }
+.hub-jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; padding: 0; list-style: none; }
+.hub-jump a { display: inline-block; padding: 7px 12px; border: 1px solid var(--line, rgba(190,215,245,.13)); border-radius: 999px; color: var(--moon, #bccbdf); font-size: 13px; text-decoration: none; }
+.hub-jump a:hover { color: #fff; background: var(--panel-strong, rgba(190,215,245,.075)); }
+.hub-group { margin-top: 52px; }
+.hub-group h2 { margin: 0 0 4px; font: 600 26px/1.2 var(--display, "Space Grotesk", system-ui, sans-serif); letter-spacing: -.01em; color: var(--ice, #dcecf8); }
+.hub-group .hub-count { margin: 0 0 6px; font: 500 12px/1.4 var(--mono, "JetBrains Mono", monospace); color: var(--dim, #667184); }
+.hub-list { margin: 0; padding: 0; list-style: none; }
+.hub-list li { padding: 16px 0; border-bottom: 1px solid var(--line, rgba(190,215,245,.13)); }
+.hub-list a { color: var(--ice, #dcecf8); font-size: 17px; font-weight: 600; line-height: 1.4; text-decoration: none; }
+.hub-list a:hover { color: var(--green-bright, #85ffc2); }
+.hub-list p { margin: 6px 0 0; color: var(--fog, #8d99ab); font-size: 15px; line-height: 1.55; }
+.hub-section { position: relative; z-index: 2; padding: 0 0 96px; }
+.hub-section .hub-inner { width: min(100%, 760px); }
+
+/* Mobile menu: the longer dropdowns stay scrollable inside the open panel. */
+@media (max-width: 1020px) { .nav-links.is-open { max-height: calc(100vh - 96px); overflow-y: auto; } }
+
+/* base.css pages (agents, contact, legal) get the home page's header and footer. */
+header.nav .navlinks { display: flex; gap: 2px; }
+header.nav .navlinks a { padding: 8px 13px; border-radius: 999px; font-size: 14px; color: var(--moon); font-weight: 500; transition: .2s; }
+header.nav .navlinks a:hover, header.nav .navlinks a[aria-current] { color: #fff; background: var(--frost2); }
+header.nav .nav-cta { display: flex; align-items: center; gap: 8px; margin-left: 8px; }
+header.nav .mb { position: relative; display: inline-block; border-radius: 999px; padding: 1.3px; overflow: hidden; isolation: isolate; }
+@media (max-width: 900px) { header.nav .navlinks a { display: none; } header.nav .nav-cta .btn-ghost { display: none; } }
+footer .fgrid { display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; margin-bottom: 40px; }
+footer .fgrid .about { max-width: 300px; }
+footer .fgrid .about .brand { margin-bottom: 14px; }
+footer .fgrid .about p { font-size: 13.5px; color: var(--fog); line-height: 1.55; }
+footer .fcols { display: flex; gap: 48px; flex-wrap: wrap; }
+footer .fcol h4 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--fog); font-weight: 600; margin: 0 0 14px; }
+footer .fcol a { display: block; font-size: 14px; color: var(--moon); padding: 5px 0; transition: .2s; }
+footer .fcol a:hover { color: #fff; }
+@media (max-width: 560px) { footer .fgrid, footer .fcols { gap: 24px; } }
