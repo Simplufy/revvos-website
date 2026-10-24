@@ -81,6 +81,7 @@ if (!(await exists(supportFile))) {
 for (const file of await htmlFiles(root)) {
   const html = await readFile(file, "utf8");
   const relative = path.relative(root, file);
+  if (relative === "404.html") continue; // the not-found page: noindex, no description by design
   if (!/^<!doctype html>/i.test(html)) errors.push(`Missing doctype: ${relative}`);
   if ((html.match(/<title>/gi) || []).length !== 1) errors.push(`Expected one title: ${relative}`);
   if ((html.match(/<h1[ >]/gi) || []).length !== 1) errors.push(`Expected one h1: ${relative}`);
