@@ -81,7 +81,8 @@ export function baseFooter(url) {
 }
 
 export function cssHref() {
-  const css = readFileSync(path.join(ROOT, "assets", "site-nav.css"));
+  // hash with LF line endings, so every checkout (autocrlf or not) gets the same version and pages don't churn
+  const css = readFileSync(path.join(ROOT, "assets", "site-nav.css"), "utf8").replace(/\r\n/g, "\n");
   return `/assets/site-nav.css?v=${createHash("sha1").update(css).digest("hex").slice(0, 8)}`;
 }
 
