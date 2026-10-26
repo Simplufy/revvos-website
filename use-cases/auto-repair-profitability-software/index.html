@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Auto Repair Profitability Software: Where Margin Leaks</title>
+  <meta name="description" content="Auto repair profitability software explained: where shop margin is made and lost, the math on labor and parts, and what software can and cannot decide.">
+  <link rel="canonical" href="https://revvos.xyz/use-cases/auto-repair-profitability-software">
+  <meta property="og:title" content="Auto Repair Profitability Software: Where Margin Leaks">
+  <meta property="og:description" content="Auto repair profitability software explained: where shop margin is made and lost, the math on labor and parts, and what software can and cannot decide.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://revvos.xyz/use-cases/auto-repair-profitability-software">
+  <meta name="theme-color" content="#132419">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080a14'/%3E%3Cpath d='M9 22V10h6.2a3.9 3.9 0 0 1 1.5 7.5L20 22h-3.3l-2.9-4.2H12V22H9Zm3-6.7h2.9a1.6 1.6 0 0 0 0-3.2H12v3.2Z' fill='%23eaf1ff'/%3E%3Ccircle cx='23' cy='11' r='2.4' fill='%232fe08e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/marketing.css?v=6">
+  <link rel="stylesheet" href="/assets/brand-alignment.css">
+  <link rel="stylesheet" href="/assets/guides.css?v=1">
+  <link rel="stylesheet" href="/assets/site-nav.css?v=043f2894" data-site-nav>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Auto repair profitability software: find where your margin leaks", "description": "Auto repair profitability software explained: where shop margin is made and lost, the math on labor and parts, and what software can and cannot decide.", "mainEntityOfPage": "https://revvos.xyz/use-cases/auto-repair-profitability-software", "datePublished": "2026-10-23", "dateModified": "2026-10-23", "author": {"@type": "Organization", "name": "RevvOS", "url": "https://revvos.xyz/"}, "publisher": {"@type": "Organization", "name": "RevvOS", "url": "https://revvos.xyz"}, "citation": ["https://www.tekmetric.com/post/the-numbers-that-drive-auto-repair-shop-performance", "https://www.ratchetandwrench.com/sponsored-content/autozone/article/33010669/the-kpi-gross-profit-on-labor", "https://www.ratchetandwrench.com/running-a-shop/article/55359025/numbers-track-your-margins", "https://www.fenderbender.com/running-a-shop/finance/article/33028082/financial-keys-to-success", "https://www.ratchetandwrench.com/articles/6385-the-kpi-tracker-profile"]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does profitability software measure for an auto repair shop?", "acceptedAnswer": {"@type": "Answer", "text": "Mostly gross profit on labor and parts, effective labor rate, average repair order and discounts, by job, advisor, technician and location. Net profit also depends on overhead and closed books, which usually live in accounting."}}, {"@type": "Question", "name": "What is a good gross profit margin for an auto repair shop?", "acceptedAnswer": {"@type": "Answer", "text": "Reference points vary by source and by how margin is defined. In the 2025 Ratchet+Wrench survey, 38% of owners reported 50-59% gross margin and 19% reported 60% or more. A sponsored Ratchet+Wrench piece lists 60-69% as the labor average. Compare to your own history first."}}, {"@type": "Question", "name": "What is effective labor rate and why does it matter?", "acceptedAnswer": {"@type": "Answer", "text": "It is what the shop actually collects per labor hour after discounts, flat-rate jobs and packages. It can sit well below the posted rate, and the gap is a common place for margin to leak."}}, {"@type": "Question", "name": "Can AI make my shop more profitable?", "acceptedAnswer": {"@type": "Answer", "text": "It can flag jobs with thin margin, rising discounts or falling effective labor rate, and summarize the pattern. Whether to raise prices, change discount rules or fix workflow is an owner decision."}}, {"@type": "Question", "name": "Does RevvOS calculate profit?", "acceptedAnswer": {"@type": "Answer", "text": "RevvOS is not accounting software. It surfaces operational signals from your shop systems with source and timestamp, such as possible billing issues for a person to check, and does not treat job totals as collected cash."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://revvos.xyz/"}, {"@type": "ListItem", "position": 2, "name": "Use cases", "item": "https://revvos.xyz/use-cases/"}, {"@type": "ListItem", "position": 3, "name": "Auto repair profitability software", "item": "https://revvos.xyz/use-cases/auto-repair-profitability-software"}]}]</script>
+</head>
+<body class="page-guide">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<!-- site-nav:start --><header class="site-header">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <details class="nav-group"><summary>Platform</summary><div class="nav-menu"><a href="/platform/">Platform overview</a><a href="/agents/">Agents</a><a href="/integrations/">Integrations</a><a href="/security/">Security</a><a href="/pricing/">Pricing</a></div></details>
+      <details class="nav-group"><summary>Solutions</summary><div class="nav-menu"><a href="/solutions/">All solutions</a><a href="/solutions/multi-location/">Multi-location operations</a><a href="/solutions/daily-operations/">Daily operations</a><a href="/solutions/executive-visibility/">Executive visibility</a><a href="/roles/owner/">For owners</a><a href="/roles/operations/">For operations leaders</a><a href="/roles/marketing/">For marketing leaders</a></div></details>
+      <details class="nav-group"><summary>Use cases</summary><div class="nav-menu"><a href="/use-cases/">All use cases</a><a href="/use-cases/reputation/">Reputation</a><a href="/use-cases/local-seo/">Local SEO</a><a href="/use-cases/social-media/">Social media</a><a href="/use-cases/customer-engagement/">Customer engagement</a><a href="/use-cases/operational-visibility/">Operational visibility</a><a href="/use-cases/compliance/">Compliance</a></div></details>
+      <a href="/guides/">Guides</a>
+      <details class="nav-group"><summary>Resources</summary><div class="nav-menu"><a href="/resources/">Field guide and library</a><a href="/compare/">Software comparisons</a><a href="/case-studies/">Scenarios</a><a href="/guides/">All guides</a></div></details>
+      <a href="/support/">Support</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-secondary" href="/contact/">Contact</a>
+      <a class="btn btn-primary" href="/demo/">Get an assessment</a>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header><!-- site-nav:end -->
+<main id="main" class="guide">
+  <article class="guide-wrap">
+    <!-- crumbs:start --><nav class="guide-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> <span>/</span> <a href="/use-cases/">Use cases</a> <span>/</span> <span aria-current="page">Auto repair profitability software</span></nav><!-- crumbs:end -->
+    <p class="guide-kicker">Resources</p>
+    <h1>Auto repair profitability software: find where your margin leaks</h1>
+    <p class="guide-summary">Auto repair profitability software shows where a shop makes and loses money by job, by advisor and by location, mainly through gross profit on labor, parts margin and effective labor rate. The software does the arithmetic. Deciding what to change, such as pricing, discounts or technician workflow, stays with the owner.</p>
+    <p class="guide-meta">Updated October 23, 2026 &middot; 5 min read</p>
+    
+    <div class="guide-body">
+<p>A shop can be busy and still not make money. The bays are full, the phones ring, and at the end of the month the number in the bank is smaller than it should be. Auto repair profitability software exists to show why: which jobs, which discounts, which hours. This page explains what such software measures, walks through the math with a made-up example, and is clear about what it cannot decide for you.</p>
+<h2>What profit means at the shop level</h2>
+<p>Three layers get mixed up. <strong>Gross profit</strong> is what a job earns after its direct costs, labor and parts. <strong>Overhead</strong> is rent, utilities, insurance, software and everything that exists whether or not a car comes in. <strong>Net profit</strong> is what is left. Most shop software handles the first layer well. The other two usually depend on accounting.</p>
+<p>For labor, Ratchet+Wrench describes gross profit as <a href="https://www.ratchetandwrench.com/sponsored-content/autozone/article/33010669/the-kpi-gross-profit-on-labor" rel="noopener">job revenue minus the cost of labor, excluding overhead</a>. That 2023 article is labeled sponsored content and lists 60-69% as the industry average and 70-75% as an optimal benchmark. Treat those as reference points, because shops define labor cost in different ways.</p>
+<h2>The numbers profitability software tracks</h2>
+<ul>
+<li><strong>Gross profit on labor and on parts</strong>, by job and by shop.</li>
+<li><strong>Parts margin:</strong> <a href="https://www.tekmetric.com/post/the-numbers-that-drive-auto-repair-shop-performance" rel="noopener">retail minus cost, divided by retail</a>.</li>
+<li><strong>Effective labor rate:</strong> what you collect per labor hour after discounts, flat-rate jobs and packages.</li>
+<li><strong>Average repair order</strong>, and how much of it is labor versus parts.</li>
+<li><strong>Discounts given</strong>, by advisor and by reason.</li>
+<li><strong>Close ratio</strong>, because profit on declined work is zero.</li>
+</ul>
+<h2>A made-up example of a leak</h2>
+<p>This example is illustrative, not a benchmark. Say a shop posts a labor rate of $120 an hour but, after discounts and a few flat-rate packages that run long, collects $95 per labor hour. Tekmetric describes <a href="https://www.tekmetric.com/post/the-numbers-that-drive-auto-repair-shop-performance" rel="noopener">effective labor rate</a> as the amount actually earned per hour, not the posted rate. The gap between the two is $25 an hour, or about 21% of the posted rate. If the shop sells 200 labor hours in a month, that gap is $5,000 that never reached the register.</p>
+<p>Nothing in that example is a mistake anyone can see on a single repair order. Each discount was reasonable. Software helps because it adds them up.</p>
+<h2>Where margin usually leaks</h2>
+<ol>
+<li><strong>Discounts with no rule.</strong> Each one looks small. Together they pull effective labor rate below the posted rate.</li>
+<li><strong>Flat-rate or package jobs that run long.</strong> The customer paid the same, but the tech spent more hours.</li>
+<li><strong>Parts priced from habit.</strong> A matrix that no one has reviewed in years.</li>
+<li><strong>Declined and unanswered estimates.</strong> Work you could have done and did not follow up.</li>
+<li><strong>Idle time.</strong> Sold hours versus hours actually worked.</li>
+</ol>
+<p>A 2016 FenderBender article suggests sanity checks. It describes <a href="https://www.fenderbender.com/running-a-shop/finance/article/33028082/financial-keys-to-success" rel="noopener">a labor margin of 88% as "too good to be true" and 18% as "really bad"</a>, and says some of its figures are illustrative. The lesson is that extreme numbers more often point to bad data than to great or terrible performance.</p>
+<h2>Reference points, used carefully</h2>
+<p>The 2025 Ratchet+Wrench survey asked owners about gross profit margin. <a href="https://www.ratchetandwrench.com/running-a-shop/article/55359025/numbers-track-your-margins" rel="noopener">38% reported 50-59%, 19% reported 60% or more, 11% reported 30-39%, and 7% did not track it</a>. Those are survey answers from shops that responded. Your own trend over the last year tells you more than a distribution.</p>
+<p>Tracking also seems to travel with better numbers. In Ratchet+Wrench's 2018 survey, <a href="https://www.ratchetandwrench.com/articles/6385-the-kpi-tracker-profile" rel="noopener">44% of shops that tracked KPIs reported an effective labor rate above $90, compared with 15% of those that did not</a>. That is a correlation in a 2018 survey, and it does not show that tracking caused the gap.</p>
+<h2>What software does and does not do</h2>
+<p>Software can calculate every margin above, rank jobs from thinnest to richest, and show the trend by advisor or location. AI can add a plain summary and flag a jump in discounts.</p>
+<p>It cannot tell you whether to raise your labor rate, tighten discount rules, retrain an advisor or drop a loss-making service. It also cannot fix inputs: parts cost entered late, labor time logged wrong, or repair orders left open all distort the result.</p>
+<h2>What stays with a person</h2>
+<ul>
+<li>Pricing: labor rate, parts matrix, discount rules.</li>
+<li>Deciding whether a thin-margin job is a mistake or a good customer.</li>
+<li>Reading net profit with your accountant, after overhead.</li>
+</ul>
+<h2>Where RevvOS fits</h2>
+<p>RevvOS is not accounting software and does not produce your P&amp;L. It works on the operational side: its <a href="/solutions/executive-visibility/">executive visibility view</a> can flag items such as a possible billing issue on a repair order for a person to compare with the source, labeled as possible and not as a confirmed amount, and it keeps job totals separate from collected cash. Every line shows the source system and last-updated time. It also never changes the repair order itself. Related reading: <a href="/use-cases/ai-business-intelligence-auto-repair">AI business intelligence auto repair</a>, <a href="/use-cases/ai-cfo-for-auto-shops">AI CFO for auto shops</a> and <a href="/auto-repair-shop-automation">auto repair shop automation</a>. To scope one workflow, start with the <a href="/demo/">Multi-Shop Operating Gap Assessment</a>.</p>
+    </div>
+    <section class="guide-faq faq" aria-labelledby="faq-h"><h2 id="faq-h">Questions people ask</h2><details><summary>What does profitability software measure for an auto repair shop?</summary><p>Mostly gross profit on labor and parts, effective labor rate, average repair order and discounts, by job, advisor, technician and location. Net profit also depends on overhead and closed books, which usually live in accounting.</p></details><details><summary>What is a good gross profit margin for an auto repair shop?</summary><p>Reference points vary by source and by how margin is defined. In the 2025 Ratchet+Wrench survey, 38% of owners reported 50-59% gross margin and 19% reported 60% or more. A sponsored Ratchet+Wrench piece lists 60-69% as the labor average. Compare to your own history first.</p></details><details><summary>What is effective labor rate and why does it matter?</summary><p>It is what the shop actually collects per labor hour after discounts, flat-rate jobs and packages. It can sit well below the posted rate, and the gap is a common place for margin to leak.</p></details><details><summary>Can AI make my shop more profitable?</summary><p>It can flag jobs with thin margin, rising discounts or falling effective labor rate, and summarize the pattern. Whether to raise prices, change discount rules or fix workflow is an owner decision.</p></details><details><summary>Does RevvOS calculate profit?</summary><p>RevvOS is not accounting software. It surfaces operational signals from your shop systems with source and timestamp, such as possible billing issues for a person to check, and does not treat job totals as collected cash.</p></details></section>
+    <!-- related:start --><aside class="silo-more" aria-labelledby="silo-more-h"><h2 id="silo-more-h">More use cases</h2><ul><li><a href="/use-cases/operational-visibility/">Operational visibility</a></li><li><a href="/use-cases/auto-shop-reporting-ai/">Auto Shop Reporting AI: Build the Weekly Owner Report</a></li><li><a href="/use-cases/compliance/">Compliance</a></li><li><a href="/use-cases/declined-work-follow-up-software/">Declined Work Follow Up Software: Sort the No First</a></li><li><a href="/use-cases/repair-shop-revenue-recovery-software/">Repair Shop Revenue Recovery Software: The Four Leaks</a></li></ul><p class="silo-more-all"><a href="/use-cases/">All use cases <span aria-hidden="true">&rarr;</span></a></p></aside><!-- related:end -->
+    <aside class="guide-cta">
+      <h2>Get a RevvOS assessment</h2>
+      <p>We review how your shop handles calls, estimates, follow-up and reporting today, and show where RevvOS agents would take work off the desk.</p>
+      <a class="btn btn-primary" href="/demo">Get an assessment</a>
+    </aside>
+    <section class="guide-sources sources"><h2>Sources</h2><ol><li><a href="https://www.tekmetric.com/post/the-numbers-that-drive-auto-repair-shop-performance" rel="noopener">The Four Numbers That Drive Top Auto Repair Shop Performance</a>, Tekmetric</li><li><a href="https://www.ratchetandwrench.com/sponsored-content/autozone/article/33010669/the-kpi-gross-profit-on-labor" rel="noopener">The KPI: Gross Profit on Labor</a>, Ratchet+Wrench (AutoZone sponsored content)</li><li><a href="https://www.ratchetandwrench.com/running-a-shop/article/55359025/numbers-track-your-margins" rel="noopener">Numbers: Track Your Margins</a>, Ratchet+Wrench</li><li><a href="https://www.fenderbender.com/running-a-shop/finance/article/33028082/financial-keys-to-success" rel="noopener">Financial keys to success</a>, FenderBender</li><li><a href="https://www.ratchetandwrench.com/articles/6385-the-kpi-tracker-profile" rel="noopener">The KPI Tracker profile</a>, Ratchet+Wrench</li></ol></section>
+  </article>
+</main>
+<!-- site-footer:start --><footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about"><a href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a><p>RevvOS shows your team what needs attention, prepares the next step, and keeps people in control.</p></div>
+      <div class="footer-links">
+        <div class="footer-column"><h3>Platform</h3><a href="/platform/">Overview</a><a href="/agents/">Agents</a><a href="/integrations/">Integrations</a><a href="/security/">Security</a><a href="/pricing/">Pricing</a></div>
+        <div class="footer-column"><h3>Solutions</h3><a href="/solutions/">All solutions</a><a href="/solutions/multi-location/">Multi-location</a><a href="/solutions/daily-operations/">Daily operations</a><a href="/solutions/executive-visibility/">Executive visibility</a><a href="/roles/owner/">Owners</a><a href="/roles/operations/">Operations leaders</a><a href="/roles/marketing/">Marketing leaders</a></div>
+        <div class="footer-column"><h3>Library</h3><a href="/use-cases/">Use cases</a><a href="/guides/">Guides</a><a href="/compare/">Software comparisons</a><a href="/resources/">Resources</a><a href="/case-studies/">Scenarios</a></div>
+        <div class="footer-column"><h3>Company</h3><a href="/demo/">Book a demo</a><a href="/contact/">Contact</a><a href="/support/">Support</a><a href="/legal/privacy/">Privacy</a><a href="/legal/terms/">Terms</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 RevvOS. All rights reserved.</span><span class="footer-bottom-links"><a href="/legal/security/">Legal security</a><a href="mailto:team@simplufy.com">team@simplufy.com</a></span></div>
+  </div>
+</footer><!-- site-footer:end -->
+<script src="/assets/marketing.js?v=8" defer></script>
+</body>
+</html>

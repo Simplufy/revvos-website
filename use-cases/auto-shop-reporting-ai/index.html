@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Auto Shop Reporting AI: Build the Weekly Owner Report</title>
+  <meta name="description" content="Auto shop reporting AI explained through the weekly owner report: which numbers to include, how each is defined, and how AI summarizes without hiding gaps.">
+  <link rel="canonical" href="https://revvos.xyz/use-cases/auto-shop-reporting-ai">
+  <meta property="og:title" content="Auto Shop Reporting AI: Build the Weekly Owner Report">
+  <meta property="og:description" content="Auto shop reporting AI explained through the weekly owner report: which numbers to include, how each is defined, and how AI summarizes without hiding gaps.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://revvos.xyz/use-cases/auto-shop-reporting-ai">
+  <meta name="theme-color" content="#132419">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080a14'/%3E%3Cpath d='M9 22V10h6.2a3.9 3.9 0 0 1 1.5 7.5L20 22h-3.3l-2.9-4.2H12V22H9Zm3-6.7h2.9a1.6 1.6 0 0 0 0-3.2H12v3.2Z' fill='%23eaf1ff'/%3E%3Ccircle cx='23' cy='11' r='2.4' fill='%232fe08e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/marketing.css?v=6">
+  <link rel="stylesheet" href="/assets/brand-alignment.css">
+  <link rel="stylesheet" href="/assets/guides.css?v=1">
+  <link rel="stylesheet" href="/assets/site-nav.css?v=043f2894" data-site-nav>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Auto shop reporting AI: a weekly owner report you will actually read", "description": "Auto shop reporting AI explained through the weekly owner report: which numbers to include, how each is defined, and how AI summarizes without hiding gaps.", "mainEntityOfPage": "https://revvos.xyz/use-cases/auto-shop-reporting-ai", "datePublished": "2026-10-23", "dateModified": "2026-10-23", "author": {"@type": "Organization", "name": "RevvOS", "url": "https://revvos.xyz/"}, "publisher": {"@type": "Organization", "name": "RevvOS", "url": "https://revvos.xyz"}, "citation": ["https://www.tekmetric.com/post/the-numbers-that-drive-auto-repair-shop-performance", "https://www.ratchetandwrench.com/running-a-shop/article/55359025/numbers-track-your-margins", "https://www.ratchetandwrench.com/sponsored-content/autozone/article/33010669/the-kpi-gross-profit-on-labor", "https://tours.tekmetric.com/answers/how-real-time-reports-help-grow-your-auto-repair-business", "https://www.sba.gov/business-guide/manage-your-business/manage-your-finances"]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What should an auto shop's weekly report include?", "acceptedAnswer": {"@type": "Answer", "text": "Start with average repair order, car count, gross profit on labor and parts, effective labor rate and close ratio, plus a short list of exceptions (old estimates, aging repair orders). Add more only when someone will act on it."}}, {"@type": "Question", "name": "Can AI write my shop report for me?", "acceptedAnswer": {"@type": "Answer", "text": "It can draft the summary and flag changes from the numbers it is given. A person should read it, because the report is only as accurate as the data behind it and the AI cannot tell a late entry from a real drop."}}, {"@type": "Question", "name": "How often should I look at shop reports?", "acceptedAnswer": {"@type": "Answer", "text": "Weekly for the short report, with the exception list daily. Monthly is the right rhythm for margin and the finance side, since those depend on closed books."}}, {"@type": "Question", "name": "Is an AI report different from the reports in my shop management system?", "acceptedAnswer": {"@type": "Answer", "text": "The numbers can be the same. The difference is plain-language summary, change flags and, for groups, one view across shops and systems instead of exports."}}, {"@type": "Question", "name": "What does RevvOS reporting show?", "acceptedAnswer": {"@type": "Answer", "text": "RevvOS shows a short attention brief with the source system and last-updated time on each line, marks missing connections as unavailable, and prepares drafts for a person to review. It does not change repair orders."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://revvos.xyz/"}, {"@type": "ListItem", "position": 2, "name": "Use cases", "item": "https://revvos.xyz/use-cases/"}, {"@type": "ListItem", "position": 3, "name": "Auto shop reporting AI", "item": "https://revvos.xyz/use-cases/auto-shop-reporting-ai"}]}]</script>
+</head>
+<body class="page-guide">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<!-- site-nav:start --><header class="site-header">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <details class="nav-group"><summary>Platform</summary><div class="nav-menu"><a href="/platform/">Platform overview</a><a href="/agents/">Agents</a><a href="/integrations/">Integrations</a><a href="/security/">Security</a><a href="/pricing/">Pricing</a></div></details>
+      <details class="nav-group"><summary>Solutions</summary><div class="nav-menu"><a href="/solutions/">All solutions</a><a href="/solutions/multi-location/">Multi-location operations</a><a href="/solutions/daily-operations/">Daily operations</a><a href="/solutions/executive-visibility/">Executive visibility</a><a href="/roles/owner/">For owners</a><a href="/roles/operations/">For operations leaders</a><a href="/roles/marketing/">For marketing leaders</a></div></details>
+      <details class="nav-group"><summary>Use cases</summary><div class="nav-menu"><a href="/use-cases/">All use cases</a><a href="/use-cases/reputation/">Reputation</a><a href="/use-cases/local-seo/">Local SEO</a><a href="/use-cases/social-media/">Social media</a><a href="/use-cases/customer-engagement/">Customer engagement</a><a href="/use-cases/operational-visibility/">Operational visibility</a><a href="/use-cases/compliance/">Compliance</a></div></details>
+      <a href="/guides/">Guides</a>
+      <details class="nav-group"><summary>Resources</summary><div class="nav-menu"><a href="/resources/">Field guide and library</a><a href="/compare/">Software comparisons</a><a href="/case-studies/">Scenarios</a><a href="/guides/">All guides</a></div></details>
+      <a href="/support/">Support</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-secondary" href="/contact/">Contact</a>
+      <a class="btn btn-primary" href="/demo/">Get an assessment</a>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header><!-- site-nav:end -->
+<main id="main" class="guide">
+  <article class="guide-wrap">
+    <!-- crumbs:start --><nav class="guide-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> <span>/</span> <a href="/use-cases/">Use cases</a> <span>/</span> <span aria-current="page">Auto shop reporting AI</span></nav><!-- crumbs:end -->
+    <p class="guide-kicker">Resources</p>
+    <h1>Auto shop reporting AI: a weekly owner report you will actually read</h1>
+    <p class="guide-summary">Auto shop reporting AI turns the numbers in your shop systems into a short weekly report in plain language, with each figure tied to its source and the date it was last refreshed. The value is in the reading and the flags, not new math, so the report should stay to a handful of numbers and say clearly when data is missing.</p>
+    <p class="guide-meta">Updated October 23, 2026 &middot; 5 min read</p>
+    
+    <div class="guide-body">
+<p>Most owners have more reports than time. The shop system can produce dozens, and the one that matters tends to be the one nobody opened. Auto shop reporting AI is a way to shrink that pile into a single weekly page you read on Monday with coffee. This guide builds that page, number by number, and then covers where AI helps and where a person has to check its work.</p>
+<h2>Start with a short list</h2>
+<p>A weekly report should fit on one screen. Tekmetric's own guidance names <a href="https://www.tekmetric.com/post/the-numbers-that-drive-auto-repair-shop-performance" rel="noopener">four numbers for shop performance: average repair order, car count, parts margin and effective labor rate</a>. Add gross profit on labor, close ratio and a list of exceptions, and you have seven items. That is plenty.</p>
+<p>Here is how each is defined, so everyone reads the same thing:</p>
+<ul>
+<li><strong>Average repair order:</strong> total revenue divided by the number of cars serviced.</li>
+<li><strong>Car count:</strong> vehicles serviced in the period, ideally split into new and returning customers.</li>
+<li><strong>Parts margin:</strong> retail price minus cost, divided by retail price.</li>
+<li><strong>Effective labor rate:</strong> what the shop actually collects per labor hour, after discounts, flat-rate jobs and packages. It is not your posted rate.</li>
+<li><strong>Gross profit on labor:</strong> <a href="https://www.ratchetandwrench.com/sponsored-content/autozone/article/33010669/the-kpi-gross-profit-on-labor" rel="noopener">job revenue minus the cost of labor, excluding overhead</a>, per a 2023 Ratchet+Wrench piece that is labeled sponsored content.</li>
+<li><strong>Close ratio:</strong> the share of estimates customers approve, ideally by advisor. Tekmetric lists it among its <a href="https://tours.tekmetric.com/answers/how-real-time-reports-help-grow-your-auto-repair-business" rel="noopener">employee report metrics</a>.</li>
+</ul>
+<h2>How to read the report</h2>
+<p>A single week is noisy. Read each number against your own last four to eight weeks, not a rule of thumb from an article.</p>
+<p>If you want an outside reference for margin, the 2025 Ratchet+Wrench survey asked owners for their gross profit margin. <a href="https://www.ratchetandwrench.com/running-a-shop/article/55359025/numbers-track-your-margins" rel="noopener">38% reported 50-59%, 19% reported 60% or more, 16% reported 40-49%, and 7% said they do not track it</a>. Those are survey answers from shops that chose to respond, not a standard to hit, and shops define margin differently.</p>
+<p>Two habits make the report useful:</p>
+<ol>
+<li>Write down one decision each week that the report led to. If it never leads to one, cut a number.</li>
+<li>Keep a note when a number moved for a known reason, such as a holiday week or a tech out sick.</li>
+</ol>
+<h2>The exception list matters more than the averages</h2>
+<p>Averages hide the work that is stuck. The second half of the report should be a short list of items that need a person: estimates with no response after several days, repair orders aging in one stage, parts that are late, reviews waiting for a reply. Tekmetric's reporting includes <a href="https://tours.tekmetric.com/answers/how-real-time-reports-help-grow-your-auto-repair-business" rel="noopener">declined jobs, a customer activity report</a> that advisors can use to follow up. A list like this is what turns a report into action.</p>
+<h2>Where AI helps with the report</h2>
+<ul>
+<li><strong>Writing the summary.</strong> Three plain sentences on what changed beat a grid of figures.</li>
+<li><strong>Flagging movement.</strong> A close ratio sliding at one advisor is easy to miss across 50 numbers.</li>
+<li><strong>Combining sources.</strong> For groups, one report across shops and systems instead of exports pasted into a spreadsheet.</li>
+<li><strong>Drafting the next step</strong> for a named person to review.</li>
+</ul>
+<h2>Where AI needs checking</h2>
+<p>AI reads what it is given. If a shop has not closed its repair orders, the week's revenue will be understated and the summary will say so confidently. If a feed is down, the honest report says "unavailable" and does not estimate. Three checks keep the report honest:</p>
+<ol>
+<li>Does every figure show its source system?</li>
+<li>Does it show when that source was last refreshed?</li>
+<li>Are gaps labeled, or quietly filled in?</li>
+</ol>
+<p>Finance numbers need extra care. Profit depends on closed books and proper bookkeeping, which the SBA's guidance calls out when it says to <a href="https://www.sba.gov/business-guide/manage-your-business/manage-your-finances" rel="noopener">maintain proper bookkeeping and a basic knowledge of business finances</a>. A weekly shop report is not a replacement for your accountant's statements.</p>
+<h2>What stays with a person</h2>
+<ul>
+<li>Reading the report and deciding what it means.</li>
+<li>Any change to a repair order, a price or a customer message.</li>
+<li>Judging whether a gap in the data is a problem or a late entry.</li>
+</ul>
+<h2>Where RevvOS fits</h2>
+<p>RevvOS's <a href="/solutions/executive-visibility/">executive visibility view</a> is an attention brief: a short list of what needs a decision, with the original system and last-updated time on every line and missing connections shown as unavailable. For groups, the <a href="/solutions/multi-location/">multi-location view</a> compares connected shops. Drafts wait for a person to approve. RevvOS is not accounting software, and it works alongside the systems you already run. Related reading: <a href="/use-cases/ai-business-intelligence-auto-repair">AI business intelligence auto repair</a> and <a href="/use-cases/auto-repair-profitability-software">auto repair profitability software</a>. To scope one report on one real workflow, start with the <a href="/demo/">Multi-Shop Operating Gap Assessment</a>.</p>
+    </div>
+    <section class="guide-faq faq" aria-labelledby="faq-h"><h2 id="faq-h">Questions people ask</h2><details><summary>What should an auto shop&#x27;s weekly report include?</summary><p>Start with average repair order, car count, gross profit on labor and parts, effective labor rate and close ratio, plus a short list of exceptions (old estimates, aging repair orders). Add more only when someone will act on it.</p></details><details><summary>Can AI write my shop report for me?</summary><p>It can draft the summary and flag changes from the numbers it is given. A person should read it, because the report is only as accurate as the data behind it and the AI cannot tell a late entry from a real drop.</p></details><details><summary>How often should I look at shop reports?</summary><p>Weekly for the short report, with the exception list daily. Monthly is the right rhythm for margin and the finance side, since those depend on closed books.</p></details><details><summary>Is an AI report different from the reports in my shop management system?</summary><p>The numbers can be the same. The difference is plain-language summary, change flags and, for groups, one view across shops and systems instead of exports.</p></details><details><summary>What does RevvOS reporting show?</summary><p>RevvOS shows a short attention brief with the source system and last-updated time on each line, marks missing connections as unavailable, and prepares drafts for a person to review. It does not change repair orders.</p></details></section>
+    <!-- related:start --><aside class="silo-more" aria-labelledby="silo-more-h"><h2 id="silo-more-h">More use cases</h2><ul><li><a href="/use-cases/auto-repair-profitability-software/">Auto Repair Profitability Software: Where Margin Leaks</a></li><li><a href="/use-cases/operational-visibility/">Operational visibility</a></li><li><a href="/use-cases/compliance/">Compliance</a></li><li><a href="/use-cases/ai-phone-answering-auto-repair/">AI Phone Answering Auto Repair: A One-Week Trial Plan</a></li><li><a href="/use-cases/ai-business-intelligence-auto-repair/">AI Business Intelligence Auto Repair: What It Does</a></li></ul><p class="silo-more-all"><a href="/use-cases/">All use cases <span aria-hidden="true">&rarr;</span></a></p></aside><!-- related:end -->
+    <aside class="guide-cta">
+      <h2>Get a RevvOS assessment</h2>
+      <p>We review how your shop handles calls, estimates, follow-up and reporting today, and show where RevvOS agents would take work off the desk.</p>
+      <a class="btn btn-primary" href="/demo">Get an assessment</a>
+    </aside>
+    <section class="guide-sources sources"><h2>Sources</h2><ol><li><a href="https://www.tekmetric.com/post/the-numbers-that-drive-auto-repair-shop-performance" rel="noopener">The Four Numbers That Drive Top Auto Repair Shop Performance</a>, Tekmetric</li><li><a href="https://www.ratchetandwrench.com/running-a-shop/article/55359025/numbers-track-your-margins" rel="noopener">Numbers: Track Your Margins</a>, Ratchet+Wrench</li><li><a href="https://www.ratchetandwrench.com/sponsored-content/autozone/article/33010669/the-kpi-gross-profit-on-labor" rel="noopener">The KPI: Gross Profit on Labor</a>, Ratchet+Wrench (AutoZone sponsored content)</li><li><a href="https://tours.tekmetric.com/answers/how-real-time-reports-help-grow-your-auto-repair-business" rel="noopener">Scaling Your Auto Repair Business With Real-Time Reports</a>, Tekmetric</li><li><a href="https://www.sba.gov/business-guide/manage-your-business/manage-your-finances" rel="noopener">Manage your finances</a>, U.S. Small Business Administration</li></ol></section>
+  </article>
+</main>
+<!-- site-footer:start --><footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about"><a href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a><p>RevvOS shows your team what needs attention, prepares the next step, and keeps people in control.</p></div>
+      <div class="footer-links">
+        <div class="footer-column"><h3>Platform</h3><a href="/platform/">Overview</a><a href="/agents/">Agents</a><a href="/integrations/">Integrations</a><a href="/security/">Security</a><a href="/pricing/">Pricing</a></div>
+        <div class="footer-column"><h3>Solutions</h3><a href="/solutions/">All solutions</a><a href="/solutions/multi-location/">Multi-location</a><a href="/solutions/daily-operations/">Daily operations</a><a href="/solutions/executive-visibility/">Executive visibility</a><a href="/roles/owner/">Owners</a><a href="/roles/operations/">Operations leaders</a><a href="/roles/marketing/">Marketing leaders</a></div>
+        <div class="footer-column"><h3>Library</h3><a href="/use-cases/">Use cases</a><a href="/guides/">Guides</a><a href="/compare/">Software comparisons</a><a href="/resources/">Resources</a><a href="/case-studies/">Scenarios</a></div>
+        <div class="footer-column"><h3>Company</h3><a href="/demo/">Book a demo</a><a href="/contact/">Contact</a><a href="/support/">Support</a><a href="/legal/privacy/">Privacy</a><a href="/legal/terms/">Terms</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 RevvOS. All rights reserved.</span><span class="footer-bottom-links"><a href="/legal/security/">Legal security</a><a href="mailto:team@simplufy.com">team@simplufy.com</a></span></div>
+  </div>
+</footer><!-- site-footer:end -->
+<script src="/assets/marketing.js?v=8" defer></script>
+</body>
+</html>
