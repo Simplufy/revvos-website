@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Collision Cycle Time Software and AI | RevvOS</title>
+  <meta name="description" content="Cycle time for a collision shop, stage by stage: where the days actually go, the signal that a stage is late, who owns it, and what AI can and cannot do about it.">
+  <meta property="og:title" content="Collision Cycle Time Software and AI | RevvOS">
+  <meta property="og:description" content="Keys to keys is not touch time. Break cycle time into seven stages, find the four that lose days, and see what an AI layer can honestly surface.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://revvos.xyz/use-cases/collision-cycle-time-software-ai">
+  <meta name="theme-color" content="#05060f">
+  <link rel="canonical" href="https://revvos.xyz/use-cases/collision-cycle-time-software-ai">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080a14'/%3E%3Cpath d='M9 22V10h6.2a3.9 3.9 0 0 1 1.5 7.5L20 22h-3.3l-2.9-4.2H12V22H9Zm3-6.7h2.9a1.6 1.6 0 0 0 0-3.2H12v3.2Z' fill='%23eaf1ff'/%3E%3Ccircle cx='23' cy='11' r='2.4' fill='%232fe08e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/marketing.css?v=6">
+  <link rel="stylesheet" href="/assets/pages-flow.css">
+  <link rel="stylesheet" href="/assets/brand-alignment.css">
+  <link rel="stylesheet" href="/assets/os-story.css?v=9">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Collision Cycle Time Software and AI",
+        "url": "https://revvos.xyz/use-cases/collision-cycle-time-software-ai",
+        "description": "Cycle time for a collision repair shop broken into seven stages, with the late signal and the owner for each, and the honest limit of what AI changes.",
+        "isPartOf": { "@type": "WebSite", "name": "RevvOS", "url": "https://revvos.xyz/" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://revvos.xyz/" },
+          { "@type": "ListItem", "position": 2, "name": "AI for Auto Body Shops", "item": "https://revvos.xyz/industries/ai-for-auto-body-shops" },
+          { "@type": "ListItem", "position": 3, "name": "Collision Cycle Time Software and AI", "item": "https://revvos.xyz/use-cases/collision-cycle-time-software-ai" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a good cycle time for a collision repair shop?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "There is no single number that travels across shops, because cycle time moves with severity mix, parts availability, approval speed, and how much sublet a job needs. The comparison that survives is a shop against its own trend, and its sites against each other, measured on one consistent definition of when the clock starts and stops."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is keys-to-keys the same as touch time?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Keys-to-keys includes every hour the vehicle spends waiting on an approval, a part, a sublet, or a queue. Touch time counts only the hours a technician works the vehicle. A shop can run strong touch time and poor cycle time at once, and when it does, the delay is almost never on the production floor."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can AI reduce collision cycle time?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not by repairing faster. It cannot refinish, weld, or calibrate, and it cannot move an appraiser. It can remove the days lost to waiting and to nobody noticing: a stage gone quiet, an approval still pending, a moved ETA, a sublet holding the job. Those are administrative days, and they are usually the biggest recoverable block in a shop."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="flow-page action-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="/platform">Platform</a>
+      <details class="nav-group"><summary>Solutions</summary><div class="nav-menu"><a href="/solutions/multi-location">Multi-location operations</a><a href="/solutions/daily-operations">Daily operations</a><a href="/solutions/executive-visibility">Executive visibility</a></div></details>
+      <details class="nav-group"><summary>Roles</summary><div class="nav-menu"><a href="/roles/owner">Owners</a><a href="/roles/operations">Operations leaders</a><a href="/roles/marketing">Marketing leaders</a></div></details>
+      <details class="nav-group"><summary>Use cases</summary><div class="nav-menu"><a href="/use-cases/reputation">Reputation</a><a href="/use-cases/local-seo">Local SEO</a><a href="/use-cases/social-media">Social media</a><a href="/use-cases/customer-engagement">Customer engagement</a><a href="/use-cases/operational-visibility">Operational visibility</a><a href="/use-cases/compliance">Compliance</a></div></details>
+      <a href="/resources">Resources</a>
+      <a href="/support/">Support</a>
+    </nav>
+    <div class="nav-actions"><a class="btn btn-secondary" href="/contact">Contact</a><a class="btn btn-primary" href="/demo">Get an assessment</a><button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button></div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="action-hero" aria-labelledby="ct-title">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/industries/ai-for-auto-body-shops">AI for Auto Body Shops</a><span>/</span><span aria-current="page">Collision Cycle Time Software and AI</span></nav>
+      <div class="action-hero-copy reveal">
+        <p class="eyebrow">Use case</p>
+        <h1 id="ct-title">Collision cycle time: where the days actually go.</h1>
+        <p class="lede">Cycle time is the number your insurer scores you on, the number your customer experiences as a rental bill, and the number that decides when your money arrives. It is also the most misreported figure in a body shop, because keys-to-keys and touch time are treated as the same thing when they are not.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/demo">See it on your jobs <span class="arrow">-&gt;</span></a>
+          <a class="btn btn-secondary" href="/industries/">For multi-shop groups</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEFINITION -->
+  <section class="section" style="padding: 72px 0; border-top: 1px solid var(--line);" aria-labelledby="def-title">
+    <div class="wrap">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;" class="reveal">
+        <div style="background: var(--canvas-2); border: 1px solid var(--line); border-radius: 12px; padding: 26px;">
+          <div style="font-family: var(--mono); font-size: 11px; color: var(--fog); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px;">Metric one</div>
+          <h3 style="font-size: 20px; color: var(--ice); margin: 0 0 10px 0;">Keys to keys</h3>
+          <p style="font-size: 15px; color: var(--moon); margin: 0;">The full span from the customer handing over the keys to the customer driving away. It contains every hour of waiting: approval, parts, sublet, queue, and the day nobody noticed the car was ready.</p>
+        </div>
+        <div style="background: var(--canvas-2); border: 1px solid var(--line); border-radius: 12px; padding: 26px;">
+          <div style="font-family: var(--mono); font-size: 11px; color: var(--fog); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px;">Metric two</div>
+          <h3 style="font-size: 20px; color: var(--ice); margin: 0 0 10px 0;">Touch time</h3>
+          <p style="font-size: 15px; color: var(--moon); margin: 0;">Only the hours a technician is physically working the vehicle. It measures your production floor and says nothing about anything that happens off it.</p>
+        </div>
+        <div style="background: var(--panel-strong); border: 1px solid var(--line-strong); border-radius: 12px; padding: 26px;">
+          <div style="font-family: var(--mono); font-size: 11px; color: var(--green); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px;">Metric three</div>
+          <h3 style="font-size: 20px; color: var(--ice); margin: 0 0 10px 0;">Severity</h3>
+          <p style="font-size: 15px; color: var(--moon); margin: 0;">The size of the repair. Comparing cycle time across two jobs or two shops without holding severity constant is where most shop reporting quietly breaks.</p>
+        </div>
+      </div>
+      <div style="max-width: 840px; margin-top: 32px;" class="reveal">
+        <p style="color: var(--moon); font-size: 17px; line-height: 1.7;">The trap is easy to fall into. A shop with a fast floor and a slow front office shows excellent touch time and a cycle time that is destroying its DRP scorecard. When the owner looks at a single figure, that shop believes it is efficient. When the number is broken apart, the problem stops being vague and becomes a list of specific days in specific stages.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAGE LANES -->
+  <section class="section" style="padding: 72px 0; background: var(--canvas-2); border-top: 1px solid var(--line);" aria-labelledby="lanes-title">
+    <div class="wrap">
+      <div style="max-width: 760px; margin-bottom: 36px;" class="reveal">
+        <p class="eyebrow">Seven stages</p>
+        <h2 id="lanes-title" style="font-size: 30px; color: var(--ice); margin-bottom: 12px;">Each stage has a late signal and an owner.</h2>
+        <p style="color: var(--moon); font-size: 17px;">The four stages where collision shops lose the most days are authorization, approval and supplement, parts wait, and sublet. All four are stages where the shop is waiting on someone else, which is exactly why they go unnoticed: nobody in the building feels responsible for a day that is passing in somebody else's inbox.</p>
+      </div>
+
+      <div style="display: grid; gap: 16px;" class="reveal">
+        <div style="background: var(--canvas); border: 1px solid var(--line); border-radius: 12px; padding: 24px 28px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; margin-bottom: 10px;">
+            <span style="font-family: var(--mono); font-size: 11px; color: var(--fog); letter-spacing: 0.08em;">STAGE 1</span>
+            <h3 style="font-size: 18px; color: var(--ice); margin: 0;">Intake and authorization</h3>
+          </div>
+          <p style="font-size: 15px; color: var(--moon); margin: 0 0 10px 0;"><strong style="color: var(--ice);">Late signal:</strong> the vehicle is on site but no authorization exists, so no clock has started and no work can begin.</p>
+          <p style="font-size: 15px; color: var(--moon); margin: 0;"><strong style="color: var(--ice);">Owner:</strong> the front office. <strong style="color: var(--ice);">AI surfaces:</strong> a checked-in vehicle with no authorization after a set window, plus the missing document that is blocking it.</p>
+        </div>
+
+        <div style="background: var(--canvas); border: 1px solid var(--line); border-radius: 12px; padding: 24px 28px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; margin-bottom: 10px;">
+            <span style="font-family: var(--mono); font-size: 11px; color: var(--fog); letter-spacing: 0.08em;">STAGE 2</span>
+            <h3 style="font-size: 18px; color: var(--ice); margin: 0;">Teardown and estimate</h3>
+          </div>
+          <p style="font-size: 15px; color: var(--moon); margin: 0 0 10px 0;"><strong style="color: var(--ice);">Late signal:</strong> the car is apart and the estimate is still being written, or the photos exist but the file has not moved.</p>
+          <p style="font-size: 15px; color: var(--moon); margin: 0;"><strong style="color: var(--ice);">Owner:</strong> the estimator. <strong style="color: var(--ice);">AI surfaces:</strong> a teardown that finished more than a shift ago with no estimate attached to it.</p>
+        </div>
+
+        <div style="background: var(--canvas); border: 1px solid var(--line); border-left: 3px solid var(--green); border-radius: 12px; padding: 24px 28px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; margin-bottom: 10px;">
+            <span style="font-family: var(--mono); font-size: 11px; color: var(--green); letter-spacing: 0.08em;">STAGE 3 · HIGH LOSS</span>
+            <h3 style="font-size: 18px; color: var(--ice); margin: 0;">Approval and supplement</h3>
+          </div>
+          <p style="font-size: 15px; color: var(--moon); margin: 0 0 10px 0;"><strong style="color: var(--ice);">Late signal:</strong> the file is open with the insurer and nothing has come back. A supplement is submitted and the shop is unsure whether it is being reviewed or has been forgotten.</p>
+          <p style="font-size: 15px; color: var(--moon); margin: 0;"><strong style="color: var(--ice);">Owner:</strong> the estimator and the appraiser relationship. <strong style="color: var(--ice);">AI surfaces:</strong> an approval pending past the shop's own threshold, and a supplement approaching a timing limit. A person still makes every call and every argument.</p>
+        </div>
+
+        <div style="background: var(--canvas); border: 1px solid var(--line); border-left: 3px solid var(--green); border-radius: 12px; padding: 24px 28px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; margin-bottom: 10px;">
+            <span style="font-family: var(--mono); font-size: 11px; color: var(--green); letter-spacing: 0.08em;">STAGE 4 · HIGH LOSS</span>
+            <h3 style="font-size: 18px; color: var(--ice); margin: 0;">Parts wait</h3>
+          </div>
+          <p style="font-size: 15px; color: var(--moon); margin: 0 0 10px 0;"><strong style="color: var(--ice);">Late signal:</strong> an ordered part's ETA moves and nobody updates the promise made to the customer.</p>
+          <p style="font-size: 15px; color: var(--moon); margin: 0;"><strong style="color: var(--ice);">Owner:</strong> parts and the estimator. <strong style="color: var(--ice);">AI surfaces:</strong> a changed ETA, a part order with no tracking, and the jobs downstream of it.</p>
+        </div>
+
+        <div style="background: var(--canvas); border: 1px solid var(--line); border-radius: 12px; padding: 24px 28px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; margin-bottom: 10px;">
+            <span style="font-family: var(--mono); font-size: 11px; color: var(--fog); letter-spacing: 0.08em;">STAGE 5</span>
+            <h3 style="font-size: 18px; color: var(--ice); margin: 0;">Production stages</h3>
+          </div>
+          <p style="font-size: 15px; color: var(--moon); margin: 0 0 10px 0;"><strong style="color: var(--ice);">Late signal:</strong> a vehicle sits between two stages with no technician assigned, or stalls in a booth queue.</p>
+          <p style="font-size: 15px; color: var(--moon); margin: 0;"><strong style="color: var(--ice);">Owner:</strong> production management. <strong style="color: var(--ice);">AI surfaces:</strong> a job with no movement in its current stage against the shop's own norm for that stage.</p>
+        </div>
+
+        <div style="background: var(--canvas); border: 1px solid var(--line); border-left: 3px solid var(--green); border-radius: 12px; padding: 24px 28px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; margin-bottom: 10px;">
+            <span style="font-family: var(--mono); font-size: 11px; color: var(--green); letter-spacing: 0.08em;">STAGE 6 · HIGH LOSS</span>
+            <h3 style="font-size: 18px; color: var(--ice); margin: 0;">Sublet</h3>
+          </div>
+          <p style="font-size: 15px; color: var(--moon); margin: 0 0 10px 0;"><strong style="color: var(--ice);">Late signal:</strong> the vehicle left the building for a sublet and nobody is tracking when it is coming back. Alignment, glass, calibration, a dealer visit for a module.</p>
+          <p style="font-size: 15px; color: var(--moon); margin: 0;"><strong style="color: var(--ice);">Owner:</strong> the shop's sublet coordinator. <strong style="color: var(--ice);">AI surfaces:</strong> a sublet that has exceeded its quoted turnaround, and the delivery date that depends on it.</p>
+        </div>
+
+        <div style="background: var(--canvas); border: 1px solid var(--line); border-radius: 12px; padding: 24px 28px;">
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; margin-bottom: 10px;">
+            <span style="font-family: var(--mono); font-size: 11px; color: var(--fog); letter-spacing: 0.08em;">STAGE 7</span>
+            <h3 style="font-size: 18px; color: var(--ice); margin: 0;">QC and delivery</h3>
+          </div>
+          <p style="font-size: 15px; color: var(--moon); margin: 0 0 10px 0;"><strong style="color: var(--ice);">Late signal:</strong> the car passed QC and is sitting in the lot because nobody called the customer or the rental has to be returned first.</p>
+          <p style="font-size: 15px; color: var(--moon); margin: 0;"><strong style="color: var(--ice);">Owner:</strong> the front office. <strong style="color: var(--ice);">AI surfaces:</strong> a completed vehicle with no delivery appointment booked, which is a lost day that costs nothing to recover.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HONEST LIMIT -->
+  <section class="section" style="padding: 72px 0; border-top: 1px solid var(--line);" aria-labelledby="limit-title">
+    <div class="wrap">
+      <div style="max-width: 860px;" class="reveal">
+        <p class="eyebrow">The honest limit</p>
+        <h2 id="limit-title" style="font-size: 30px; color: var(--ice); margin-bottom: 16px;">AI cannot build a car faster. It can stop days from disappearing.</h2>
+        <p style="color: var(--moon); font-size: 17px; line-height: 1.7; margin-bottom: 16px;">A software layer does not refinish a panel, weld a rail, pull a frame, or perform an ADAS calibration. It does not source a part that a supplier does not have, and it does not make an appraiser work a claim any sooner. Anyone selling cycle-time software as if it shortens the physical repair is selling something that does not exist.</p>
+        <p style="color: var(--moon); font-size: 17px; line-height: 1.7; margin-bottom: 16px;">What it can do is attack the other half of the number. In most collision shops a meaningful share of keys-to-keys time is not repair time at all. It is a stage that went quiet, an approval nobody chased, an ETA that changed without a phone call, a sublet that overran, a finished car that nobody collected. Those days are administrative, they are recoverable without hiring a technician or buying an oven, and they are invisible in a shop that reports one number instead of seven.</p>
+        <div style="margin-top: 26px; padding: 22px 26px; background: var(--canvas-2); border: 1px solid var(--line); border-left: 3px solid var(--green); border-radius: 10px;">
+          <p style="font-size: 15px; color: var(--moon); margin: 0;"><strong style="color: var(--ice);">Start here:</strong> pick ten closed jobs from last month and mark, for each one, how many days were spent waiting on someone outside the building. That total is the realistic ceiling for what a cycle-time system can recover.</p>
+        </div>
+        <p style="margin-top: 26px; font-size: 16px; color: var(--moon);">Related: <a href="/use-cases/collision-estimate-automation" style="color: var(--green); text-decoration: none;">estimate automation -&gt;</a> &nbsp; <a href="/use-cases/collision-supplement-automation" style="color: var(--green); text-decoration: none;">supplement automation -&gt;</a> &nbsp; <a href="/industries/" style="color: var(--green); text-decoration: none;">cycle time across multiple shops -&gt;</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Q AND A -->
+  <section class="section" style="padding: 72px 0; background: var(--canvas-2); border-top: 1px solid var(--line);" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div style="max-width: 860px;" class="reveal">
+        <p class="eyebrow">Common questions</p>
+        <h2 id="faq-title" style="font-size: 30px; color: var(--ice); margin-bottom: 28px;">Three questions shop owners ask.</h2>
+        <div style="display: grid; gap: 22px;">
+          <div>
+            <h3 style="font-size: 18px; color: var(--ice); margin: 0 0 8px 0;">What is a good cycle time for a collision repair shop?</h3>
+            <p style="font-size: 15px; color: var(--moon); margin: 0;">There is no single number that travels across shops, because cycle time moves with severity mix, parts availability, approval speed, and how much sublet a job needs. The comparison that survives is a shop against its own trend, and its sites against each other, measured on one consistent definition of when the clock starts and stops.</p>
+          </div>
+          <div>
+            <h3 style="font-size: 18px; color: var(--ice); margin: 0 0 8px 0;">Is keys-to-keys the same as touch time?</h3>
+            <p style="font-size: 15px; color: var(--moon); margin: 0;">No. Keys-to-keys includes every hour the vehicle spends waiting on an approval, a part, a sublet, or a queue. Touch time counts only the hours a technician works the vehicle. A shop can run strong touch time and poor cycle time at once, and when it does, the delay is almost never on the production floor.</p>
+          </div>
+          <div>
+            <h3 style="font-size: 18px; color: var(--ice); margin: 0 0 8px 0;">Can AI reduce collision cycle time?</h3>
+            <p style="font-size: 15px; color: var(--moon); margin: 0;">Not by repairing faster. It cannot refinish, weld, or calibrate, and it cannot move an appraiser. It can remove the days lost to waiting and to nobody noticing: a stage gone quiet, an approval still pending, a moved ETA, a sublet holding the job. Those are administrative days, and they are usually the biggest recoverable block in a shop.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="flow-close" style="padding: 72px 0; border-top: 1px solid var(--line);">
+    <div class="wrap flow-close-inner reveal">
+      <div>
+        <p class="flow-kicker">Seven stages, one number</p>
+        <h2 style="font-size: 30px; color: var(--ice); margin-bottom: 12px;">Find the days that were never repair time.</h2>
+        <p style="color: var(--moon); font-size: 16px; margin-bottom: 24px;">We will stage out your last month of collision jobs and show you where the waiting actually accumulated.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/demo">Book an operating gap assessment <span class="arrow">-&gt;</span></a>
+        <a class="btn btn-secondary" href="/industries/ai-for-auto-body-shops">Collision overview</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
+        <p>RevvOS shows your team what needs attention, prepares the next step, and keeps people in control.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column"><h3>Platform</h3><a href="/platform">Overview</a><a href="/agents">Agents</a><a href="/integrations">Integrations</a><a href="/security">Security</a></div>
+        <div class="footer-column"><h3>Solutions</h3><a href="/solutions/multi-location">Multi-location</a><a href="/solutions/daily-operations">Daily operations</a><a href="/solutions/executive-visibility">Executive visibility</a></div>
+        <div class="footer-column"><h3>Explore</h3><a href="/use-cases/operational-visibility">Operational visibility</a><a href="/case-studies">Scenarios</a><a href="/resources">Resources</a><a href="/pricing">Pricing</a></div>
+        <div class="footer-column"><h3>Company</h3><a href="/demo">Get an operating gap assessment</a><a href="/contact">Contact</a><a href="/support/">Support</a><a href="/legal/privacy">Privacy</a><a href="/legal/terms">Terms</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 RevvOS. All rights reserved.</span>
+      <span class="footer-bottom-links"><a href="/legal/security">Legal security</a><a href="mailto:team@simplufy.com">team@simplufy.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/marketing.js?v=8" defer></script>
+<script src="/assets/plain-pages.js?v=9" defer></script>
+<script src="/assets/pages-flow.js" defer></script>
+</body>
+</html>
