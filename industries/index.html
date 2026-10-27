@@ -22,25 +22,30 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "name": "AI for automotive service businesses, by type of shop.", "url": "https://revvos.xyz/industries/", "description": "How AI fits each kind of automotive service business: collision, auto glass, detailing, tire, diesel, ADAS calibration and general repair.", "isPartOf": {"@type": "WebSite", "name": "RevvOS", "url": "https://revvos.xyz/"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://revvos.xyz/"}, {"@type": "ListItem", "position": 2, "name": "Industries", "item": "https://revvos.xyz/industries/"}]}]}
   </script>
+  <link rel="stylesheet" href="/assets/site-nav.css?v=043f2894" data-site-nav>
 </head>
 <body class="flow-page action-page">
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="progress" aria-hidden="true"></div>
 
-<header class="site-header">
+<!-- site-nav:start --><header class="site-header">
   <div class="wrap nav-bar">
     <a class="brand" href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
     <nav class="nav-links" aria-label="Primary navigation">
-      <a href="/platform">Platform</a>
-      <details class="nav-group"><summary>Solutions</summary><div class="nav-menu"><a href="/solutions/multi-location">Multi-location operations</a><a href="/solutions/daily-operations">Daily operations</a><a href="/solutions/executive-visibility">Executive visibility</a></div></details>
-      <details class="nav-group"><summary>Roles</summary><div class="nav-menu"><a href="/roles/owner">Owners</a><a href="/roles/operations">Operations leaders</a><a href="/roles/marketing">Marketing leaders</a></div></details>
-      <details class="nav-group"><summary>Use cases</summary><div class="nav-menu"><a href="/use-cases/reputation">Reputation</a><a href="/use-cases/local-seo">Local SEO</a><a href="/use-cases/social-media">Social media</a><a href="/use-cases/customer-engagement">Customer engagement</a><a href="/use-cases/operational-visibility">Operational visibility</a><a href="/use-cases/compliance">Compliance</a></div></details>
-      <a href="/resources">Resources</a>
+      <details class="nav-group"><summary>Platform</summary><div class="nav-menu"><a href="/platform/">Platform overview</a><a href="/agents/">Agents</a><a href="/integrations/">Integrations</a><a href="/security/">Security</a><a href="/pricing/">Pricing</a></div></details>
+      <details class="nav-group"><summary>Solutions</summary><div class="nav-menu"><a href="/solutions/">All solutions</a><a href="/solutions/multi-location/">Multi-location operations</a><a href="/solutions/daily-operations/">Daily operations</a><a href="/solutions/executive-visibility/">Executive visibility</a><a href="/roles/owner/">For owners</a><a href="/roles/operations/">For operations leaders</a><a href="/roles/marketing/">For marketing leaders</a></div></details>
+      <details class="nav-group"><summary>Use cases</summary><div class="nav-menu"><a href="/use-cases/">All use cases</a><a href="/use-cases/reputation/">Reputation</a><a href="/use-cases/local-seo/">Local SEO</a><a href="/use-cases/social-media/">Social media</a><a href="/use-cases/customer-engagement/">Customer engagement</a><a href="/use-cases/operational-visibility/">Operational visibility</a><a href="/use-cases/compliance/">Compliance</a></div></details>
+      <a href="/guides/">Guides</a>
+      <details class="nav-group"><summary>Resources</summary><div class="nav-menu"><a href="/resources/">Field guide and library</a><a href="/compare/">Software comparisons</a><a href="/case-studies/">Scenarios</a><a href="/guides/">All guides</a></div></details>
       <a href="/support/">Support</a>
     </nav>
-    <div class="nav-actions"><a class="btn btn-secondary" href="/contact">Contact</a><a class="btn btn-primary" href="/demo">Get an assessment</a><button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button></div>
+    <div class="nav-actions">
+      <a class="btn btn-secondary" href="/contact/">Contact</a>
+      <a class="btn btn-primary" href="/demo/">Get an assessment</a>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button>
+    </div>
   </div>
-</header>
+</header><!-- site-nav:end -->
 
 <main id="main">
   <section class="action-hero" aria-labelledby="body-title">
@@ -73,10 +78,9 @@
     <div class="wrap">
       <h2 id="collision-and-auto-body" style="font-size: 26px; color: var(--ice); margin-bottom: 20px;">Collision and auto body</h2>
       <ul role="list" style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
-      <li class="hub-item" data-route="/industries/ai-for-auto-body-shops" data-pending style="background: var(--canvas-2); border: 1px solid var(--line); border-radius: 12px; padding: 22px;">
-        <h3 style="font-size: 17px; color: var(--ice); margin: 0 0 8px 0;"><span class="hub-name">AI for Auto Body Shops</span></h3>
+      <li class="hub-item" data-route="/industries/ai-for-auto-body-shops" style="background: var(--canvas-2); border: 1px solid var(--line); border-radius: 12px; padding: 22px;">
+        <h3 style="font-size: 17px; color: var(--ice); margin: 0 0 8px 0;"><a href="/industries/ai-for-auto-body-shops">AI for Auto Body Shops</a></h3>
         <p style="font-size: 14px; color: var(--moon); line-height: 1.65; margin: 0;">How AI fits a collision repair shop: estimates, supplements, parts rules, production stages and sublet, plus which parts of the workflow still need a person.</p>
-        <p class="hub-soon" style="font-size: 12px; color: var(--moon); opacity: .7; margin: 10px 0 0 0;">Coming soon</p>
       </li>
       <li class="hub-item" data-route="/industries/ai-for-collision-claims" data-pending style="background: var(--canvas-2); border: 1px solid var(--line); border-radius: 12px; padding: 22px;">
         <h3 style="font-size: 17px; color: var(--ice); margin: 0 0 8px 0;"><span class="hub-name">AI for Collision Claims</span></h3>
@@ -145,26 +149,20 @@
   </section>
 </main>
 
-<footer class="site-footer">
+<!-- site-footer:start --><footer class="site-footer">
   <div class="wrap">
     <div class="footer-grid">
-      <div class="footer-about">
-        <a href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
-        <p>RevvOS shows your team what needs attention, prepares the next step, and keeps people in control.</p>
-      </div>
+      <div class="footer-about"><a href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a><p>RevvOS shows your team what needs attention, prepares the next step, and keeps people in control.</p></div>
       <div class="footer-links">
-        <div class="footer-column"><h3>Platform</h3><a href="/platform">Overview</a><a href="/agents">Agents</a><a href="/integrations">Integrations</a><a href="/security">Security</a></div>
-        <div class="footer-column"><h3>Solutions</h3><a href="/solutions/multi-location">Multi-location</a><a href="/solutions/daily-operations">Daily operations</a><a href="/solutions/executive-visibility">Executive visibility</a></div>
-        <div class="footer-column"><h3>Explore</h3><a href="/use-cases/operational-visibility">Operational visibility</a><a href="/case-studies">Scenarios</a><a href="/resources">Resources</a><a href="/pricing">Pricing</a></div>
-        <div class="footer-column"><h3>Company</h3><a href="/demo">Get an operating gap assessment</a><a href="/contact">Contact</a><a href="/support/">Support</a><a href="/legal/privacy">Privacy</a><a href="/legal/terms">Terms</a></div>
+        <div class="footer-column"><h3>Platform</h3><a href="/platform/">Overview</a><a href="/agents/">Agents</a><a href="/integrations/">Integrations</a><a href="/security/">Security</a><a href="/pricing/">Pricing</a></div>
+        <div class="footer-column"><h3>Solutions</h3><a href="/solutions/">All solutions</a><a href="/solutions/multi-location/">Multi-location</a><a href="/solutions/daily-operations/">Daily operations</a><a href="/solutions/executive-visibility/">Executive visibility</a><a href="/roles/owner/">Owners</a><a href="/roles/operations/">Operations leaders</a><a href="/roles/marketing/">Marketing leaders</a></div>
+        <div class="footer-column"><h3>Library</h3><a href="/use-cases/">Use cases</a><a href="/guides/">Guides</a><a href="/compare/">Software comparisons</a><a href="/resources/">Resources</a><a href="/case-studies/">Scenarios</a></div>
+        <div class="footer-column"><h3>Company</h3><a href="/demo/">Book a demo</a><a href="/contact/">Contact</a><a href="/support/">Support</a><a href="/legal/privacy/">Privacy</a><a href="/legal/terms/">Terms</a></div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 RevvOS. All rights reserved.</span>
-      <span class="footer-bottom-links"><a href="/legal/security">Legal security</a><a href="mailto:team@simplufy.com">team@simplufy.com</a></span>
-    </div>
+    <div class="footer-bottom"><span>&copy; 2026 RevvOS. All rights reserved.</span><span class="footer-bottom-links"><a href="/legal/security/">Legal security</a><a href="mailto:team@simplufy.com">team@simplufy.com</a></span></div>
   </div>
-</footer>
+</footer><!-- site-footer:end -->
 
 <script src="/assets/marketing.js?v=8" defer></script>
 <script src="/assets/plain-pages.js?v=9" defer></script>
