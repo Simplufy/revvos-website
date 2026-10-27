@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Repair Status Automation: Update Customers Without Calls</title>
+  <meta name="description" content="Repair status automation sends the customer a text when a repair order changes stage. Which stages to message, what to write and what stays human.">
+  <link rel="canonical" href="https://revvos.xyz/use-cases/repair-status-automation">
+  <meta property="og:title" content="Repair Status Automation: Update Customers Without Calls">
+  <meta property="og:description" content="Repair status automation sends the customer a text when a repair order changes stage. Which stages to message, what to write and what stays human.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://revvos.xyz/use-cases/repair-status-automation">
+  <meta name="theme-color" content="#132419">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080a14'/%3E%3Cpath d='M9 22V10h6.2a3.9 3.9 0 0 1 1.5 7.5L20 22h-3.3l-2.9-4.2H12V22H9Zm3-6.7h2.9a1.6 1.6 0 0 0 0-3.2H12v3.2Z' fill='%23eaf1ff'/%3E%3Ccircle cx='23' cy='11' r='2.4' fill='%232fe08e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/marketing.css?v=6">
+  <link rel="stylesheet" href="/assets/brand-alignment.css">
+  <link rel="stylesheet" href="/assets/guides.css?v=1">
+  <link rel="stylesheet" href="/assets/site-nav.css?v=043f2894" data-site-nav>
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Repair status automation: tell the customer before they call", "description": "Repair status automation sends the customer a text when a repair order changes stage. Which stages to message, what to write and what stays human.", "mainEntityOfPage": "https://revvos.xyz/use-cases/repair-status-automation", "datePublished": "2026-10-25", "dateModified": "2026-10-25", "author": {"@type": "Organization", "name": "RevvOS", "url": "https://revvos.xyz/"}, "publisher": {"@type": "Organization", "name": "RevvOS", "url": "https://revvos.xyz"}, "citation": ["https://www.autoremarketing.com/trends/text2drive-study-highlights-what-consumers-want-dealership-service-lane", "https://www.repairerdrivennews.com/2019/07/15/christian-bros-experience-with-customer-texts-digital-inspections-could-yield-collision-industry-lessons/", "https://blog.autovitals.com/find-bottlenecks-fast", "https://www.cccis.com/collision-repairers/consumer-engagement/repair-status-surveys", "https://www.twilio.com/docs/messaging/compliance/a2p-10dlc"]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is repair status automation?", "acceptedAnswer": {"@type": "Answer", "text": "It is automatic messaging triggered by a change in a repair order's stage, such as estimate ready or ready for pickup. The shop system or a connected tool sends the text or email, so advisors stop answering routine status calls."}}, {"@type": "Question", "name": "Do customers actually want text updates?", "acceptedAnswer": {"@type": "Answer", "text": "Many do. In a 2022 TEXT2DRIVE survey of 1,000 drivers, text was the preferred channel at 42%, ahead of email and phone. It was a dealership survey run by a software vendor, so test it with your own customers."}}, {"@type": "Question", "name": "Which statuses should I send?", "acceptedAnswer": {"@type": "Answer", "text": "Start with checked in, estimate ready, waiting on parts and ready for pickup. Add inspection done if you promise a time for the estimate. Skip minor stages that only add noise."}}, {"@type": "Question", "name": "Should the messages be written by AI?", "acceptedAnswer": {"@type": "Answer", "text": "The routine facts work as templates. Anything about price, a delay or a safety finding should come from a person, because the customer may reply and expect an answer."}}, {"@type": "Question", "name": "Does RevvOS send customer status texts?", "acceptedAnswer": {"@type": "Answer", "text": "RevvOS shows an advisor the true stage of each repair order and prepares drafts for a person to review. Customer sends only happen if that workflow is set up, and they usually go out through your shop system or texting tool."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://revvos.xyz/"}, {"@type": "ListItem", "position": 2, "name": "Use cases", "item": "https://revvos.xyz/use-cases/"}, {"@type": "ListItem", "position": 3, "name": "Repair status automation", "item": "https://revvos.xyz/use-cases/repair-status-automation"}]}]</script>
+</head>
+<body class="page-guide">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+<!-- site-nav:start --><header class="site-header">
+  <div class="wrap nav-bar">
+    <a class="brand" href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <details class="nav-group"><summary>Platform</summary><div class="nav-menu"><a href="/platform/">Platform overview</a><a href="/agents/">Agents</a><a href="/integrations/">Integrations</a><a href="/security/">Security</a><a href="/pricing/">Pricing</a></div></details>
+      <details class="nav-group"><summary>Solutions</summary><div class="nav-menu"><a href="/solutions/">All solutions</a><a href="/solutions/multi-location/">Multi-location operations</a><a href="/solutions/daily-operations/">Daily operations</a><a href="/solutions/executive-visibility/">Executive visibility</a><a href="/roles/owner/">For owners</a><a href="/roles/operations/">For operations leaders</a><a href="/roles/marketing/">For marketing leaders</a></div></details>
+      <details class="nav-group"><summary>Use cases</summary><div class="nav-menu"><a href="/use-cases/">All use cases</a><a href="/use-cases/reputation/">Reputation</a><a href="/use-cases/local-seo/">Local SEO</a><a href="/use-cases/social-media/">Social media</a><a href="/use-cases/customer-engagement/">Customer engagement</a><a href="/use-cases/operational-visibility/">Operational visibility</a><a href="/use-cases/compliance/">Compliance</a></div></details>
+      <a href="/guides/">Guides</a>
+      <details class="nav-group"><summary>Resources</summary><div class="nav-menu"><a href="/resources/">Field guide and library</a><a href="/compare/">Software comparisons</a><a href="/case-studies/">Scenarios</a><a href="/guides/">All guides</a></div></details>
+      <a href="/support/">Support</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-secondary" href="/contact/">Contact</a>
+      <a class="btn btn-primary" href="/demo/">Get an assessment</a>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header><!-- site-nav:end -->
+<main id="main" class="guide">
+  <article class="guide-wrap">
+    <!-- crumbs:start --><nav class="guide-crumbs" aria-label="Breadcrumb"><a href="/">Home</a> <span>/</span> <a href="/use-cases/">Use cases</a> <span>/</span> <span aria-current="page">Repair status automation</span></nav><!-- crumbs:end -->
+    <p class="guide-kicker">Resources</p>
+    <h1>Repair status automation: tell the customer before they call</h1>
+    <p class="guide-summary">Repair status automation sends the customer a short message each time their repair order changes stage, such as inspection done, estimate ready, waiting on parts or ready for pickup. It only works when the stage on the repair order is accurate, so fix the stages first, then automate the messages and keep approvals and bad news with a person.</p>
+    <p class="guide-meta">Updated October 25, 2026 &middot; 6 min read</p>
+    
+    <div class="guide-body">
+<p>A customer drops off a pickup at 8 a.m. At noon they call to ask if it is done. At two they call again. Your advisor, who was standing next to a lift, picks up both times, and neither call moved the repair forward.</p>
+<p>Repair status automation fixes that loop. When a repair order changes stage, the shop system or a connected tool sends the customer a short message, so they hear from you before they have to ask. This page covers which stages deserve a message, what the message should say, and the part most shops skip: making the stage on the repair order true.</p>
+<h2>What customers say they want</h2>
+<p>Customers like text. A 2022 survey of 1,000 drivers who had visited a dealership service department, run by the software vendor TEXT2DRIVE, found that <a href="https://www.autoremarketing.com/trends/text2drive-study-highlights-what-consumers-want-dealership-service-lane" rel="noopener">about 53% want text communications and notifications</a>. Asked which channel they prefer overall, 42% said text, 29% email and 18% phone. It is a vendor survey of dealership customers, so read it as direction, not as a measure of your shop.</p>
+<p>Independent shops report the same pattern. Christian Brothers Automotive, a franchise group, told Repairer Driven News in 2019 that most customers say yes when asked about text notifications, and that the automated updates are <a href="https://www.repairerdrivennews.com/2019/07/15/christian-bros-experience-with-customer-texts-digital-inspections-could-yield-collision-industry-lessons/" rel="noopener">generic but give customers peace of mind</a>. Their shops still phone to confirm the full scope of work before starting.</p>
+<h2>Which stages deserve a message</h2>
+<p>Not every click in the shop system should reach the customer. Six stages cover most of what people want to know:</p>
+<ol>
+<li><strong>Checked in.</strong> Confirms you have the car and the concern.</li>
+<li><strong>Inspection done, estimate coming.</strong> Sets a time when they will hear next.</li>
+<li><strong>Estimate ready.</strong> The only message that asks the customer to do something.</li>
+<li><strong>Waiting on parts.</strong> Say what is late and give the new date, or say you do not have one yet.</li>
+<li><strong>In repair.</strong> Optional. Skip it if it only adds noise.</li>
+<li><strong>Ready for pickup.</strong> Hours, amount due and where to park.</li>
+</ol>
+<p>The Christian Brothers executive quoted above said notifications go out about four times a day at their shops, which gives a sense of the ceiling. If a customer gets a message at every minor stage change, they stop reading them.</p>
+<h2>Fix the stages before you automate</h2>
+<p>Automation repeats whatever the repair order says. If a car is physically finished but the order still reads "in progress," the customer gets a wrong text, and then a call.</p>
+<p>AutoVitals, a shop-software vendor, makes the point in a March 2026 post: <a href="https://blog.autovitals.com/find-bottlenecks-fast" rel="noopener">unclear status causes limbo, duplicated work and late customer updates</a>, and it recommends a clear status for every repair order with markers such as waiting for approval, parts on order and ready for pickup. Before you switch anything on, agree on three things with your team:</p>
+<ul>
+<li>Who changes the stage, and when. The tech who finishes the work, or the advisor who closes the loop?</li>
+<li>What each stage means in plain words, so "ready" never means "almost."</li>
+<li>What happens when a stage is skipped or reversed. A car that goes back on the lift should not send a second "ready for pickup."</li>
+</ul>
+<h2>What to automate and what a person writes</h2>
+<p>Automate the plain facts: checked in, estimate sent, part ordered, ready. These are the same every time, and a template does them well.</p>
+<p>Keep a person on anything that carries weight:</p>
+<ul>
+<li><strong>Approvals.</strong> An estimate needs a conversation when the number is large or the finding is a safety item.</li>
+<li><strong>Bad news.</strong> A part delayed again, a bigger repair than quoted, a car that will not be done today. Call these in.</li>
+<li><strong>Questions back.</strong> A customer who replies "why is it so much?" needs an advisor, not a second template.</li>
+</ul>
+<h2>Collision shops</h2>
+<p>Collision work runs longer and customers wait weeks, so updates matter more. CCC's UpdatePlus product sends <a href="https://www.cccis.com/collision-repairers/consumer-engagement/repair-status-surveys" rel="noopener">automated text and email updates on repair status</a> and a one-question survey on delivery day. A 2016 CCC report, cited in the 2019 Repairer Driven News piece above, found that keeping customers informed mattered more to satisfaction than cycle time. J.D. Power's David Pieffer made a similar point in 2018: some carriers with longer cycle times still score well when they set expectations and keep customers informed. That is an argument for honest updates, not for slower repairs.</p>
+<h2>Texting rules</h2>
+<p>If your application sends text messages over a standard 10-digit number in the US, carriers expect registration. Twilio's documentation describes <a href="https://www.twilio.com/docs/messaging/compliance/a2p-10dlc" rel="noopener">A2P 10DLC as the carrier standard meant to keep application texting verified and consensual</a>. Your texting vendor usually handles registration, but ask. Get consent when you take the work order, honor a stop request in every channel, and have your own lawyer confirm what consent you need.</p>
+<h2>How to know it is working</h2>
+<p>Count before you start. For two weeks, tally the status calls your advisors take each day, and note how many were "is my car ready." Turn automation on, then count again. We cannot give you a typical reduction, because we have no sourced figure, and we would doubt any vendor that quotes one without saying how it counted.</p>
+<h2>Where RevvOS fits</h2>
+<p>RevvOS sits next to your shop system, not in place of it. Its <a href="/solutions/daily-operations/">daily operations view</a> shows each repair order's stage, age and owner, and it flags aging orders, delayed parts with no delivery time, callbacks owed and cars ready for pickup. That gives an advisor the true status in one place. RevvOS prepares follow-up drafts for a named person to review, and anything is sent only when that workflow has been set up for your business. It is not a texting platform, so the customer-facing sends usually come from your shop system or a texting tool.</p>
+<p>Related reading: <a href="/use-cases/ai-text-messaging-auto-repair">AI text messaging for auto repair</a>, <a href="/use-cases/auto-shop-customer-follow-up-automation">auto shop customer follow up automation</a> and <a href="/use-cases/auto-shop-bottleneck-detection">auto shop bottleneck detection</a>. To scope one workflow on your own repair orders, start with the <a href="/demo/">Multi-Shop Operating Gap Assessment</a>.</p>
+    </div>
+    <section class="guide-faq faq" aria-labelledby="faq-h"><h2 id="faq-h">Questions people ask</h2><details><summary>What is repair status automation?</summary><p>It is automatic messaging triggered by a change in a repair order's stage, such as estimate ready or ready for pickup. The shop system or a connected tool sends the text or email, so advisors stop answering routine status calls.</p></details><details><summary>Do customers actually want text updates?</summary><p>Many do. In a 2022 TEXT2DRIVE survey of 1,000 drivers, text was the preferred channel at 42%, ahead of email and phone. It was a dealership survey run by a software vendor, so test it with your own customers.</p></details><details><summary>Which statuses should I send?</summary><p>Start with checked in, estimate ready, waiting on parts and ready for pickup. Add inspection done if you promise a time for the estimate. Skip minor stages that only add noise.</p></details><details><summary>Should the messages be written by AI?</summary><p>The routine facts work as templates. Anything about price, a delay or a safety finding should come from a person, because the customer may reply and expect an answer.</p></details><details><summary>Does RevvOS send customer status texts?</summary><p>RevvOS shows an advisor the true stage of each repair order and prepares drafts for a person to review. Customer sends only happen if that workflow is set up, and they usually go out through your shop system or texting tool.</p></details></section>
+    <!-- related:start --><aside class="silo-more" aria-labelledby="silo-more-h"><h2 id="silo-more-h">More use cases</h2><ul><li><a href="/use-cases/missed-call-automation-auto-repair/">Missed Call Automation Auto Repair Shops Can Set Up</a></li><li><a href="/use-cases/ai-lead-intake-auto-repair/">AI Lead Intake Auto Repair: Fields, Speed, Ownership</a></li><li><a href="/use-cases/ai-phone-answering-auto-repair/">AI Phone Answering Auto Repair: A One-Week Trial Plan</a></li><li><a href="/use-cases/ai-receptionist-for-body-shops">AI Receptionist for Body Shops | Collision Call Types</a></li><li><a href="/use-cases/automotive-lead-generation-ai/">Automotive Lead Generation AI: Capture, Route, Reply</a></li></ul><p class="silo-more-all"><a href="/use-cases/">All use cases <span aria-hidden="true">&rarr;</span></a></p></aside><!-- related:end -->
+    <aside class="guide-cta">
+      <h2>Get a RevvOS assessment</h2>
+      <p>We review how your shop handles calls, estimates, follow-up and reporting today, and show where RevvOS agents would take work off the desk.</p>
+      <a class="btn btn-primary" href="/demo">Get an assessment</a>
+    </aside>
+    <section class="guide-sources sources"><h2>Sources</h2><ol><li><a href="https://www.autoremarketing.com/trends/text2drive-study-highlights-what-consumers-want-dealership-service-lane" rel="noopener">TEXT2DRIVE study highlights what consumers want in dealership service lane</a>, Auto Remarketing</li><li><a href="https://www.repairerdrivennews.com/2019/07/15/christian-bros-experience-with-customer-texts-digital-inspections-could-yield-collision-industry-lessons/" rel="noopener">Christian Bros. experience with customer texts, digital inspections could yield collision industry lessons</a>, Repairer Driven News</li><li><a href="https://blog.autovitals.com/find-bottlenecks-fast" rel="noopener">Why Are Jobs Taking Too Long? Find Bottlenecks Fast</a>, AutoVitals</li><li><a href="https://www.cccis.com/collision-repairers/consumer-engagement/repair-status-surveys" rel="noopener">Repair Status Updates &amp; Surveys</a>, CCC Intelligent Solutions</li><li><a href="https://www.twilio.com/docs/messaging/compliance/a2p-10dlc" rel="noopener">A2P 10DLC</a>, Twilio</li></ol></section>
+  </article>
+</main>
+<!-- site-footer:start --><footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about"><a href="/" aria-label="RevvOS home"><img src="/assets/logos/revvos-lockup.svg?v=3" alt="RevvOS"></a><p>RevvOS shows your team what needs attention, prepares the next step, and keeps people in control.</p></div>
+      <div class="footer-links">
+        <div class="footer-column"><h3>Platform</h3><a href="/platform/">Overview</a><a href="/agents/">Agents</a><a href="/integrations/">Integrations</a><a href="/security/">Security</a><a href="/pricing/">Pricing</a></div>
+        <div class="footer-column"><h3>Solutions</h3><a href="/solutions/">All solutions</a><a href="/solutions/multi-location/">Multi-location</a><a href="/solutions/daily-operations/">Daily operations</a><a href="/solutions/executive-visibility/">Executive visibility</a><a href="/roles/owner/">Owners</a><a href="/roles/operations/">Operations leaders</a><a href="/roles/marketing/">Marketing leaders</a></div>
+        <div class="footer-column"><h3>Library</h3><a href="/use-cases/">Use cases</a><a href="/guides/">Guides</a><a href="/compare/">Software comparisons</a><a href="/resources/">Resources</a><a href="/case-studies/">Scenarios</a></div>
+        <div class="footer-column"><h3>Company</h3><a href="/demo/">Book a demo</a><a href="/contact/">Contact</a><a href="/support/">Support</a><a href="/legal/privacy/">Privacy</a><a href="/legal/terms/">Terms</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 RevvOS. All rights reserved.</span><span class="footer-bottom-links"><a href="/legal/security/">Legal security</a><a href="mailto:team@simplufy.com">team@simplufy.com</a></span></div>
+  </div>
+</footer><!-- site-footer:end -->
+<script src="/assets/marketing.js?v=8" defer></script>
+</body>
+</html>
